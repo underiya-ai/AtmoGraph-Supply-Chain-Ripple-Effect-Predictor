@@ -35,3 +35,10 @@ The project aims to identify supply chain vulnerabilities and provide insights i
 Project Status
 
 Currently under development.
+
+Ripple-effect prediction
+
+Choose option 45 from the menu, enter a disrupted company, and provide a severity
+from 1 to 100. AtmoGraph estimates downstream risk using network distance and
+the affected company's configured failure probability. This is a transparent
+heuristic for exploration, not a trained machine-learning forecast.

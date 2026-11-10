@@ -433,7 +433,58 @@ class AtmoGraph:
                   max(0, len(self.graph) - 1))
 
     # --------------------------------------------------------
-    # 20. Critical company detection
+    # 20. Predict disruption ripple risk
+    # --------------------------------------------------------
+
+    def predict_ripple_effect(self):
+
+        if not self.graph:
+            print("Network is empty.")
+            return
+
+        origin = input("Enter disrupted company: ").strip()
+
+        if origin not in self.graph:
+            print("Company not found.")
+            return
+
+        try:
+            severity = float(input("Enter disruption severity (1-100): "))
+        except ValueError:
+            print("Enter a valid severity number.")
+            return
+
+        if not 1 <= severity <= 100:
+            print("Severity must be between 1 and 100.")
+            return
+
+        affected = self.find_affected([origin])
+
+        print("\n========== RIPPLE EFFECT PREDICTION ==========")
+        print("Disruption source:", origin)
+        print("Disruption severity:", severity, "%")
+        print("Estimate uses graph distance and each company's failure probability.")
+
+        if not affected:
+            print("No downstream companies are connected to this company.")
+            return
+
+        for company, distance in affected.items():
+            vulnerability = self.details[company]["failure_probability"]
+            score = severity * (0.65 ** (distance - 1))
+            score *= (1 + vulnerability / 100) / 2
+            risk = "HIGH" if score >= 60 else "MEDIUM" if score >= 30 else "LOW"
+            print(
+                company,
+                "| Distance:", distance,
+                "| Estimated Ripple Risk:", round(score, 1), "%",
+                "| Risk:", risk
+            )
+
+        print("==============================================")
+
+    # --------------------------------------------------------
+    # 21. Critical company detection
     # --------------------------------------------------------
 
     def critical_companies(self):
@@ -1148,6 +1199,7 @@ def main():
 42. Current Timestamp
 43. Reset Network
 44. Final Summary Report
+45. Predict Disruption Ripple Effect
  0. Exit
 
 ====================================================
@@ -1296,8 +1348,11 @@ def main():
         elif choice == 44:
             system.summary_report()
 
+        elif choice == 45:
+            system.predict_ripple_effect()
+
         else:
-            print("Invalid choice! Select between 0 and 44.")
+            print("Invalid choice! Select between 0 and 45.")
 
 
 # ============================================================
