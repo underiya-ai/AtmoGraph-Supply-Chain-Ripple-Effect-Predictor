@@ -42,3 +42,10 @@ Choose option 45 from the menu, enter a disrupted company, and provide a severit
 from 1 to 100. AtmoGraph estimates downstream risk using network distance and
 the affected company's configured failure probability. This is a transparent
 heuristic for exploration, not a trained machine-learning forecast.
+
+Dashboard data export
+
+Choose option 46 to export the current dashboard summary, company details,
+network connections, and simulation history to `atmograph_dashboard.json`.
+The export includes company counts, network health, and the same ripple-risk
+estimates used by the dashboard interface.

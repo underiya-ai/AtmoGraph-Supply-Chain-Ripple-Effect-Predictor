@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtmoGraph Supply Chain Ripple Effect Predictor</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --text: #e5eefb;
+      --muted: #a5b4cf;
+      --line: rgba(148, 163, 184, 0.25);
+      --shadow: 0 18px 30px rgba(15, 23, 42, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #020817, #0f172a 45%, #111827);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 50px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 0.04em;
+    }
+
+    .tag {
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 0.8rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      font-weight: 700;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(31, 41, 55, 0.9);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .panel-body {
+      padding: 20px;
+    }
+
+    .network-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .company-card {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 12px;
+    }
+
+    .company-name {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
+    .connections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      min-height: 32px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 5px 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: var(--accent);
+      font-size: 0.72rem;
+      white-space: nowrap;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .controls {
+      display: grid;
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    select, input[type="range"], button {
+      width: 100%;
+    }
+
+    select, input[type="range"] {
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #0f172a;
+      color: var(--text);
+      padding: 10px 12px;
+    }
+
+    input[type="range"] {
+      padding: 0;
+      accent-color: var(--accent);
+    }
+
+    .severity-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .severity-value {
+      min-width: 56px;
+      text-align: right;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--accent), #2563eb);
+      color: #f8fafc;
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+    }
+
+    .results {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .result-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .result-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(30, 41, 59, 0.7);
+    }
+
+    .risk-low { border-color: rgba(34, 197, 94, 0.35); }
+    .risk-medium { border-color: rgba(245, 158, 11, 0.35); }
+    .risk-high { border-color: rgba(239, 68, 68, 0.35); }
+
+    .risk-badge {
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+
+    .risk-low .risk-badge { background: rgba(34, 197, 94, 0.2); color: #86efac; }
+    .risk-medium .risk-badge { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .risk-high .risk-badge { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+
+    .summary {
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>ATMOGRAPH</h1>
+      <div class="tag">Supply Chain Ripple Effect Predictor</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-label">Total Companies</div>
+        <div class="stat-value" id="totalCompanies">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Active</div>
+        <div class="stat-value" id="activeCompanies">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Failed</div>
+        <div class="stat-value" id="failedCompanies">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Network Health</div>
+        <div class="stat-value" id="networkHealth">0%</div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <section class="panel">
+        <div class="panel-header">Supply Chain Network</div>
+        <div class="panel-body">
+          <div class="network-box" id="networkBox"></div>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <div class="panel-header">Ripple Prediction</div>
+        <div class="panel-body controls">
+          <div>
+            <label for="disruptedCompany">Disrupted Company</label>
+            <select id="disruptedCompany"></select>
+          </div>
+
+          <div>
+            <label for="severityRange">Disruption Severity</label>
+            <div class="severity-wrap">
+              <input id="severityRange" type="range" min="1" max="100" value="60" />
+              <span id="severityValue" class="severity-value">60%</span>
+            </div>
+          </div>
+
+          <button id="predictButton">Predict Ripple Effect</button>
+
+          <div class="results">
+            <div class="result-title">Estimated Impact</div>
+            <div class="result-list" id="resultList"></div>
+          </div>
+
+          <div class="summary" id="summaryText"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const graph = {
+      Supplier_A: ["Manufacturer"],
+      Supplier_B: ["Manufacturer"],
+      Supplier_C: ["Manufacturer_2"],
+      Manufacturer: ["Distributor"],
+      Manufacturer_2: ["Distributor"],
+      Distributor: ["Retailer"],
+      Retailer: ["Customer"],
+      Customer: []
+    };
+
+    const companyDetails = {};
+
+    Object.keys(graph).forEach((company) => {
+      companyDetails[company] = {
+        status: "Active",
+        inventory: 100,
+        capacity: 100,
+        demand: 50,
+        failure_probability: 10
+      };
+    });
+
+    const networkBox = document.getElementById("networkBox");
+    const resultList = document.getElementById("resultList");
+    const summaryText = document.getElementById("summaryText");
+    const disruptedCompany = document.getElementById("disruptedCompany");
+    const severityRange = document.getElementById("severityRange");
+    const severityValue = document.getElementById("severityValue");
+    const totalCompaniesEl = document.getElementById("totalCompanies");
+    const activeCompaniesEl = document.getElementById("activeCompanies");
+    const failedCompaniesEl = document.getElementById("failedCompanies");
+    const networkHealthEl = document.getElementById("networkHealth");
+
+    function findAffected(startNodes) {
+      const visited = new Set(startNodes);
+      const queue = [...startNodes];
+      const levels = {};
+
+      while (queue.length > 0) {
+        const current = queue.shift();
+
+        for (const company of (graph[current] || [])) {
+          if (!visited.has(company)) {
+            visited.add(company);
+            queue.push(company);
+            levels[company] = (levels[current] ?? 0) + 1;
+          }
+        }
+      }
+
+      return levels;
+    }
+
+    function updateStatCards() {
+      const total = Object.keys(graph).length;
+      const failed = 0;
+      const active = total - failed;
+
+      totalCompaniesEl.textContent = total;
+      activeCompaniesEl.textContent = active;
+      failedCompaniesEl.textContent = failed;
+      networkHealthEl.textContent = total > 0 ? `${Math.round((active / total) * 100)}%` : "0%";
+    }
+
+    function renderNetwork() {
+      networkBox.innerHTML = "";
+
+      Object.entries(graph).forEach(([company, connections]) => {
+        const card = document.createElement("div");
+        card.className = "company-card";
+
+        const title = document.createElement("div");
+        title.className = "company-name";
+        title.textContent = company;
+
+        const pills = document.createElement("div");
+        pills.className = "connections";
+
+        if (connections.length === 0) {
+          const empty = document.createElement("span");
+          empty.className = "empty";
+          empty.textContent = "No downstream links";
+          pills.appendChild(empty);
+        } else {
+          connections.forEach((connection) => {
+            const pill = document.createElement("span");
+            pill.className = "pill";
+            pill.textContent = connection;
+            pills.appendChild(pill);
+          });
+        }
+
+        card.appendChild(title);
+        card.appendChild(pills);
+        networkBox.appendChild(card);
+      });
+    }
+
+    function renderCompanyOptions() {
+      disruptedCompany.innerHTML = "";
+      Object.keys(graph).forEach((company) => {
+        const option = document.createElement("option");
+        option.value = company;
+        option.textContent = company;
+        disruptedCompany.appendChild(option);
+      });
+    }
+
+    function setSeverityLabel(value) {
+      severityValue.textContent = `${value}%`;
+    }
+
+    function getRiskLabel(score) {
+      if (score >= 60) return "HIGH";
+      if (score >= 30) return "MEDIUM";
+      return "LOW";
+    }
+
+    function predictRippleEffect() {
+      const origin = disruptedCompany.value;
+      const severity = Number(severityRange.value);
+      const affected = findAffected([origin]);
+
+      resultList.innerHTML = "";
+
+      if (Object.keys(affected).length === 0) {
+        summaryText.textContent = "No downstream companies are connected to this disruption source.";
+        return;
+      }
+
+      const items = [];
+
+      Object.entries(affected).forEach(([company, distance]) => {
+        const vulnerability = companyDetails[company].failure_probability || 10;
+        let score = severity * (0.65 ** (distance - 1));
+        score *= (1 + vulnerability / 100) / 2;
+        const risk = getRiskLabel(score);
+
+        items.push({ company, distance, score, risk });
+      });
+
+      items.sort((a, b) => a.distance - b.distance || b.score - a.score);
+
+      items.forEach((item) => {
+        const resultItem = document.createElement("div");
+        resultItem.className = `result-item risk-${item.risk.toLowerCase()}`;
+
+        const left = document.createElement("div");
+        left.textContent = `${item.company} | Distance ${item.distance}`;
+
+        const right = document.createElement("div");
+        right.innerHTML = `${Math.round(item.score * 10) / 10}% <span class="risk-badge">${item.risk}</span>`;
+
+        resultItem.appendChild(left);
+        resultItem.appendChild(right);
+        resultList.appendChild(resultItem);
+      });
+
+      const highestImpact = items.reduce((max, item) => item.score > max.score ? item : max, items[0]);
+      summaryText.textContent = `Source: ${origin} | Severity: ${severity}% | Highest ripple risk: ${highestImpact.company} at ${Math.round(highestImpact.score * 10) / 10}%.`;
+    }
+
+    severityRange.addEventListener("input", (event) => setSeverityLabel(event.target.value));
+    document.getElementById("predictButton").addEventListener("click", predictRippleEffect);
+
+    setSeverityLabel(severityRange.value);
+    renderCompanyOptions();
+    renderNetwork();
+    updateStatCards();
+    predictRippleEffect();
+  </script>
+</body>
+</html>
