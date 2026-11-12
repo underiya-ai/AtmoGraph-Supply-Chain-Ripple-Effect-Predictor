@@ -1,0 +1,10 @@
+node_id,name,node_type,country
+S1,Supplier A,supplier,India
+S2,Supplier B,supplier,China
+F1,Factory A,factory,India
+F2,Factory B,factory,Vietnam
+W1,Warehouse A,warehouse,India
+W2,Warehouse B,warehouse,Germany
+R1,Retailer A,retailer,India
+R2,Retailer B,retailer,India
+R3,Retailer C,retailer,Germany

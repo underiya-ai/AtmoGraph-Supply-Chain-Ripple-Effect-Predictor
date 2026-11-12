@@ -1,0 +1,10 @@
+source,target
+S1,F1
+S2,F1
+S2,F2
+F1,W1
+F1,W2
+F2,W2
+W1,R1
+W1,R2
+W2,R3
