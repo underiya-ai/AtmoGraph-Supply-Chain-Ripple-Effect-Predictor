@@ -1301,11 +1301,57 @@ class AtmoGraph:
 # ============================================================
 
 def main():
-
     system = AtmoGraph()
+    actions = {
+        1: system.display_network,
+        2: system.network_statistics,
+        3: system.add_company,
+        4: system.remove_company,
+        5: system.add_connection,
+        6: system.remove_connection,
+        7: lambda: system.bfs(input("Enter starting company: ").strip()),
+        8: lambda: system.dfs(input("Enter starting company: ").strip()),
+        9: system.simulate_failure,
+        10: system.multiple_failure,
+        11: system.risk_analysis,
+        12: system.risk_percentage,
+        13: system.impact_score,
+        14: system.critical_companies,
+        15: system.alternative_suppliers,
+        16: system.bottleneck_detection,
+        17: system.dependency_analysis,
+        18: system.supplier_ranking,
+        19: system.recover_company,
+        20: system.search_company,
+        21: system.company_details,
+        22: system.show_history,
+        23: system.dashboard,
+        24: system.visualize_network,
+        25: system.shortest_path,
+        26: system.path_analysis,
+        27: system.disconnected_companies,
+        28: system.detect_cycles,
+        29: system.validate_network,
+        30: system.update_probability,
+        31: system.inventory_tracking,
+        32: system.inventory_alerts,
+        33: system.update_inventory,
+        34: system.production_capacity,
+        35: system.update_capacity,
+        36: system.demand_tracking,
+        37: system.shortage_estimation,
+        38: system.recovery_recommendations,
+        39: system.risk_mitigation,
+        40: system.company_status,
+        41: system.export_csv,
+        42: system.current_timestamp,
+        43: system.reset_network,
+        44: system.summary_report,
+        45: system.predict_ripple_effect,
+        46: system.export_dashboard_json,
+    }
 
     while True:
-
         print("""
 ====================================================
        ATMOGRAPH - SUPPLY CHAIN RIPPLE PREDICTOR
@@ -1364,7 +1410,6 @@ def main():
 
         try:
             choice = int(input("Enter your choice: "))
-
         except ValueError:
             print("Please enter a valid number.")
             continue
@@ -1373,146 +1418,11 @@ def main():
             print("Thank you for using AtmoGraph!")
             break
 
-        elif choice == 1:
-            system.display_network()
-
-        elif choice == 2:
-            system.network_statistics()
-
-        elif choice == 3:
-            system.add_company()
-
-        elif choice == 4:
-            system.remove_company()
-
-        elif choice == 5:
-            system.add_connection()
-
-        elif choice == 6:
-            system.remove_connection()
-
-        elif choice == 7:
-            system.bfs(input("Enter starting company: ").strip())
-
-        elif choice == 8:
-            system.dfs(input("Enter starting company: ").strip())
-
-        elif choice == 9:
-            system.simulate_failure()
-
-        elif choice == 10:
-            system.multiple_failure()
-
-        elif choice == 11:
-            system.risk_analysis()
-
-        elif choice == 12:
-            system.risk_percentage()
-
-        elif choice == 13:
-            system.impact_score()
-
-        elif choice == 14:
-            system.critical_companies()
-
-        elif choice == 15:
-            system.alternative_suppliers()
-
-        elif choice == 16:
-            system.bottleneck_detection()
-
-        elif choice == 17:
-            system.dependency_analysis()
-
-        elif choice == 18:
-            system.supplier_ranking()
-
-        elif choice == 19:
-            system.recover_company()
-
-        elif choice == 20:
-            system.search_company()
-
-        elif choice == 21:
-            system.company_details()
-
-        elif choice == 22:
-            system.show_history()
-
-        elif choice == 23:
-            system.dashboard()
-
-        elif choice == 24:
-            system.visualize_network()
-
-        elif choice == 25:
-            system.shortest_path()
-
-        elif choice == 26:
-            system.path_analysis()
-
-        elif choice == 27:
-            system.disconnected_companies()
-
-        elif choice == 28:
-            system.detect_cycles()
-
-        elif choice == 29:
-            system.validate_network()
-
-        elif choice == 30:
-            system.update_probability()
-
-        elif choice == 31:
-            system.inventory_tracking()
-
-        elif choice == 32:
-            system.inventory_alerts()
-
-        elif choice == 33:
-            system.update_inventory()
-
-        elif choice == 34:
-            system.production_capacity()
-
-        elif choice == 35:
-            system.update_capacity()
-
-        elif choice == 36:
-            system.demand_tracking()
-
-        elif choice == 37:
-            system.shortage_estimation()
-
-        elif choice == 38:
-            system.recovery_recommendations()
-
-        elif choice == 39:
-            system.risk_mitigation()
-
-        elif choice == 40:
-            system.company_status()
-
-        elif choice == 41:
-            system.export_csv()
-
-        elif choice == 42:
-            system.current_timestamp()
-
-        elif choice == 43:
-            system.reset_network()
-
-        elif choice == 44:
-            system.summary_report()
-
-        elif choice == 45:
-            system.predict_ripple_effect()
-
-        elif choice == 46:
-            system.export_dashboard_json()
-
-        else:
+        action = actions.get(choice)
+        if action is None:
             print("Invalid choice! Select between 0 and 46.")
+            continue
+        action()
 
 
 # ============================================================
