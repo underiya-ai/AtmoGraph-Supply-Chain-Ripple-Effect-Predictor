@@ -1,0 +1,151 @@
+node_id,name,node_type,industry,region,tier
+SUP-I1-R1-T1,"Aerospace Supplier (Africa/Middle East, Tier 1)",supplier,Aerospace,Africa/Middle East,1
+SUP-I1-R1-T2,"Aerospace Supplier (Africa/Middle East, Tier 2)",supplier,Aerospace,Africa/Middle East,2
+SUP-I1-R1-T3,"Aerospace Supplier (Africa/Middle East, Tier 3)",supplier,Aerospace,Africa/Middle East,3
+SUP-I1-R1-T4,"Aerospace Supplier (Africa/Middle East, Tier 4)",supplier,Aerospace,Africa/Middle East,4
+SUP-I1-R2-T1,"Aerospace Supplier (Asia-Pacific, Tier 1)",supplier,Aerospace,Asia-Pacific,1
+SUP-I1-R2-T2,"Aerospace Supplier (Asia-Pacific, Tier 2)",supplier,Aerospace,Asia-Pacific,2
+SUP-I1-R2-T3,"Aerospace Supplier (Asia-Pacific, Tier 3)",supplier,Aerospace,Asia-Pacific,3
+SUP-I1-R2-T4,"Aerospace Supplier (Asia-Pacific, Tier 4)",supplier,Aerospace,Asia-Pacific,4
+SUP-I1-R3-T1,"Aerospace Supplier (Europe, Tier 1)",supplier,Aerospace,Europe,1
+SUP-I1-R3-T2,"Aerospace Supplier (Europe, Tier 2)",supplier,Aerospace,Europe,2
+SUP-I1-R3-T3,"Aerospace Supplier (Europe, Tier 3)",supplier,Aerospace,Europe,3
+SUP-I1-R3-T4,"Aerospace Supplier (Europe, Tier 4)",supplier,Aerospace,Europe,4
+SUP-I1-R4-T1,"Aerospace Supplier (North America, Tier 1)",supplier,Aerospace,North America,1
+SUP-I1-R4-T2,"Aerospace Supplier (North America, Tier 2)",supplier,Aerospace,North America,2
+SUP-I1-R4-T3,"Aerospace Supplier (North America, Tier 3)",supplier,Aerospace,North America,3
+SUP-I1-R4-T4,"Aerospace Supplier (North America, Tier 4)",supplier,Aerospace,North America,4
+SUP-I1-R5-T1,"Aerospace Supplier (South America, Tier 1)",supplier,Aerospace,South America,1
+SUP-I1-R5-T2,"Aerospace Supplier (South America, Tier 2)",supplier,Aerospace,South America,2
+SUP-I1-R5-T3,"Aerospace Supplier (South America, Tier 3)",supplier,Aerospace,South America,3
+SUP-I1-R5-T4,"Aerospace Supplier (South America, Tier 4)",supplier,Aerospace,South America,4
+FAC-I1-1,Aerospace Factory 1,factory,Aerospace,Africa/Middle East,
+FAC-I1-2,Aerospace Factory 2,factory,Aerospace,Asia-Pacific,
+WH-I1-1,Aerospace Warehouse 1,warehouse,Aerospace,Africa/Middle East,
+WH-I1-2,Aerospace Warehouse 2,warehouse,Aerospace,Asia-Pacific,
+WH-I1-3,Aerospace Warehouse 3,warehouse,Aerospace,Europe,
+RET-I1-1,Aerospace Retailer 1,retailer,Aerospace,Africa/Middle East,
+RET-I1-2,Aerospace Retailer 2,retailer,Aerospace,Asia-Pacific,
+RET-I1-3,Aerospace Retailer 3,retailer,Aerospace,Europe,
+RET-I1-4,Aerospace Retailer 4,retailer,Aerospace,North America,
+RET-I1-5,Aerospace Retailer 5,retailer,Aerospace,South America,
+SUP-I2-R1-T1,"Automotive Supplier (Africa/Middle East, Tier 1)",supplier,Automotive,Africa/Middle East,1
+SUP-I2-R1-T2,"Automotive Supplier (Africa/Middle East, Tier 2)",supplier,Automotive,Africa/Middle East,2
+SUP-I2-R1-T3,"Automotive Supplier (Africa/Middle East, Tier 3)",supplier,Automotive,Africa/Middle East,3
+SUP-I2-R1-T4,"Automotive Supplier (Africa/Middle East, Tier 4)",supplier,Automotive,Africa/Middle East,4
+SUP-I2-R2-T1,"Automotive Supplier (Asia-Pacific, Tier 1)",supplier,Automotive,Asia-Pacific,1
+SUP-I2-R2-T2,"Automotive Supplier (Asia-Pacific, Tier 2)",supplier,Automotive,Asia-Pacific,2
+SUP-I2-R2-T3,"Automotive Supplier (Asia-Pacific, Tier 3)",supplier,Automotive,Asia-Pacific,3
+SUP-I2-R2-T4,"Automotive Supplier (Asia-Pacific, Tier 4)",supplier,Automotive,Asia-Pacific,4
+SUP-I2-R3-T1,"Automotive Supplier (Europe, Tier 1)",supplier,Automotive,Europe,1
+SUP-I2-R3-T2,"Automotive Supplier (Europe, Tier 2)",supplier,Automotive,Europe,2
+SUP-I2-R3-T3,"Automotive Supplier (Europe, Tier 3)",supplier,Automotive,Europe,3
+SUP-I2-R3-T4,"Automotive Supplier (Europe, Tier 4)",supplier,Automotive,Europe,4
+SUP-I2-R4-T1,"Automotive Supplier (North America, Tier 1)",supplier,Automotive,North America,1
+SUP-I2-R4-T2,"Automotive Supplier (North America, Tier 2)",supplier,Automotive,North America,2
+SUP-I2-R4-T3,"Automotive Supplier (North America, Tier 3)",supplier,Automotive,North America,3
+SUP-I2-R4-T4,"Automotive Supplier (North America, Tier 4)",supplier,Automotive,North America,4
+SUP-I2-R5-T1,"Automotive Supplier (South America, Tier 1)",supplier,Automotive,South America,1
+SUP-I2-R5-T2,"Automotive Supplier (South America, Tier 2)",supplier,Automotive,South America,2
+SUP-I2-R5-T3,"Automotive Supplier (South America, Tier 3)",supplier,Automotive,South America,3
+SUP-I2-R5-T4,"Automotive Supplier (South America, Tier 4)",supplier,Automotive,South America,4
+FAC-I2-1,Automotive Factory 1,factory,Automotive,Africa/Middle East,
+FAC-I2-2,Automotive Factory 2,factory,Automotive,Asia-Pacific,
+WH-I2-1,Automotive Warehouse 1,warehouse,Automotive,Africa/Middle East,
+WH-I2-2,Automotive Warehouse 2,warehouse,Automotive,Asia-Pacific,
+WH-I2-3,Automotive Warehouse 3,warehouse,Automotive,Europe,
+RET-I2-1,Automotive Retailer 1,retailer,Automotive,Africa/Middle East,
+RET-I2-2,Automotive Retailer 2,retailer,Automotive,Asia-Pacific,
+RET-I2-3,Automotive Retailer 3,retailer,Automotive,Europe,
+RET-I2-4,Automotive Retailer 4,retailer,Automotive,North America,
+RET-I2-5,Automotive Retailer 5,retailer,Automotive,South America,
+SUP-I3-R1-T1,"Consumer Goods Supplier (Africa/Middle East, Tier 1)",supplier,Consumer Goods,Africa/Middle East,1
+SUP-I3-R1-T2,"Consumer Goods Supplier (Africa/Middle East, Tier 2)",supplier,Consumer Goods,Africa/Middle East,2
+SUP-I3-R1-T3,"Consumer Goods Supplier (Africa/Middle East, Tier 3)",supplier,Consumer Goods,Africa/Middle East,3
+SUP-I3-R1-T4,"Consumer Goods Supplier (Africa/Middle East, Tier 4)",supplier,Consumer Goods,Africa/Middle East,4
+SUP-I3-R2-T1,"Consumer Goods Supplier (Asia-Pacific, Tier 1)",supplier,Consumer Goods,Asia-Pacific,1
+SUP-I3-R2-T2,"Consumer Goods Supplier (Asia-Pacific, Tier 2)",supplier,Consumer Goods,Asia-Pacific,2
+SUP-I3-R2-T3,"Consumer Goods Supplier (Asia-Pacific, Tier 3)",supplier,Consumer Goods,Asia-Pacific,3
+SUP-I3-R2-T4,"Consumer Goods Supplier (Asia-Pacific, Tier 4)",supplier,Consumer Goods,Asia-Pacific,4
+SUP-I3-R3-T1,"Consumer Goods Supplier (Europe, Tier 1)",supplier,Consumer Goods,Europe,1
+SUP-I3-R3-T2,"Consumer Goods Supplier (Europe, Tier 2)",supplier,Consumer Goods,Europe,2
+SUP-I3-R3-T3,"Consumer Goods Supplier (Europe, Tier 3)",supplier,Consumer Goods,Europe,3
+SUP-I3-R3-T4,"Consumer Goods Supplier (Europe, Tier 4)",supplier,Consumer Goods,Europe,4
+SUP-I3-R4-T1,"Consumer Goods Supplier (North America, Tier 1)",supplier,Consumer Goods,North America,1
+SUP-I3-R4-T2,"Consumer Goods Supplier (North America, Tier 2)",supplier,Consumer Goods,North America,2
+SUP-I3-R4-T3,"Consumer Goods Supplier (North America, Tier 3)",supplier,Consumer Goods,North America,3
+SUP-I3-R4-T4,"Consumer Goods Supplier (North America, Tier 4)",supplier,Consumer Goods,North America,4
+SUP-I3-R5-T1,"Consumer Goods Supplier (South America, Tier 1)",supplier,Consumer Goods,South America,1
+SUP-I3-R5-T2,"Consumer Goods Supplier (South America, Tier 2)",supplier,Consumer Goods,South America,2
+SUP-I3-R5-T3,"Consumer Goods Supplier (South America, Tier 3)",supplier,Consumer Goods,South America,3
+SUP-I3-R5-T4,"Consumer Goods Supplier (South America, Tier 4)",supplier,Consumer Goods,South America,4
+FAC-I3-1,Consumer Goods Factory 1,factory,Consumer Goods,Africa/Middle East,
+FAC-I3-2,Consumer Goods Factory 2,factory,Consumer Goods,Asia-Pacific,
+WH-I3-1,Consumer Goods Warehouse 1,warehouse,Consumer Goods,Africa/Middle East,
+WH-I3-2,Consumer Goods Warehouse 2,warehouse,Consumer Goods,Asia-Pacific,
+WH-I3-3,Consumer Goods Warehouse 3,warehouse,Consumer Goods,Europe,
+RET-I3-1,Consumer Goods Retailer 1,retailer,Consumer Goods,Africa/Middle East,
+RET-I3-2,Consumer Goods Retailer 2,retailer,Consumer Goods,Asia-Pacific,
+RET-I3-3,Consumer Goods Retailer 3,retailer,Consumer Goods,Europe,
+RET-I3-4,Consumer Goods Retailer 4,retailer,Consumer Goods,North America,
+RET-I3-5,Consumer Goods Retailer 5,retailer,Consumer Goods,South America,
+SUP-I4-R1-T1,"Electronics Supplier (Africa/Middle East, Tier 1)",supplier,Electronics,Africa/Middle East,1
+SUP-I4-R1-T2,"Electronics Supplier (Africa/Middle East, Tier 2)",supplier,Electronics,Africa/Middle East,2
+SUP-I4-R1-T3,"Electronics Supplier (Africa/Middle East, Tier 3)",supplier,Electronics,Africa/Middle East,3
+SUP-I4-R1-T4,"Electronics Supplier (Africa/Middle East, Tier 4)",supplier,Electronics,Africa/Middle East,4
+SUP-I4-R2-T1,"Electronics Supplier (Asia-Pacific, Tier 1)",supplier,Electronics,Asia-Pacific,1
+SUP-I4-R2-T2,"Electronics Supplier (Asia-Pacific, Tier 2)",supplier,Electronics,Asia-Pacific,2
+SUP-I4-R2-T3,"Electronics Supplier (Asia-Pacific, Tier 3)",supplier,Electronics,Asia-Pacific,3
+SUP-I4-R2-T4,"Electronics Supplier (Asia-Pacific, Tier 4)",supplier,Electronics,Asia-Pacific,4
+SUP-I4-R3-T1,"Electronics Supplier (Europe, Tier 1)",supplier,Electronics,Europe,1
+SUP-I4-R3-T2,"Electronics Supplier (Europe, Tier 2)",supplier,Electronics,Europe,2
+SUP-I4-R3-T3,"Electronics Supplier (Europe, Tier 3)",supplier,Electronics,Europe,3
+SUP-I4-R3-T4,"Electronics Supplier (Europe, Tier 4)",supplier,Electronics,Europe,4
+SUP-I4-R4-T1,"Electronics Supplier (North America, Tier 1)",supplier,Electronics,North America,1
+SUP-I4-R4-T2,"Electronics Supplier (North America, Tier 2)",supplier,Electronics,North America,2
+SUP-I4-R4-T3,"Electronics Supplier (North America, Tier 3)",supplier,Electronics,North America,3
+SUP-I4-R4-T4,"Electronics Supplier (North America, Tier 4)",supplier,Electronics,North America,4
+SUP-I4-R5-T1,"Electronics Supplier (South America, Tier 1)",supplier,Electronics,South America,1
+SUP-I4-R5-T2,"Electronics Supplier (South America, Tier 2)",supplier,Electronics,South America,2
+SUP-I4-R5-T3,"Electronics Supplier (South America, Tier 3)",supplier,Electronics,South America,3
+SUP-I4-R5-T4,"Electronics Supplier (South America, Tier 4)",supplier,Electronics,South America,4
+FAC-I4-1,Electronics Factory 1,factory,Electronics,Africa/Middle East,
+FAC-I4-2,Electronics Factory 2,factory,Electronics,Asia-Pacific,
+WH-I4-1,Electronics Warehouse 1,warehouse,Electronics,Africa/Middle East,
+WH-I4-2,Electronics Warehouse 2,warehouse,Electronics,Asia-Pacific,
+WH-I4-3,Electronics Warehouse 3,warehouse,Electronics,Europe,
+RET-I4-1,Electronics Retailer 1,retailer,Electronics,Africa/Middle East,
+RET-I4-2,Electronics Retailer 2,retailer,Electronics,Asia-Pacific,
+RET-I4-3,Electronics Retailer 3,retailer,Electronics,Europe,
+RET-I4-4,Electronics Retailer 4,retailer,Electronics,North America,
+RET-I4-5,Electronics Retailer 5,retailer,Electronics,South America,
+SUP-I5-R1-T1,"Pharmaceuticals Supplier (Africa/Middle East, Tier 1)",supplier,Pharmaceuticals,Africa/Middle East,1
+SUP-I5-R1-T2,"Pharmaceuticals Supplier (Africa/Middle East, Tier 2)",supplier,Pharmaceuticals,Africa/Middle East,2
+SUP-I5-R1-T3,"Pharmaceuticals Supplier (Africa/Middle East, Tier 3)",supplier,Pharmaceuticals,Africa/Middle East,3
+SUP-I5-R1-T4,"Pharmaceuticals Supplier (Africa/Middle East, Tier 4)",supplier,Pharmaceuticals,Africa/Middle East,4
+SUP-I5-R2-T1,"Pharmaceuticals Supplier (Asia-Pacific, Tier 1)",supplier,Pharmaceuticals,Asia-Pacific,1
+SUP-I5-R2-T2,"Pharmaceuticals Supplier (Asia-Pacific, Tier 2)",supplier,Pharmaceuticals,Asia-Pacific,2
+SUP-I5-R2-T3,"Pharmaceuticals Supplier (Asia-Pacific, Tier 3)",supplier,Pharmaceuticals,Asia-Pacific,3
+SUP-I5-R2-T4,"Pharmaceuticals Supplier (Asia-Pacific, Tier 4)",supplier,Pharmaceuticals,Asia-Pacific,4
+SUP-I5-R3-T1,"Pharmaceuticals Supplier (Europe, Tier 1)",supplier,Pharmaceuticals,Europe,1
+SUP-I5-R3-T2,"Pharmaceuticals Supplier (Europe, Tier 2)",supplier,Pharmaceuticals,Europe,2
+SUP-I5-R3-T3,"Pharmaceuticals Supplier (Europe, Tier 3)",supplier,Pharmaceuticals,Europe,3
+SUP-I5-R3-T4,"Pharmaceuticals Supplier (Europe, Tier 4)",supplier,Pharmaceuticals,Europe,4
+SUP-I5-R4-T1,"Pharmaceuticals Supplier (North America, Tier 1)",supplier,Pharmaceuticals,North America,1
+SUP-I5-R4-T2,"Pharmaceuticals Supplier (North America, Tier 2)",supplier,Pharmaceuticals,North America,2
+SUP-I5-R4-T3,"Pharmaceuticals Supplier (North America, Tier 3)",supplier,Pharmaceuticals,North America,3
+SUP-I5-R4-T4,"Pharmaceuticals Supplier (North America, Tier 4)",supplier,Pharmaceuticals,North America,4
+SUP-I5-R5-T1,"Pharmaceuticals Supplier (South America, Tier 1)",supplier,Pharmaceuticals,South America,1
+SUP-I5-R5-T2,"Pharmaceuticals Supplier (South America, Tier 2)",supplier,Pharmaceuticals,South America,2
+SUP-I5-R5-T3,"Pharmaceuticals Supplier (South America, Tier 3)",supplier,Pharmaceuticals,South America,3
+SUP-I5-R5-T4,"Pharmaceuticals Supplier (South America, Tier 4)",supplier,Pharmaceuticals,South America,4
+FAC-I5-1,Pharmaceuticals Factory 1,factory,Pharmaceuticals,Africa/Middle East,
+FAC-I5-2,Pharmaceuticals Factory 2,factory,Pharmaceuticals,Asia-Pacific,
+WH-I5-1,Pharmaceuticals Warehouse 1,warehouse,Pharmaceuticals,Africa/Middle East,
+WH-I5-2,Pharmaceuticals Warehouse 2,warehouse,Pharmaceuticals,Asia-Pacific,
+WH-I5-3,Pharmaceuticals Warehouse 3,warehouse,Pharmaceuticals,Europe,
+RET-I5-1,Pharmaceuticals Retailer 1,retailer,Pharmaceuticals,Africa/Middle East,
+RET-I5-2,Pharmaceuticals Retailer 2,retailer,Pharmaceuticals,Asia-Pacific,
+RET-I5-3,Pharmaceuticals Retailer 3,retailer,Pharmaceuticals,Europe,
+RET-I5-4,Pharmaceuticals Retailer 4,retailer,Pharmaceuticals,North America,
+RET-I5-5,Pharmaceuticals Retailer 5,retailer,Pharmaceuticals,South America,
