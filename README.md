@@ -49,3 +49,14 @@ Choose option 46 to export the current dashboard summary, company details,
 network connections, and simulation history to `atmograph_dashboard.json`.
 The export includes company counts, network health, and the same ripple-risk
 estimates used by the dashboard interface.
+
+Browser dashboard
+
+Open `index.html` in a browser to explore the interactive dashboard. Search or
+filter companies by status, select a company as the disruption source, and
+adjust severity to view downstream risk estimates. Use **Mark source failed**
+to record a simulated failure, then recover individual companies or reset all
+statuses. The dashboard keeps up to 50 scenarios and failed-company statuses in
+browser local storage. Use **Export JSON** or **Export CSV** to download the
+current dashboard data. These browser scenarios are local to the browser and
+are separate from the Python CLI's simulation history.

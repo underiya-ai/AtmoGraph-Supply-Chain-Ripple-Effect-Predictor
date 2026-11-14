@@ -271,10 +271,132 @@
       font-size: 0.96rem;
     }
 
+    .header-actions, .toolbar, .button-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .header-actions { justify-content: flex-end; }
+    .toolbar { margin-bottom: 16px; }
+    .toolbar > * { flex: 1 1 180px; }
+
+    .button-secondary {
+      width: auto;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+    }
+
+    .button-danger {
+      width: auto;
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      color: #fecaca;
+    }
+
+    .button-row button { flex: 1 1 150px; }
+
+    .company-card {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .company-card.is-failed {
+      border-color: rgba(239, 68, 68, 0.65);
+      background: rgba(127, 29, 29, 0.2);
+    }
+
+    .company-meta, .history-meta {
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .company-status {
+      display: inline-flex;
+      width: fit-content;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      color: #86efac;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .is-failed .company-status {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+    }
+
+    .company-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .company-actions button {
+      padding: 7px 9px;
+      font-size: 0.76rem;
+    }
+
+    .inline-control {
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #0f172a;
+      color: var(--text);
+      padding: 10px 12px;
+      min-width: 0;
+    }
+
+    .results, .history-panel { min-width: 0; }
+    .result-item { align-items: flex-start; }
+    .result-detail { color: var(--muted); font-size: 0.76rem; margin-top: 3px; }
+    .result-score { text-align: right; white-space: nowrap; font-weight: 700; }
+    .history-list { display: grid; gap: 8px; }
+    .history-item {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(30, 41, 59, 0.55);
+    }
+
+    .history-heading { display: flex; justify-content: space-between; gap: 10px; }
+    .empty-state, .notice { color: var(--muted); line-height: 1.5; }
+    .notice { min-height: 1.4em; font-size: 0.85rem; }
+    .network-count { color: var(--muted); margin: 0 0 12px; font-size: 0.84rem; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    button:focus-visible, select:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
     @media (max-width: 860px) {
       .layout {
         grid-template-columns: 1fr;
       }
+    }
+
+    @media (max-width: 520px) {
+      .container { padding: 20px 12px 32px; }
+      .panel-body { padding: 14px; }
+      .header-actions { justify-content: stretch; width: 100%; }
+      .header-actions button { flex: 1 1 130px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
     }
   </style>
 </head>
@@ -282,7 +404,11 @@
   <div class="container">
     <div class="header">
       <h1>ATMOGRAPH</h1>
-      <div class="tag">Supply Chain Ripple Effect Predictor</div>
+      <div class="header-actions">
+        <div class="tag">Supply Chain Ripple Effect Predictor</div>
+        <button class="button-secondary" id="exportJsonButton" type="button">Export JSON</button>
+        <button class="button-secondary" id="exportCsvButton" type="button">Export CSV</button>
+      </div>
     </div>
 
     <div class="stats">
@@ -302,12 +428,28 @@
         <div class="stat-label">Network Health</div>
         <div class="stat-value" id="networkHealth">0%</div>
       </div>
+      <div class="stat-card">
+        <div class="stat-label">Scenarios Recorded</div>
+        <div class="stat-value" id="simulationCount">0</div>
+      </div>
     </div>
 
     <div class="layout">
       <section class="panel">
         <div class="panel-header">Supply Chain Network</div>
         <div class="panel-body">
+          <div class="toolbar">
+            <label class="sr-only" for="companySearch">Search companies</label>
+            <input class="inline-control" id="companySearch" type="search" placeholder="Search companies..." />
+            <label class="sr-only" for="statusFilter">Filter by status</label>
+            <select class="inline-control" id="statusFilter">
+              <option value="all">All companies</option>
+              <option value="active">Active only</option>
+              <option value="failed">Failed only</option>
+            </select>
+            <button class="button-secondary" id="recoverAllButton" type="button">Recover all</button>
+          </div>
+          <p class="network-count" id="networkCount" aria-live="polite"></p>
           <div class="network-box" id="networkBox"></div>
         </div>
       </section>
@@ -317,25 +459,37 @@
         <div class="panel-body controls">
           <div>
             <label for="disruptedCompany">Disrupted Company</label>
-            <select id="disruptedCompany"></select>
+            <select id="disruptedCompany" aria-describedby="scenarioNotice"></select>
           </div>
 
           <div>
             <label for="severityRange">Disruption Severity</label>
             <div class="severity-wrap">
-              <input id="severityRange" type="range" min="1" max="100" value="60" />
-              <span id="severityValue" class="severity-value">60%</span>
+              <input id="severityRange" type="range" min="1" max="100" value="60" aria-label="Disruption severity percentage" />
+              <output id="severityValue" class="severity-value" for="severityRange">60%</output>
             </div>
           </div>
 
-          <button id="predictButton">Predict Ripple Effect</button>
+          <div class="button-row">
+            <button id="predictButton" type="button">Predict ripple effect</button>
+            <button class="button-danger" id="simulateButton" type="button">Mark source failed</button>
+            <button class="button-secondary" id="resetButton" type="button">Reset statuses</button>
+          </div>
+          <p class="notice" id="scenarioNotice" role="status" aria-live="polite"></p>
 
-          <div class="results">
-            <div class="result-title">Estimated Impact</div>
-            <div class="result-list" id="resultList"></div>
+          <div class="results" aria-labelledby="resultsTitle">
+            <div class="result-title" id="resultsTitle">Estimated Impact</div>
+            <div class="result-list" id="resultList" aria-live="polite"></div>
           </div>
 
           <div class="summary" id="summaryText"></div>
+          <section class="results history-panel" aria-labelledby="historyTitle">
+            <div class="history-heading">
+              <div class="result-title" id="historyTitle">Scenario History</div>
+              <button class="button-secondary" id="clearHistoryButton" type="button">Clear history</button>
+            </div>
+            <div class="history-list" id="historyList" aria-live="polite"></div>
+          </section>
         </div>
       </aside>
     </div>
@@ -352,107 +506,45 @@
       Retailer: ["Customer"],
       Customer: []
     };
-
-    const companyDetails = {};
-
-    Object.keys(graph).forEach((company) => {
-      companyDetails[company] = {
-        status: "Active",
-        inventory: 100,
-        capacity: 100,
-        demand: 50,
-        failure_probability: 10
-      };
-    });
-
-    const networkBox = document.getElementById("networkBox");
-    const resultList = document.getElementById("resultList");
-    const summaryText = document.getElementById("summaryText");
-    const disruptedCompany = document.getElementById("disruptedCompany");
-    const severityRange = document.getElementById("severityRange");
-    const severityValue = document.getElementById("severityValue");
-    const totalCompaniesEl = document.getElementById("totalCompanies");
-    const activeCompaniesEl = document.getElementById("activeCompanies");
-    const failedCompaniesEl = document.getElementById("failedCompanies");
-    const networkHealthEl = document.getElementById("networkHealth");
+    const STORAGE_KEY = "atmograph-dashboard-v1";
+    const HISTORY_LIMIT = 50;
+    const companies = Object.keys(graph);
+    const companyDetails = Object.fromEntries(companies.map((company) => [company, {
+      status: "Active",
+      inventory: 100,
+      capacity: 100,
+      demand: 50,
+      failure_probability: 10
+    }]));
+    const state = { failed: new Set(), history: [], prediction: [], storageError: "" };
+    const $ = (id) => document.getElementById(id);
+    const networkBox = $("networkBox");
+    const resultList = $("resultList");
+    const summaryText = $("summaryText");
+    const disruptedCompany = $("disruptedCompany");
+    const severityRange = $("severityRange");
+    const severityValue = $("severityValue");
+    const searchInput = $("companySearch");
+    const statusFilter = $("statusFilter");
+    const scenarioNotice = $("scenarioNotice");
 
     function findAffected(startNodes) {
       const visited = new Set(startNodes);
-      const queue = [...startNodes];
+      const queue = startNodes.map((company) => [company, 0]);
       const levels = {};
+      let head = 0;
 
-      while (queue.length > 0) {
-        const current = queue.shift();
-
-        for (const company of (graph[current] || [])) {
+      while (head < queue.length) {
+        const [current, distance] = queue[head++];
+        for (const company of graph[current] || []) {
           if (!visited.has(company)) {
             visited.add(company);
-            queue.push(company);
-            levels[company] = (levels[current] ?? 0) + 1;
+            levels[company] = distance + 1;
+            queue.push([company, distance + 1]);
           }
         }
       }
-
       return levels;
-    }
-
-    function updateStatCards() {
-      const total = Object.keys(graph).length;
-      const failed = 0;
-      const active = total - failed;
-
-      totalCompaniesEl.textContent = total;
-      activeCompaniesEl.textContent = active;
-      failedCompaniesEl.textContent = failed;
-      networkHealthEl.textContent = total > 0 ? `${Math.round((active / total) * 100)}%` : "0%";
-    }
-
-    function renderNetwork() {
-      networkBox.innerHTML = "";
-
-      Object.entries(graph).forEach(([company, connections]) => {
-        const card = document.createElement("div");
-        card.className = "company-card";
-
-        const title = document.createElement("div");
-        title.className = "company-name";
-        title.textContent = company;
-
-        const pills = document.createElement("div");
-        pills.className = "connections";
-
-        if (connections.length === 0) {
-          const empty = document.createElement("span");
-          empty.className = "empty";
-          empty.textContent = "No downstream links";
-          pills.appendChild(empty);
-        } else {
-          connections.forEach((connection) => {
-            const pill = document.createElement("span");
-            pill.className = "pill";
-            pill.textContent = connection;
-            pills.appendChild(pill);
-          });
-        }
-
-        card.appendChild(title);
-        card.appendChild(pills);
-        networkBox.appendChild(card);
-      });
-    }
-
-    function renderCompanyOptions() {
-      disruptedCompany.innerHTML = "";
-      Object.keys(graph).forEach((company) => {
-        const option = document.createElement("option");
-        option.value = company;
-        option.textContent = company;
-        disruptedCompany.appendChild(option);
-      });
-    }
-
-    function setSeverityLabel(value) {
-      severityValue.textContent = `${value}%`;
     }
 
     function getRiskLabel(score) {
@@ -461,58 +553,350 @@
       return "LOW";
     }
 
-    function predictRippleEffect() {
-      const origin = disruptedCompany.value;
-      const severity = Number(severityRange.value);
-      const affected = findAffected([origin]);
+    function escapeCsv(value) {
+      return `"${String(value ?? "").replaceAll('"', '""')}"`;
+    }
 
-      resultList.innerHTML = "";
+    function setNotice(message, isError = false) {
+      scenarioNotice.textContent = message;
+      scenarioNotice.style.color = isError ? "#fca5a5" : "";
+    }
 
-      if (Object.keys(affected).length === 0) {
-        summaryText.textContent = "No downstream companies are connected to this disruption source.";
+    function persistState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          failed: [...state.failed],
+          history: state.history.slice(0, HISTORY_LIMIT)
+        }));
+        return true;
+      } catch (error) {
+        state.storageError = `Could not save dashboard state: ${error.message}`;
+        setNotice(state.storageError, true);
+        return false;
+      }
+    }
+
+    function restoreState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (!saved) return;
+        const parsed = JSON.parse(saved);
+        if (!parsed || !Array.isArray(parsed.failed) || !Array.isArray(parsed.history)) {
+          throw new Error("Saved dashboard data has an invalid format.");
+        }
+        state.failed = new Set(parsed.failed.filter((name) => companies.includes(name)));
+        state.history = parsed.history
+          .filter((entry) => entry && typeof entry.time === "string" &&
+            typeof entry.source === "string" && companies.includes(entry.source))
+          .slice(0, HISTORY_LIMIT);
+        return true;
+      } catch (error) {
+        state.storageError = `Saved dashboard state could not be loaded: ${error.message}`;
+        setNotice(state.storageError, true);
+        return false;
+      }
+    }
+
+    function updateStatCards() {
+      const total = companies.length;
+      const failed = state.failed.size;
+      const active = total - failed;
+      $("totalCompanies").textContent = String(total);
+      $("activeCompanies").textContent = String(active);
+      $("failedCompanies").textContent = String(failed);
+      $("networkHealth").textContent = `${total ? Math.round((active / total) * 100) : 0}%`;
+      $("simulationCount").textContent = String(state.history.length);
+    }
+
+    function makeElement(tag, className, text) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (text !== undefined) element.textContent = text;
+      return element;
+    }
+
+    function getSuppliers(company) {
+      return companies.filter((source) => graph[source].includes(company));
+    }
+
+    function renderNetwork() {
+      networkBox.replaceChildren();
+      const query = searchInput.value.trim().toLocaleLowerCase();
+      const filter = statusFilter.value;
+      const visible = companies.filter((company) => {
+        const isFailed = state.failed.has(company);
+        return company.toLocaleLowerCase().includes(query) &&
+          (filter === "all" || (filter === "failed" ? isFailed : !isFailed));
+      });
+
+      $("networkCount").textContent = `Showing ${visible.length} of ${companies.length} companies`;
+      if (visible.length === 0) {
+        networkBox.appendChild(makeElement("p", "empty-state", "No companies match these filters."));
         return;
       }
 
-      const items = [];
-
-      Object.entries(affected).forEach(([company, distance]) => {
-        const vulnerability = companyDetails[company].failure_probability || 10;
-        let score = severity * (0.65 ** (distance - 1));
-        score *= (1 + vulnerability / 100) / 2;
-        const risk = getRiskLabel(score);
-
-        items.push({ company, distance, score, risk });
+      visible.forEach((company) => {
+        const connections = graph[company];
+        const suppliers = getSuppliers(company);
+        const isFailed = state.failed.has(company);
+        const card = makeElement("article", `company-card${isFailed ? " is-failed" : ""}`);
+        const title = makeElement("div", "company-name", company);
+        const status = makeElement("span", "company-status", isFailed ? "FAILED" : "ACTIVE");
+        const meta = makeElement(
+          "div",
+          "company-meta",
+          `Suppliers: ${suppliers.length ? suppliers.join(", ") : "None"} · ` +
+          `Failure probability: ${companyDetails[company].failure_probability}%`
+        );
+        const pills = makeElement("div", "connections");
+        if (connections.length === 0) {
+          pills.appendChild(makeElement("span", "empty", "No downstream links"));
+        } else {
+          connections.forEach((connection) => pills.appendChild(makeElement("span", "pill", connection)));
+        }
+        const actions = makeElement("div", "company-actions");
+        const selectButton = makeElement("button", "button-secondary", "Use as source");
+        selectButton.type = "button";
+        selectButton.dataset.action = "select";
+        selectButton.dataset.company = company;
+        selectButton.setAttribute("aria-label", `Select ${company} as disruption source`);
+        actions.appendChild(selectButton);
+        if (isFailed) {
+          const recoverButton = makeElement("button", "button-secondary", "Recover");
+          recoverButton.type = "button";
+          recoverButton.dataset.action = "recover";
+          recoverButton.dataset.company = company;
+          recoverButton.setAttribute("aria-label", `Recover ${company}`);
+          actions.appendChild(recoverButton);
+        }
+        card.append(title, status, meta, pills, actions);
+        networkBox.appendChild(card);
       });
-
-      items.sort((a, b) => a.distance - b.distance || b.score - a.score);
-
-      items.forEach((item) => {
-        const resultItem = document.createElement("div");
-        resultItem.className = `result-item risk-${item.risk.toLowerCase()}`;
-
-        const left = document.createElement("div");
-        left.textContent = `${item.company} | Distance ${item.distance}`;
-
-        const right = document.createElement("div");
-        right.innerHTML = `${Math.round(item.score * 10) / 10}% <span class="risk-badge">${item.risk}</span>`;
-
-        resultItem.appendChild(left);
-        resultItem.appendChild(right);
-        resultList.appendChild(resultItem);
-      });
-
-      const highestImpact = items.reduce((max, item) => item.score > max.score ? item : max, items[0]);
-      summaryText.textContent = `Source: ${origin} | Severity: ${severity}% | Highest ripple risk: ${highestImpact.company} at ${Math.round(highestImpact.score * 10) / 10}%.`;
     }
 
-    severityRange.addEventListener("input", (event) => setSeverityLabel(event.target.value));
-    document.getElementById("predictButton").addEventListener("click", predictRippleEffect);
+    function renderCompanyOptions() {
+      disruptedCompany.replaceChildren();
+      companies.forEach((company) => {
+        const option = makeElement("option", "", company);
+        option.value = company;
+        disruptedCompany.appendChild(option);
+      });
+    }
 
-    setSeverityLabel(severityRange.value);
+    function calculatePrediction(origin, severity) {
+      return Object.entries(findAffected([origin]))
+        .map(([company, distance]) => {
+          const vulnerability = companyDetails[company].failure_probability;
+          const score = severity * (0.65 ** (distance - 1)) * (1 + vulnerability / 100) / 2;
+          return { company, distance, score: Math.round(score * 10) / 10, risk: getRiskLabel(score) };
+        })
+        .sort((a, b) => a.distance - b.distance || b.score - a.score ||
+          a.company.localeCompare(b.company));
+    }
+
+    function renderPrediction(items, origin, severity) {
+      resultList.replaceChildren();
+      state.prediction = items;
+      if (items.length === 0) {
+        summaryText.textContent = `${origin} has no downstream companies in this network.`;
+        resultList.appendChild(makeElement("p", "empty-state", "No downstream impact to estimate."));
+        return;
+      }
+      items.forEach((item) => {
+        const row = makeElement("div", `result-item risk-${item.risk.toLowerCase()}`);
+        const left = makeElement("div", "", item.company);
+        left.appendChild(makeElement("div", "result-detail", `Distance ${item.distance} · ${item.risk} risk`));
+        const right = makeElement("div", "result-score", `${item.score}%`);
+        right.appendChild(makeElement("span", "risk-badge", item.risk));
+        row.append(left, right);
+        resultList.appendChild(row);
+      });
+      const highest = items[0];
+      summaryText.textContent =
+        `Source: ${origin} · Severity: ${severity}% · ${items.length} downstream companies · ` +
+        `Highest estimated risk: ${highest.company} (${highest.score}%). This is a heuristic estimate, not a forecast.`;
+    }
+
+    function predictRippleEffect() {
+      const origin = disruptedCompany.value;
+      const severity = Number(severityRange.value);
+      if (!companies.includes(origin) || !Number.isFinite(severity) || severity < 1 || severity > 100) {
+        setNotice("Choose a valid company and severity from 1 to 100.", true);
+        return false;
+      }
+      renderPrediction(calculatePrediction(origin, severity), origin, severity);
+      setNotice(`Risk estimate updated for ${origin} at ${severity}% severity.`);
+      return true;
+    }
+
+    function addHistory(type, source, severity, affectedCount) {
+      state.history.unshift({
+        time: new Date().toISOString(),
+        type,
+        source,
+        severity,
+        affected_count: affectedCount
+      });
+      state.history = state.history.slice(0, HISTORY_LIMIT);
+      renderHistory();
+      updateStatCards();
+      return persistState();
+    }
+
+    function renderHistory() {
+      const list = $("historyList");
+      list.replaceChildren();
+      if (state.history.length === 0) {
+        list.appendChild(makeElement("p", "empty-state", "No scenarios recorded yet."));
+        return;
+      }
+      state.history.forEach((entry) => {
+        const row = makeElement("article", "history-item");
+        const heading = makeElement("div", "history-heading");
+        const description = entry.type === "failure" ? "Failure simulation" : "Ripple prediction";
+        heading.append(
+          makeElement("strong", "", `${description}: ${entry.source}`),
+          makeElement("span", "", `${entry.severity}%`)
+        );
+        const date = new Date(entry.time);
+        const when = Number.isNaN(date.getTime()) ? entry.time : date.toLocaleString();
+        row.append(heading, makeElement(
+          "div",
+          "history-meta",
+          `${when} · ${entry.affected_count} downstream companies`
+        ));
+        list.appendChild(row);
+      });
+    }
+
+    function simulateFailure() {
+      const source = disruptedCompany.value;
+      if (!companies.includes(source)) {
+        setNotice("Choose a valid company before recording a disruption.", true);
+        return;
+      }
+      state.failed.add(source);
+      companyDetails[source].status = "Failed";
+      const severity = Number(severityRange.value);
+      const items = calculatePrediction(source, severity);
+      const saved = addHistory("failure", source, severity, items.length);
+      renderNetwork();
+      updateStatCards();
+      if (saved) {
+        setNotice(`${source} marked failed. Downstream companies remain estimates until individually failed.`);
+      }
+    }
+
+    function recoverCompany(company) {
+      if (!state.failed.delete(company)) return;
+      companyDetails[company].status = "Active";
+      const saved = persistState();
+      renderNetwork();
+      updateStatCards();
+      if (saved) setNotice(`${company} recovered.`);
+    }
+
+    function downloadFile(filename, content, type) {
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = filename;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function exportJson() {
+      const payload = {
+        exported_at: new Date().toISOString(),
+        total_companies: companies.length,
+        active_companies: companies.length - state.failed.size,
+        failed_companies: [...state.failed],
+        network_health: companies.length
+          ? Math.round(((companies.length - state.failed.size) / companies.length) * 100)
+          : 0,
+        network: graph,
+        company_details: companyDetails,
+        latest_prediction: state.prediction,
+        simulation_history: state.history
+      };
+      downloadFile("atmograph_dashboard.json", JSON.stringify(payload, null, 2), "application/json");
+      setNotice("Dashboard JSON exported.");
+    }
+
+    function exportCsv() {
+      const rows = [["company", "status", "suppliers", "downstream", "failure_probability", "latest_risk"]];
+      companies.forEach((company) => {
+        const estimate = state.prediction.find((item) => item.company === company);
+        rows.push([
+          company,
+          state.failed.has(company) ? "Failed" : "Active",
+          getSuppliers(company).join("; "),
+          graph[company].join("; "),
+          companyDetails[company].failure_probability,
+          estimate ? estimate.score : ""
+        ]);
+      });
+      downloadFile("atmograph_companies.csv", rows.map((row) => row.map(escapeCsv).join(",")).join("\r\n"), "text/csv;charset=utf-8");
+      setNotice("Company CSV exported.");
+    }
+
+    function resetStatuses() {
+      state.failed.clear();
+      companies.forEach((company) => { companyDetails[company].status = "Active"; });
+      const saved = persistState();
+      renderNetwork();
+      updateStatCards();
+      if (saved) setNotice("All companies are active. Scenario history was kept.");
+    }
+
+    $("predictButton").addEventListener("click", () => {
+      if (predictRippleEffect()) {
+        addHistory("prediction", disruptedCompany.value, Number(severityRange.value), state.prediction.length);
+      }
+    });
+    $("simulateButton").addEventListener("click", simulateFailure);
+    $("resetButton").addEventListener("click", resetStatuses);
+    $("recoverAllButton").addEventListener("click", resetStatuses);
+    $("clearHistoryButton").addEventListener("click", () => {
+      state.history = [];
+      const saved = persistState();
+      renderHistory();
+      updateStatCards();
+      if (saved) setNotice("Scenario history cleared.");
+    });
+    $("exportJsonButton").addEventListener("click", exportJson);
+    $("exportCsvButton").addEventListener("click", exportCsv);
+    searchInput.addEventListener("input", renderNetwork);
+    statusFilter.addEventListener("change", renderNetwork);
+    severityRange.addEventListener("input", () => {
+      severityValue.textContent = `${severityRange.value}%`;
+    });
+    networkBox.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-action]");
+      if (!button) return;
+      const { action, company } = button.dataset;
+      if (!companies.includes(company)) return;
+      if (action === "select") {
+        disruptedCompany.value = company;
+        predictRippleEffect();
+      } else if (action === "recover") {
+        recoverCompany(company);
+      }
+    });
+
+    restoreState();
+    companies.forEach((company) => {
+      companyDetails[company].status = state.failed.has(company) ? "Failed" : "Active";
+    });
     renderCompanyOptions();
     renderNetwork();
+    renderHistory();
     updateStatCards();
     predictRippleEffect();
+    if (state.storageError) setNotice(state.storageError, true);
   </script>
 </body>
 </html>
