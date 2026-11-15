@@ -14,31 +14,29 @@ from pathlib import Path
 
 class AtmoGraph:
 
-    def __init__(self):
+    DEFAULT_GRAPH = {
+        "Supplier_A": ["Manufacturer"],
+        "Supplier_B": ["Manufacturer"],
+        "Supplier_C": ["Manufacturer_2"],
+        "Manufacturer": ["Distributor"],
+        "Manufacturer_2": ["Distributor"],
+        "Distributor": ["Retailer"],
+        "Retailer": ["Customer"],
+        "Customer": [],
+    }
 
-        # 1. Initialize supply chain network
+    def __init__(self, graph=None):
+        network = self.DEFAULT_GRAPH if graph is None else graph
         self.graph = {
-            "Supplier_A": ["Manufacturer"],
-            "Supplier_B": ["Manufacturer"],
-            "Supplier_C": ["Manufacturer_2"],
-            "Manufacturer": ["Distributor"],
-            "Manufacturer_2": ["Distributor"],
-            "Distributor": ["Retailer"],
-            "Retailer": ["Customer"],
-            "Customer": []
+            company: list(connections)
+            for company, connections in network.items()
         }
 
-        # 2. Company information
-        self.details = {}
-
-        # 3. Initialize company properties
-        for company in self.graph:
-            self.details[company] = self._new_company_details()
-
-        # 4. Simulation history
+        self.details = {
+            company: self._new_company_details()
+            for company in self.graph
+        }
         self.history = []
-
-        # 5. Failed companies
         self.failed = set()
 
     @staticmethod
@@ -48,17 +46,31 @@ class AtmoGraph:
             "inventory": 100,
             "capacity": 100,
             "demand": 50,
-            "failure_probability": 10
+            "failure_probability": 10,
         }
+
+    def validate_name_input(self, label, allow_empty=False):
+        value = input(label).strip()
+        if not value and not allow_empty:
+            print("Name cannot be empty.")
+            return None
+        return value
+
+    def _ensure_status(self, company, status):
+        if company in self.graph:
+            self.details.setdefault(company, self._new_company_details())
+            self.details[company]["status"] = status
 
     def resolve_company(self, name):
         """Return the canonical company name for a case-insensitive exact match."""
         if not isinstance(name, str):
             return None
         normalized = name.strip().casefold()
+        if not normalized:
+            return None
         return next(
             (company for company in self.graph if company.casefold() == normalized),
-            None
+            None,
         )
 
     @staticmethod
@@ -91,12 +103,16 @@ class AtmoGraph:
                 "company": company,
                 "distance": distance,
                 "score": round(score, 1),
-                "risk": self.risk_level(score)
+                "risk": self.risk_level(score),
             })
 
         return sorted(
             estimates,
-            key=lambda item: (item["distance"], -item["score"], item["company"].casefold())
+            key=lambda item: (
+                item["distance"],
+                -item["score"],
+                item["company"].casefold(),
+            ),
         )
 
     def dashboard_data(self):
@@ -105,7 +121,7 @@ class AtmoGraph:
         default_origin = next(iter(self.graph), None)
         failed_names = sorted(
             self.failed.intersection(self.graph),
-            key=str.casefold
+            key=str.casefold,
         )
         failed = len(failed_names)
         active = total - failed
@@ -130,15 +146,15 @@ class AtmoGraph:
                 "estimates": (
                     self.calculate_ripple_effect(default_origin, 60)
                     if default_origin else []
-                )
-            }
+                ),
+            },
         }
 
     def _record_history(self, company, affected, severity=None):
         record = {
             "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "company": company,
-            "affected": affected
+            "affected": affected,
         }
         if severity is not None:
             record["severity"] = severity
@@ -189,10 +205,8 @@ class AtmoGraph:
 
     def add_company(self):
 
-        name = input("Enter company name: ").strip()
-
-        if not name:
-            print("Company name cannot be empty.")
+        name = self.validate_name_input("Enter company name: ")
+        if name is None:
             return
 
         if self.resolve_company(name):
@@ -210,16 +224,13 @@ class AtmoGraph:
 
     def remove_company(self):
 
-        name = input("Enter company to remove: ").strip()
-        name = self.resolve_company(name)
-
+        name = self.resolve_company(self.validate_name_input("Enter company to remove: "))
         if name not in self.graph:
             print("Company not found.")
             return
 
         del self.graph[name]
         del self.details[name]
-
         self.failed.discard(name)
 
         for company, connections in self.graph.items():
@@ -236,8 +247,8 @@ class AtmoGraph:
 
     def add_connection(self):
 
-        source = self.resolve_company(input("Enter source company: "))
-        destination = self.resolve_company(input("Enter destination company: "))
+        source = self.resolve_company(self.validate_name_input("Enter source company: "))
+        destination = self.resolve_company(self.validate_name_input("Enter destination company: "))
 
         if source not in self.graph or destination not in self.graph:
             print("Invalid company name.")
@@ -260,8 +271,8 @@ class AtmoGraph:
 
     def remove_connection(self):
 
-        source = self.resolve_company(input("Enter source company: "))
-        destination = self.resolve_company(input("Enter destination company: "))
+        source = self.resolve_company(self.validate_name_input("Enter source company: "))
+        destination = self.resolve_company(self.validate_name_input("Enter destination company: "))
 
         if source not in self.graph:
             print("Source company not found.")
@@ -375,12 +386,10 @@ class AtmoGraph:
             return
 
         print("\nAvailable Companies:")
-
         for company in self.graph:
             print("-", company)
 
-        failed = self.resolve_company(input("\nEnter failed company: "))
-
+        failed = self.resolve_company(self.validate_name_input("\nEnter failed company: "))
         if failed not in self.graph:
             print("Invalid company.")
             return
@@ -390,7 +399,7 @@ class AtmoGraph:
             return
 
         self.failed.add(failed)
-        self.details[failed]["status"] = "Failed"
+        self._ensure_status(failed, "Failed")
 
         affected = self.find_affected([failed])
         active_affected = {
@@ -407,17 +416,10 @@ class AtmoGraph:
 
         for company, level in active_affected.items():
             risk = "HIGH" if level == 1 else "MEDIUM" if level == 2 else "LOW"
-
-            print(
-                company,
-                "| Level:", level,
-                "| Risk:", risk
-            )
+            print(company, "| Level:", level, "| Risk:", risk)
 
         print("Total Downstream Companies:", len(active_affected))
-
         self._record_history(failed, len(active_affected))
-
         print("====================================")
 
     # --------------------------------------------------------
@@ -426,24 +428,22 @@ class AtmoGraph:
 
     def multiple_failure(self):
 
-        names = input(
-            "Enter failed companies separated by commas: "
-        ).split(",")
-
+        names = self.validate_name_input("Enter failed companies separated by commas: ")
+        entries = names.split(",") if names else []
         failed = []
         invalid = []
 
-        for name in names:
+        for name in entries:
             entered_name = name.strip()
-            name = self.resolve_company(entered_name)
+            resolved_name = self.resolve_company(entered_name)
 
-            if name is None:
+            if resolved_name is None:
                 if entered_name:
                     invalid.append(entered_name)
-            elif name not in self.failed:
-                self.failed.add(name)
-                self.details[name]["status"] = "Failed"
-                failed.append(name)
+            elif resolved_name not in self.failed:
+                self.failed.add(resolved_name)
+                self._ensure_status(resolved_name, "Failed")
+                failed.append(resolved_name)
 
         if invalid:
             print("Invalid companies:", ", ".join(invalid))
@@ -460,7 +460,6 @@ class AtmoGraph:
         }
 
         print("\nMultiple Failure Analysis")
-
         for company, level in active_affected.items():
             print(company, "- Level", level)
 
@@ -534,7 +533,7 @@ class AtmoGraph:
             print("Network is empty.")
             return
 
-        origin_input = input("Enter disrupted company: ").strip()
+        origin_input = self.validate_name_input("Enter disrupted company: ")
         origin = self.resolve_company(origin_input)
 
         if origin is None:
@@ -583,19 +582,15 @@ class AtmoGraph:
         scores = {}
 
         for company in self.graph:
-
-            scores[company] = len(
-                self.find_affected([company])
-            )
+            scores[company] = len(self.find_affected([company]))
 
         print("\n========== CRITICAL COMPANIES ==========")
 
         for company, score in sorted(
             scores.items(),
             key=lambda item: item[1],
-            reverse=True
+            reverse=True,
         ):
-
             if score > 0:
                 print(company, ":", score, "downstream companies")
 
@@ -605,7 +600,7 @@ class AtmoGraph:
 
     def alternative_suppliers(self):
 
-        company = self.resolve_company(input("Enter company name: "))
+        company = self.resolve_company(self.validate_name_input("Enter company name: "))
 
         if company not in self.graph:
             print("Company not found.")
@@ -692,7 +687,7 @@ class AtmoGraph:
 
     def recover_company(self):
 
-        name = self.resolve_company(input("Enter company to recover: "))
+        name = self.resolve_company(self.validate_name_input("Enter company to recover: "))
 
         if name not in self.graph:
             print("Company not found.")
@@ -703,8 +698,7 @@ class AtmoGraph:
             return
 
         self.failed.remove(name)
-        self.details[name]["status"] = "Active"
-
+        self._ensure_status(name, "Active")
         print(name, "has been recovered.")
 
     # --------------------------------------------------------
@@ -713,15 +707,14 @@ class AtmoGraph:
 
     def search_company(self):
 
-        name = input("Enter company name: ").strip()
-
+        name = self.validate_name_input("Enter company name: ")
         if not name:
             print("Enter at least one character to search.")
             return
 
         matches = [
             company for company in self.graph
-            if name.lower() in company.lower()
+            if name.casefold() in company.casefold()
         ]
 
         if matches:
@@ -737,7 +730,7 @@ class AtmoGraph:
 
     def company_details(self):
 
-        name = self.resolve_company(input("Enter company name: "))
+        name = self.resolve_company(self.validate_name_input("Enter company name: "))
 
         if name not in self.graph:
             print("Company not found.")
@@ -763,7 +756,6 @@ class AtmoGraph:
             return
 
         for record in self.history:
-
             print("\nTime:", record["time"])
             print("Failed:", record["company"])
             print("Affected:", record["affected"])
