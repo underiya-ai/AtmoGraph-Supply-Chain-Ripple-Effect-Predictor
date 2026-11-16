@@ -17,6 +17,9 @@
       --muted: #a5b4cf;
       --line: rgba(148, 163, 184, 0.25);
       --shadow: 0 18px 30px rgba(15, 23, 42, 0.35);
+      --surface: rgba(17, 24, 39, 0.9);
+      --surface-raised: rgba(31, 41, 55, 0.9);
+      --radius: 18px;
     }
 
     * { box-sizing: border-box; }
@@ -26,12 +29,15 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #020817, #0f172a 45%, #111827);
       color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 32px 20px 50px;
+      padding: 28px 24px 52px;
     }
 
     .header {
@@ -47,7 +53,20 @@
       margin: 0;
       font-size: clamp(2rem, 4vw, 3rem);
       letter-spacing: 0.04em;
+      line-height: 1.05;
     }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy { display: grid; gap: 7px; }
+    .subtitle { margin: 0; color: var(--muted); font-size: 0.92rem; }
 
     .tag {
       background: rgba(56, 189, 248, 0.14);
@@ -58,6 +77,7 @@
       font-weight: 600;
       letter-spacing: 0.03em;
       font-size: 0.8rem;
+      white-space: nowrap;
     }
 
     .stats {
@@ -68,12 +88,32 @@
     }
 
     .stat-card {
-      background: rgba(17, 24, 39, 0.85);
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 18px 18px 16px;
       box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.18s ease, border-color 0.18s ease;
     }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      background: var(--accent);
+      opacity: 0.8;
+    }
+
+    .stat-card:hover { transform: translateY(-2px); border-color: rgba(56, 189, 248, 0.45); }
+    .stat-card:nth-child(3)::before { background: var(--danger); }
+    .stat-card:nth-child(4)::before { background: var(--accent-2); }
+    .stat-card:nth-child(5)::before { background: #a78bfa; }
+    .stat-card:nth-child(6)::before { background: #fbbf24; }
+    .stat-card:nth-child(7)::before { background: #fb7185; }
+    .stat-card:nth-child(8)::before { background: #34d399; }
 
     .stat-label {
       color: var(--muted);
@@ -86,7 +126,11 @@
     .stat-value {
       font-size: clamp(1.5rem, 2vw, 2rem);
       font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.03em;
     }
+
+    .stat-hint { color: var(--muted); font-size: 0.74rem; margin-top: 5px; }
 
     .layout {
       display: grid;
@@ -95,9 +139,9 @@
     }
 
     .panel {
-      background: rgba(17, 24, 39, 0.9);
+      background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -105,10 +149,27 @@
     .panel-header {
       padding: 18px 20px;
       border-bottom: 1px solid var(--line);
-      background: rgba(31, 41, 55, 0.9);
+      background: var(--surface-raised);
       font-weight: 700;
       letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
+
+    .panel-title { display: flex; align-items: center; gap: 10px; }
+    .panel-icon {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.12);
+      font-size: 0.95rem;
+    }
+    .panel-caption { color: var(--muted); font-size: 0.76rem; font-weight: 500; letter-spacing: 0; }
 
     .panel-body {
       padding: 20px;
@@ -125,12 +186,14 @@
       border: 1px solid var(--line);
       border-radius: 12px;
       padding: 14px 12px;
+      transition: border-color 0.18s ease, transform 0.18s ease, background 0.18s ease;
     }
 
     .company-name {
       font-weight: 700;
       margin-bottom: 10px;
       color: #f8fafc;
+      overflow-wrap: anywhere;
     }
 
     .connections {
@@ -151,6 +214,9 @@
       color: var(--accent);
       font-size: 0.72rem;
       white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .empty {
@@ -180,7 +246,11 @@
       background: #0f172a;
       color: var(--text);
       padding: 10px 12px;
+      font: inherit;
     }
+
+    input[type="search"] { min-width: 0; }
+    input::placeholder { color: #71819d; opacity: 1; }
 
     input[type="range"] {
       padding: 0;
@@ -209,6 +279,7 @@
       background: linear-gradient(135deg, var(--accent), #2563eb);
       color: #f8fafc;
       transition: transform 0.15s ease, filter 0.15s ease;
+      font: inherit;
     }
 
     button:hover {
@@ -288,6 +359,16 @@
       border: 1px solid var(--line);
     }
 
+    .button-quiet {
+      width: auto;
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+    .button-quiet:hover { color: var(--text); background: rgba(148, 163, 184, 0.1); }
+    .button-small { padding: 8px 11px; font-size: 0.78rem; }
+    button:disabled { cursor: not-allowed; opacity: 0.55; transform: none; filter: none; }
+
     .button-danger {
       width: auto;
       background: rgba(239, 68, 68, 0.18);
@@ -308,6 +389,9 @@
       background: rgba(127, 29, 29, 0.2);
     }
 
+    .company-card:hover { transform: translateY(-2px); border-color: rgba(56, 189, 248, 0.45); }
+    .company-card.is-source { box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.45); }
+
     .company-meta, .history-meta {
       color: var(--muted);
       font-size: 0.78rem;
@@ -323,6 +407,7 @@
       color: #86efac;
       font-size: 0.72rem;
       font-weight: 700;
+      letter-spacing: 0.04em;
     }
 
     .is-failed .company-status {
@@ -365,6 +450,115 @@
     .empty-state, .notice { color: var(--muted); line-height: 1.5; }
     .notice { min-height: 1.4em; font-size: 0.85rem; }
     .network-count { color: var(--muted); margin: 0 0 12px; font-size: 0.84rem; }
+    .network-toolbar { align-items: end; }
+    .control-field { display: grid; gap: 6px; min-width: 0; }
+    .control-field label { margin: 0; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .toolbar-actions { display: flex; gap: 8px; align-items: center; }
+    .section-heading { margin: 0; font-size: 0.84rem; font-weight: 700; }
+    .section-note { margin: 4px 0 0; color: var(--muted); font-size: 0.75rem; }
+    .severity-presets, .risk-legend { display: flex; flex-wrap: wrap; gap: 7px; }
+    .preset-button {
+      width: auto;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: transparent;
+      font-size: 0.73rem;
+    }
+    .filter-chip[aria-pressed="true"], .preset-button[aria-pressed="true"] {
+      color: var(--accent);
+      border-color: rgba(56, 189, 248, 0.55);
+      background: rgba(56, 189, 248, 0.12);
+    }
+    .network-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 12px;
+    }
+    .network-map {
+      margin: 0 0 18px;
+      padding: 12px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.55);
+    }
+    .network-map svg { display: block; min-width: 520px; width: 100%; height: auto; }
+    .map-edge { stroke: rgba(56, 189, 248, 0.3); stroke-width: 2; }
+    .map-edge.is-impacted { stroke: #f59e0b; stroke-width: 3; }
+    .map-node rect { fill: #1e293b; stroke: rgba(148, 163, 184, 0.4); stroke-width: 1.5; }
+    .map-node text { fill: #e5eefb; font-size: 12px; text-anchor: middle; dominant-baseline: middle; }
+    .map-node.is-failed rect { fill: #7f1d1d; stroke: #ef4444; }
+    .map-node.is-source rect { stroke: #38bdf8; stroke-width: 3; }
+    .map-node.is-impacted rect { stroke: #f59e0b; }
+    .map-node { cursor: pointer; }
+    .map-node:focus rect { stroke: #f8fafc; stroke-width: 3; }
+    .map-caption { margin: 0 0 8px; color: var(--muted); font-size: 0.72rem; }
+    .impact-bar-track { height: 7px; margin-top: 7px; border-radius: 999px; background: rgba(148, 163, 184, 0.16); overflow: hidden; }
+    .impact-bar { height: 100%; border-radius: inherit; background: linear-gradient(90deg, #22c55e, #f59e0b, #ef4444); transition: width 0.25s ease; }
+    .risk-legend { margin-top: 12px; color: var(--muted); font-size: 0.72rem; }
+    .legend-item { display: inline-flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+    .legend-dot.medium { background: #f59e0b; }
+    .legend-dot.high { background: #ef4444; }
+    .help-panel { margin-top: 14px; }
+    .help-panel summary { cursor: pointer; color: var(--accent); font-size: 0.83rem; font-weight: 700; }
+    .help-panel p { margin: 10px 0 0; color: var(--muted); font-size: 0.8rem; line-height: 1.65; }
+    .history-tools { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-bottom: 10px; }
+    .history-heading { align-items: center; }
+    .history-item { cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; }
+    .history-item:hover, .history-item:focus-visible { border-color: rgba(56, 189, 248, 0.55); background: rgba(30, 41, 59, 0.85); outline: none; }
+    .history-item .history-meta { overflow-wrap: anywhere; }
+    .result-item { transition: transform 0.15s ease, border-color 0.15s ease; }
+    .result-item:hover { transform: translateX(2px); }
+    .result-score { min-width: 72px; }
+    .result-company { font-weight: 700; }
+    .result-actions { display: flex; gap: 6px; margin-top: 7px; }
+    .result-actions button { width: auto; padding: 4px 7px; font-size: 0.68rem; }
+    .notice[data-kind="error"] { color: #fca5a5; }
+    .notice[data-kind="success"] { color: #86efac; }
+    .app-status { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 0.75rem; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12); }
+    .sr-only-focusable {
+      position: absolute;
+      left: 12px;
+      top: -60px;
+      z-index: 20;
+      padding: 9px 12px;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+    }
+    .sr-only-focusable:focus { top: 12px; }
+    body[data-theme="light"] {
+      --text: #172033;
+      --muted: #526179;
+      --line: rgba(71, 85, 105, 0.2);
+      --surface: rgba(255, 255, 255, 0.94);
+      --surface-raised: rgba(241, 245, 249, 0.95);
+      --panel-2: #e2e8f0;
+      --shadow: 0 14px 28px rgba(30, 41, 59, 0.1);
+      background: linear-gradient(135deg, #e8f4fb, #f8fafc 52%, #e2e8f0);
+    }
+    body[data-theme="light"] .company-card,
+    body[data-theme="light"] .network-map,
+    body[data-theme="light"] .results,
+    body[data-theme="light"] .inline-control,
+    body[data-theme="light"] select,
+    body[data-theme="light"] input[type="range"] { background: #f8fafc; color: var(--text); }
+    body[data-theme="light"] .company-name,
+    body[data-theme="light"] .map-node text { color: #172033; fill: #172033; }
+    body[data-theme="light"] .map-node rect { fill: #e2e8f0; }
+    body[data-theme="light"] .map-node.is-failed rect { fill: #fee2e2; }
+    body[data-theme="light"] .result-item,
+    body[data-theme="light"] .history-item { background: rgba(226, 232, 240, 0.65); }
+    body[data-theme="light"] .button-secondary { color: #172033; }
+
     .sr-only {
       position: absolute;
       width: 1px;
@@ -393,6 +587,12 @@
       .panel-body { padding: 14px; }
       .header-actions { justify-content: stretch; width: 100%; }
       .header-actions button { flex: 1 1 130px; }
+      .tag { white-space: normal; text-align: center; }
+      .panel-header { padding: 15px; }
+      .stat-card { padding: 14px; }
+      .history-tools { grid-template-columns: 1fr; }
+      .toolbar-actions { width: 100%; }
+      .toolbar-actions button { flex: 1; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -401,61 +601,121 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>ATMOGRAPH</h1>
+  <a class="sr-only-focusable" href="#mainContent">Skip to dashboard</a>
+  <main class="container" id="mainContent">
+    <header class="header">
+      <div class="brand-copy">
+        <p class="eyebrow">Operational risk intelligence</p>
+        <h1>ATMOGRAPH</h1>
+        <p class="subtitle">Explore how a disruption can ripple across your supply network.</p>
+      </div>
       <div class="header-actions">
         <div class="tag">Supply Chain Ripple Effect Predictor</div>
-        <button class="button-secondary" id="exportJsonButton" type="button">Export JSON</button>
-        <button class="button-secondary" id="exportCsvButton" type="button">Export CSV</button>
+        <span class="app-status" title="Dashboard data is stored in this browser">
+          <span class="status-dot" aria-hidden="true"></span>
+          Local dashboard
+        </span>
+        <button class="button-secondary button-small" id="themeButton" type="button" aria-pressed="false" aria-label="Switch to light theme">Light theme</button>
+        <button class="button-secondary button-small" id="exportJsonButton" type="button">Export JSON</button>
+        <button class="button-secondary button-small" id="exportCsvButton" type="button">Export CSV</button>
       </div>
-    </div>
+    </header>
 
-    <div class="stats">
+    <section class="stats" aria-label="Network overview">
       <div class="stat-card">
         <div class="stat-label">Total Companies</div>
         <div class="stat-value" id="totalCompanies">0</div>
+        <div class="stat-hint">Entities in this network</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Active</div>
         <div class="stat-value" id="activeCompanies">0</div>
+        <div class="stat-hint">Currently operational</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Failed</div>
         <div class="stat-value" id="failedCompanies">0</div>
+        <div class="stat-hint">Simulated disruptions</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Network Health</div>
         <div class="stat-value" id="networkHealth">0%</div>
+        <div class="stat-hint" id="healthHint">Active companies / total</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Scenarios Recorded</div>
         <div class="stat-value" id="simulationCount">0</div>
+        <div class="stat-hint">Recent browser scenarios</div>
       </div>
-    </div>
+      <div class="stat-card">
+        <div class="stat-label">Network Links</div>
+        <div class="stat-value" id="networkLinks">0</div>
+        <div class="stat-hint">Direct supplier relationships</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Downstream Reach</div>
+        <div class="stat-value" id="downstreamReach">0</div>
+        <div class="stat-hint">Largest estimated ripple</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Avg. Vulnerability</div>
+        <div class="stat-value" id="averageVulnerability">0%</div>
+        <div class="stat-hint">Configured company baseline</div>
+      </div>
+    </section>
 
     <div class="layout">
       <section class="panel">
-        <div class="panel-header">Supply Chain Network</div>
+        <div class="panel-header">
+          <span class="panel-title"><span class="panel-icon" aria-hidden="true">⌘</span>Supply Chain Network</span>
+          <span class="panel-caption" id="networkUpdated">Live view</span>
+        </div>
         <div class="panel-body">
-          <div class="toolbar">
-            <label class="sr-only" for="companySearch">Search companies</label>
-            <input class="inline-control" id="companySearch" type="search" placeholder="Search companies..." />
-            <label class="sr-only" for="statusFilter">Filter by status</label>
-            <select class="inline-control" id="statusFilter">
-              <option value="all">All companies</option>
-              <option value="active">Active only</option>
-              <option value="failed">Failed only</option>
-            </select>
-            <button class="button-secondary" id="recoverAllButton" type="button">Recover all</button>
+          <div class="toolbar network-toolbar">
+            <div class="control-field">
+              <label for="companySearch">Find a company</label>
+              <input class="inline-control" id="companySearch" type="search" placeholder="Search by company name…" autocomplete="off" />
+            </div>
+            <div class="control-field">
+              <label for="statusFilter">Company status</label>
+              <select class="inline-control" id="statusFilter">
+                <option value="all">All companies</option>
+                <option value="active">Active only</option>
+                <option value="failed">Failed only</option>
+              </select>
+            </div>
+            <div class="control-field">
+              <label for="sortFilter">Sort companies</label>
+              <select class="inline-control" id="sortFilter">
+                <option value="name">Name (A–Z)</option>
+                <option value="connections">Most downstream</option>
+                <option value="risk">Highest vulnerability</option>
+                <option value="status">Failed first</option>
+              </select>
+            </div>
+            <div class="toolbar-actions">
+              <button class="button-quiet button-small" id="clearFiltersButton" type="button">Clear filters</button>
+              <button class="button-secondary button-small" id="recoverAllButton" type="button">Recover all</button>
+            </div>
           </div>
-          <p class="network-count" id="networkCount" aria-live="polite"></p>
+          <div class="network-summary">
+            <p class="network-count" id="networkCount" aria-live="polite"></p>
+            <span class="panel-caption" id="failedCountCaption"></span>
+          </div>
+          <p class="section-note">Keyboard: Ctrl/⌘ K searches the network · Ctrl/⌘ Enter runs a prediction · Esc clears search.</p>
+          <figure class="network-map">
+            <figcaption class="map-caption">Dependency map · Select any node to use it as the disruption source.</figcaption>
+            <svg id="networkMap" viewBox="0 0 760 220" role="group" aria-label="Interactive supply chain dependency map"></svg>
+          </figure>
           <div class="network-box" id="networkBox"></div>
         </div>
       </section>
 
       <aside class="panel">
-        <div class="panel-header">Ripple Prediction</div>
+        <div class="panel-header">
+          <span class="panel-title"><span class="panel-icon" aria-hidden="true">↗</span>Ripple Prediction</span>
+          <span class="panel-caption">Heuristic estimate</span>
+        </div>
         <div class="panel-body controls">
           <div>
             <label for="disruptedCompany">Disrupted Company</label>
@@ -467,6 +727,12 @@
             <div class="severity-wrap">
               <input id="severityRange" type="range" min="1" max="100" value="60" aria-label="Disruption severity percentage" />
               <output id="severityValue" class="severity-value" for="severityRange">60%</output>
+            </div>
+            <div class="severity-presets" aria-label="Severity presets">
+              <button class="preset-button" type="button" data-severity="25" aria-pressed="false">Low · 25%</button>
+              <button class="preset-button" type="button" data-severity="50" aria-pressed="false">Moderate · 50%</button>
+              <button class="preset-button" type="button" data-severity="75" aria-pressed="false">Severe · 75%</button>
+              <button class="preset-button" type="button" data-severity="100" aria-pressed="false">Critical · 100%</button>
             </div>
           </div>
 
@@ -480,20 +746,51 @@
           <div class="results" aria-labelledby="resultsTitle">
             <div class="result-title" id="resultsTitle">Estimated Impact</div>
             <div class="result-list" id="resultList" aria-live="polite"></div>
+            <div class="risk-legend" aria-label="Risk scale">
+              <span class="legend-item"><span class="legend-dot"></span>Low &lt; 30%</span>
+              <span class="legend-item"><span class="legend-dot medium"></span>Medium 30–59%</span>
+              <span class="legend-item"><span class="legend-dot high"></span>High ≥ 60%</span>
+            </div>
+            <div class="impact-bar-track" role="img" aria-label="Highest downstream risk meter">
+              <div class="impact-bar" id="impactBar" style="width: 0%"></div>
+            </div>
           </div>
 
-          <div class="summary" id="summaryText"></div>
+          <div class="summary" id="summaryText" aria-live="polite"></div>
+          <div class="toolbar-actions">
+            <button class="button-quiet button-small" id="copySummaryButton" type="button">Copy summary</button>
+            <span class="panel-caption" id="copyStatus" aria-live="polite"></span>
+          </div>
+          <details class="help-panel">
+            <summary>How is risk estimated?</summary>
+            <p>Risk decays with each downstream link and is adjusted by a company’s configured failure probability. Scores are illustrative planning signals—not a trained forecast or an operational guarantee.</p>
+            <p>Browser scenarios are stored locally on this device. They are separate from the Python CLI history.</p>
+          </details>
           <section class="results history-panel" aria-labelledby="historyTitle">
             <div class="history-heading">
               <div class="result-title" id="historyTitle">Scenario History</div>
-              <button class="button-secondary" id="clearHistoryButton" type="button">Clear history</button>
+              <button class="button-secondary button-small" id="clearHistoryButton" type="button">Clear history</button>
+            </div>
+            <div class="history-tools">
+              <label class="sr-only" for="historySearch">Search scenario history</label>
+              <input class="inline-control" id="historySearch" type="search" placeholder="Find a past scenario…" autocomplete="off" />
+              <select class="inline-control" id="historyFilter" aria-label="Filter history by scenario type">
+                <option value="all">All types</option>
+                <option value="prediction">Predictions</option>
+                <option value="failure">Failures</option>
+              </select>
             </div>
             <div class="history-list" id="historyList" aria-live="polite"></div>
+            <p class="section-note">Select a history item to restore its source and severity.</p>
           </section>
         </div>
       </aside>
     </div>
-  </div>
+    <footer class="section-note" style="text-align:center; margin-top:22px">
+      <span>AtmoGraph · Decisions supported by transparent, local estimates.</span>
+      <span id="lastUpdated"></span>
+    </footer>
+  </main>
 
   <script>
     const graph = {
@@ -516,9 +813,17 @@
       demand: 50,
       failure_probability: 10
     }]));
-    const state = { failed: new Set(), history: [], prediction: [], storageError: "" };
+    const state = {
+      failed: new Set(),
+      history: [],
+      prediction: [],
+      source: companies[0],
+      storageError: "",
+      theme: "dark"
+    };
     const $ = (id) => document.getElementById(id);
     const networkBox = $("networkBox");
+    const networkMap = $("networkMap");
     const resultList = $("resultList");
     const summaryText = $("summaryText");
     const disruptedCompany = $("disruptedCompany");
@@ -526,6 +831,9 @@
     const severityValue = $("severityValue");
     const searchInput = $("companySearch");
     const statusFilter = $("statusFilter");
+    const sortFilter = $("sortFilter");
+    const historySearch = $("historySearch");
+    const historyFilter = $("historyFilter");
     const scenarioNotice = $("scenarioNotice");
 
     function findAffected(startNodes) {
@@ -554,12 +862,14 @@
     }
 
     function escapeCsv(value) {
-      return `"${String(value ?? "").replaceAll('"', '""')}"`;
+      let text = String(value ?? "");
+      if (typeof value === "string" && /^[\t\r ]*[=+\-@]/.test(text)) text = `'${text}`;
+      return `"${text.replaceAll('"', '""')}"`;
     }
 
     function setNotice(message, isError = false) {
       scenarioNotice.textContent = message;
-      scenarioNotice.style.color = isError ? "#fca5a5" : "";
+      scenarioNotice.dataset.kind = isError ? "error" : "success";
     }
 
     function persistState() {
@@ -587,7 +897,10 @@
         state.failed = new Set(parsed.failed.filter((name) => companies.includes(name)));
         state.history = parsed.history
           .filter((entry) => entry && typeof entry.time === "string" &&
-            typeof entry.source === "string" && companies.includes(entry.source))
+            typeof entry.source === "string" && companies.includes(entry.source) &&
+            ["failure", "prediction"].includes(entry.type) &&
+            Number.isFinite(entry.severity) && entry.severity >= 1 && entry.severity <= 100 &&
+            Number.isInteger(entry.affected_count) && entry.affected_count >= 0)
           .slice(0, HISTORY_LIMIT);
         return true;
       } catch (error) {
@@ -606,6 +919,16 @@
       $("failedCompanies").textContent = String(failed);
       $("networkHealth").textContent = `${total ? Math.round((active / total) * 100) : 0}%`;
       $("simulationCount").textContent = String(state.history.length);
+      const linkCount = companies.reduce((sum, company) => sum + graph[company].length, 0);
+      const reach = Math.max(0, ...companies.map((company) => Object.keys(findAffected([company])).length));
+      const vulnerability = companies.length
+        ? Math.round(companies.reduce((sum, company) => sum + companyDetails[company].failure_probability, 0) / total)
+        : 0;
+      $("networkLinks").textContent = String(linkCount);
+      $("downstreamReach").textContent = String(reach);
+      $("averageVulnerability").textContent = `${vulnerability}%`;
+      $("healthHint").textContent = `${active} of ${total} companies active`;
+      $("failedCountCaption").textContent = failed ? `${failed} disruption${failed === 1 ? "" : "s"} active` : "No active disruptions";
     }
 
     function makeElement(tag, className, text) {
@@ -619,6 +942,93 @@
       return companies.filter((source) => graph[source].includes(company));
     }
 
+    function renderNetworkMap() {
+      const svgNamespace = "http://www.w3.org/2000/svg";
+      const parents = Object.fromEntries(companies.map((company) => [company, getSuppliers(company)]));
+      const roots = companies.filter((company) => parents[company].length === 0);
+      const depths = Object.fromEntries(roots.map((company) => [company, 0]));
+      const queue = [...roots];
+      for (let index = 0; index < queue.length; index += 1) {
+        const current = queue[index];
+        (graph[current] || []).forEach((downstream) => {
+          const nextDepth = depths[current] + 1;
+          if (depths[downstream] === undefined || depths[downstream] > nextDepth) {
+            depths[downstream] = nextDepth;
+            queue.push(downstream);
+          }
+        });
+      }
+      companies.forEach((company) => {
+        if (depths[company] === undefined) depths[company] = 0;
+      });
+
+      const tiers = [];
+      companies.forEach((company) => {
+        const depth = depths[company];
+        if (!tiers[depth]) tiers[depth] = [];
+        tiers[depth].push(company);
+      });
+      const maxDepth = Math.max(0, ...Object.keys(tiers).map(Number));
+      const nodeWidth = 132;
+      const nodeHeight = 32;
+      const maxTierSize = Math.max(1, ...tiers.map((tier) => (tier || []).length));
+      const height = Math.max(180, maxTierSize * 60);
+      const viewBoxWidth = Math.max(760, (maxDepth + 1) * 150);
+      networkMap.setAttribute("viewBox", `0 0 ${viewBoxWidth} ${height}`);
+      networkMap.replaceChildren();
+
+      const positions = {};
+      tiers.forEach((tier, depth) => {
+        (tier || []).forEach((company, index) => {
+          positions[company] = {
+            x: nodeWidth / 2 + 12 + depth * (viewBoxWidth - nodeWidth - 24) / Math.max(1, maxDepth),
+            y: height * (index + 1) / ((tier || []).length + 1)
+          };
+        });
+      });
+      companies.forEach((company) => {
+        (graph[company] || []).forEach((downstream) => {
+          const start = positions[company];
+          const end = positions[downstream];
+          if (!start || !end) return;
+          const edge = document.createElementNS(svgNamespace, "line");
+          edge.setAttribute("x1", String(start.x + nodeWidth / 2));
+          edge.setAttribute("y1", String(start.y));
+          edge.setAttribute("x2", String(end.x - nodeWidth / 2));
+          edge.setAttribute("y2", String(end.y));
+          edge.setAttribute("class", state.prediction.some((item) => item.company === downstream)
+            ? "map-edge is-impacted"
+            : "map-edge");
+          networkMap.appendChild(edge);
+        });
+      });
+      companies.forEach((company) => {
+        const point = positions[company];
+        const group = document.createElementNS(svgNamespace, "g");
+        const impacted = state.prediction.some((item) => item.company === company);
+        const classes = ["map-node"];
+        if (state.failed.has(company)) classes.push("is-failed");
+        if (state.source === company) classes.push("is-source");
+        if (impacted) classes.push("is-impacted");
+        group.setAttribute("class", classes.join(" "));
+        group.setAttribute("transform", `translate(${point.x - nodeWidth / 2}, ${point.y - nodeHeight / 2})`);
+        group.setAttribute("tabindex", "0");
+        group.setAttribute("role", "button");
+        group.setAttribute("aria-label", `${company}${state.failed.has(company) ? ", failed" : ", active"}. Select as disruption source.`);
+        group.dataset.company = company;
+        const rect = document.createElementNS(svgNamespace, "rect");
+        rect.setAttribute("width", String(nodeWidth));
+        rect.setAttribute("height", String(nodeHeight));
+        rect.setAttribute("rx", "8");
+        const text = document.createElementNS(svgNamespace, "text");
+        text.setAttribute("x", String(nodeWidth / 2));
+        text.setAttribute("y", String(nodeHeight / 2));
+        text.textContent = company.length > 16 ? `${company.slice(0, 14)}…` : company;
+        group.append(rect, text);
+        networkMap.appendChild(group);
+      });
+    }
+
     function renderNetwork() {
       networkBox.replaceChildren();
       const query = searchInput.value.trim().toLocaleLowerCase();
@@ -628,10 +1038,21 @@
         return company.toLocaleLowerCase().includes(query) &&
           (filter === "all" || (filter === "failed" ? isFailed : !isFailed));
       });
+      const sortMode = sortFilter.value;
+      visible.sort((left, right) => {
+        if (sortMode === "connections") return graph[right].length - graph[left].length || left.localeCompare(right);
+        if (sortMode === "risk") {
+          return companyDetails[right].failure_probability - companyDetails[left].failure_probability || left.localeCompare(right);
+        }
+        if (sortMode === "status") return Number(state.failed.has(right)) - Number(state.failed.has(left)) || left.localeCompare(right);
+        return left.localeCompare(right);
+      });
 
       $("networkCount").textContent = `Showing ${visible.length} of ${companies.length} companies`;
+      $("networkUpdated").textContent = `Updated ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`;
       if (visible.length === 0) {
         networkBox.appendChild(makeElement("p", "empty-state", "No companies match these filters."));
+        renderNetworkMap();
         return;
       }
 
@@ -639,7 +1060,10 @@
         const connections = graph[company];
         const suppliers = getSuppliers(company);
         const isFailed = state.failed.has(company);
-        const card = makeElement("article", `company-card${isFailed ? " is-failed" : ""}`);
+        const card = makeElement(
+          "article",
+          `company-card${isFailed ? " is-failed" : ""}${state.source === company ? " is-source" : ""}`
+        );
         const title = makeElement("div", "company-name", company);
         const status = makeElement("span", "company-status", isFailed ? "FAILED" : "ACTIVE");
         const meta = makeElement(
@@ -672,6 +1096,7 @@
         card.append(title, status, meta, pills, actions);
         networkBox.appendChild(card);
       });
+      renderNetworkMap();
     }
 
     function renderCompanyOptions() {
@@ -697,24 +1122,39 @@
     function renderPrediction(items, origin, severity) {
       resultList.replaceChildren();
       state.prediction = items;
+      state.source = origin;
       if (items.length === 0) {
         summaryText.textContent = `${origin} has no downstream companies in this network.`;
         resultList.appendChild(makeElement("p", "empty-state", "No downstream impact to estimate."));
+        $("impactBar").style.width = "0%";
+        $("impactBar").setAttribute("aria-label", "No downstream impact");
+        renderNetworkMap();
         return;
       }
       items.forEach((item) => {
         const row = makeElement("div", `result-item risk-${item.risk.toLowerCase()}`);
-        const left = makeElement("div", "", item.company);
+        const left = makeElement("div", "", "");
+        left.appendChild(makeElement("div", "result-company", item.company));
         left.appendChild(makeElement("div", "result-detail", `Distance ${item.distance} · ${item.risk} risk`));
+        const actions = makeElement("div", "result-actions");
+        const selectButton = makeElement("button", "button-quiet", "Use as source");
+        selectButton.type = "button";
+        selectButton.dataset.company = item.company;
+        selectButton.setAttribute("aria-label", `Use ${item.company} as a new disruption source`);
+        actions.appendChild(selectButton);
+        left.appendChild(actions);
         const right = makeElement("div", "result-score", `${item.score}%`);
         right.appendChild(makeElement("span", "risk-badge", item.risk));
         row.append(left, right);
         resultList.appendChild(row);
       });
-      const highest = items[0];
+      const highest = items.reduce((best, item) => item.score > best.score ? item : best, items[0]);
+      $("impactBar").style.width = `${Math.min(100, highest.score)}%`;
+      $("impactBar").setAttribute("aria-label", `Highest downstream risk ${highest.score}%`);
       summaryText.textContent =
         `Source: ${origin} · Severity: ${severity}% · ${items.length} downstream companies · ` +
         `Highest estimated risk: ${highest.company} (${highest.score}%). This is a heuristic estimate, not a forecast.`;
+      renderNetworkMap();
     }
 
     function predictRippleEffect() {
@@ -725,6 +1165,10 @@
         return false;
       }
       renderPrediction(calculatePrediction(origin, severity), origin, severity);
+      renderNetwork();
+      document.querySelectorAll(".preset-button").forEach((button) => {
+        button.setAttribute("aria-pressed", String(Number(button.dataset.severity) === severity));
+      });
       setNotice(`Risk estimate updated for ${origin} at ${severity}% severity.`);
       return true;
     }
@@ -746,12 +1190,26 @@
     function renderHistory() {
       const list = $("historyList");
       list.replaceChildren();
-      if (state.history.length === 0) {
-        list.appendChild(makeElement("p", "empty-state", "No scenarios recorded yet."));
+      const query = historySearch.value.trim().toLocaleLowerCase();
+      const type = historyFilter.value;
+      const visibleHistory = state.history.filter((entry) =>
+        entry.source.toLocaleLowerCase().includes(query) &&
+        (type === "all" || entry.type === type)
+      );
+      if (visibleHistory.length === 0) {
+        const message = state.history.length === 0
+          ? "No scenarios recorded yet."
+          : "No scenarios match these filters.";
+        list.appendChild(makeElement("p", "empty-state", message));
         return;
       }
-      state.history.forEach((entry) => {
+      visibleHistory.forEach((entry) => {
         const row = makeElement("article", "history-item");
+        row.tabIndex = 0;
+        row.setAttribute("role", "button");
+        row.setAttribute("aria-label", `Restore ${entry.type} scenario for ${entry.source} at ${entry.severity}% severity`);
+        row.dataset.source = entry.source;
+        row.dataset.severity = String(entry.severity);
         const heading = makeElement("div", "history-heading");
         const description = entry.type === "failure" ? "Failure simulation" : "Ripple prediction";
         heading.append(
@@ -805,12 +1263,15 @@
       document.body.appendChild(anchor);
       anchor.click();
       anchor.remove();
-      URL.revokeObjectURL(url);
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
 
     function exportJson() {
       const payload = {
         exported_at: new Date().toISOString(),
+        model_type: "transparent_heuristic",
+        risk_thresholds: { low_below: 30, medium_below: 60, high_from: 60 },
+        theme: state.theme,
         total_companies: companies.length,
         active_companies: companies.length - state.failed.size,
         failed_companies: [...state.failed],
@@ -839,8 +1300,45 @@
           estimate ? estimate.score : ""
         ]);
       });
-      downloadFile("atmograph_companies.csv", rows.map((row) => row.map(escapeCsv).join(",")).join("\r\n"), "text/csv;charset=utf-8");
+      downloadFile("atmograph_companies.csv", `\uFEFF${rows.map((row) => row.map(escapeCsv).join(",")).join("\r\n")}`, "text/csv;charset=utf-8");
       setNotice("Company CSV exported.");
+    }
+
+    function setTheme(theme) {
+      state.theme = theme === "light" ? "light" : "dark";
+      document.body.dataset.theme = state.theme;
+      const isLight = state.theme === "light";
+      $("themeButton").textContent = isLight ? "Dark theme" : "Light theme";
+      $("themeButton").setAttribute("aria-pressed", String(isLight));
+      $("themeButton").setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} theme`);
+    }
+
+    function restoreScenario(source, severity) {
+      if (!companies.includes(source) || !Number.isFinite(severity) || severity < 1 || severity > 100) {
+        setNotice("This scenario contains invalid values and could not be restored.", true);
+        return;
+      }
+      disruptedCompany.value = source;
+      severityRange.value = String(severity);
+      severityValue.textContent = `${severity}%`;
+      predictRippleEffect();
+      setNotice(`Restored ${source} scenario at ${severity}% severity.`);
+    }
+
+    async function copySummary() {
+      const text = summaryText.textContent.trim();
+      if (!text) {
+        setNotice("There is no prediction summary to copy.", true);
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(text);
+        $("copyStatus").textContent = "Copied to clipboard.";
+        setNotice("Prediction summary copied.");
+      } catch (error) {
+        $("copyStatus").textContent = "Clipboard access is unavailable.";
+        setNotice("Could not copy the summary. Check browser clipboard permissions.", true);
+      }
     }
 
     function resetStatuses() {
@@ -862,6 +1360,8 @@
     $("recoverAllButton").addEventListener("click", resetStatuses);
     $("clearHistoryButton").addEventListener("click", () => {
       state.history = [];
+      historySearch.value = "";
+      historyFilter.value = "all";
       const saved = persistState();
       renderHistory();
       updateStatCards();
@@ -871,23 +1371,106 @@
     $("exportCsvButton").addEventListener("click", exportCsv);
     searchInput.addEventListener("input", renderNetwork);
     statusFilter.addEventListener("change", renderNetwork);
+    sortFilter.addEventListener("change", renderNetwork);
+    historySearch.addEventListener("input", renderHistory);
+    historyFilter.addEventListener("change", renderHistory);
     severityRange.addEventListener("input", () => {
       severityValue.textContent = `${severityRange.value}%`;
+      document.querySelectorAll(".preset-button").forEach((button) => {
+        button.setAttribute("aria-pressed", String(Number(button.dataset.severity) === Number(severityRange.value)));
+      });
     });
+    document.querySelectorAll(".preset-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        severityRange.value = button.dataset.severity;
+        severityValue.textContent = `${severityRange.value}%`;
+        document.querySelectorAll(".preset-button").forEach((preset) => {
+          preset.setAttribute("aria-pressed", String(preset === button));
+        });
+        predictRippleEffect();
+      });
+    });
+    $("themeButton").addEventListener("click", () => {
+      const nextTheme = state.theme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+      try {
+        localStorage.setItem(`${STORAGE_KEY}-theme`, nextTheme);
+      } catch (error) {
+        setNotice(`Theme changed, but could not be saved: ${error.message}`, true);
+        return;
+      }
+      setNotice(`${nextTheme === "light" ? "Light" : "Dark"} theme enabled.`);
+    });
+    $("clearFiltersButton").addEventListener("click", () => {
+      searchInput.value = "";
+      statusFilter.value = "all";
+      sortFilter.value = "name";
+      renderNetwork();
+      searchInput.focus();
+      setNotice("Network filters cleared.");
+    });
+    $("copySummaryButton").addEventListener("click", copySummary);
     networkBox.addEventListener("click", (event) => {
       const button = event.target.closest("button[data-action]");
       if (!button) return;
       const { action, company } = button.dataset;
       if (!companies.includes(company)) return;
       if (action === "select") {
-        disruptedCompany.value = company;
-        predictRippleEffect();
+        restoreScenario(company, Number(severityRange.value));
       } else if (action === "recover") {
         recoverCompany(company);
       }
     });
+    networkMap.addEventListener("click", (event) => {
+      const node = event.target.closest("g[data-company]");
+      if (!node || !companies.includes(node.dataset.company)) return;
+      restoreScenario(node.dataset.company, Number(severityRange.value));
+    });
+    networkMap.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const node = event.target.closest("g[data-company]");
+      if (!node || !companies.includes(node.dataset.company)) return;
+      event.preventDefault();
+      restoreScenario(node.dataset.company, Number(severityRange.value));
+    });
+    resultList.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-company]");
+      if (!button || !companies.includes(button.dataset.company)) return;
+      restoreScenario(button.dataset.company, Number(severityRange.value));
+    });
+    $("historyList").addEventListener("click", (event) => {
+      const row = event.target.closest(".history-item[data-source]");
+      if (row) restoreScenario(row.dataset.source, Number(row.dataset.severity));
+    });
+    $("historyList").addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const row = event.target.closest(".history-item[data-source]");
+      if (!row) return;
+      event.preventDefault();
+      restoreScenario(row.dataset.source, Number(row.dataset.severity));
+    });
+    document.addEventListener("keydown", (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchInput.focus();
+      } else if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+        event.preventDefault();
+        $("predictButton").click();
+      } else if (event.key === "Escape" && document.activeElement === searchInput) {
+        searchInput.value = "";
+        renderNetwork();
+      }
+    });
 
     restoreState();
+    try {
+      const savedTheme = localStorage.getItem(`${STORAGE_KEY}-theme`);
+      if (savedTheme === "light" || savedTheme === "dark") state.theme = savedTheme;
+    } catch (error) {
+      state.storageError = `Theme preference could not be loaded: ${error.message}`;
+    }
+    setTheme(state.theme);
+    $("lastUpdated").textContent = ` · Session started ${new Date().toLocaleString()}`;
     companies.forEach((company) => {
       companyDetails[company].status = state.failed.has(company) ? "Failed" : "Active";
     });
