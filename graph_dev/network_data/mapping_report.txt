@@ -1,0 +1,17 @@
+Mapping and network checks
+--------------------------
+PASS  Node ids are unique
+PASS  Every edge points to an existing node
+PASS  Mapping has one row per dataset record (100000 of 100000)
+PASS  No disruption_id is mapped twice
+PASS  Mapped ids match the dataset ids
+PASS  Every mapped supplier exists in nodes.csv
+PASS  Every supplier node has attribute data
+PASS  Disruption counts in attributes add up to the mapping rows
+
+Findings
+--------
+Slowest recovery: SUP-I4-R1-T4 (Electronics Supplier (Africa/Middle East, Tier 4)) - 86.72 days
+Fastest recovery: SUP-I5-R5-T1 (Pharmaceuticals Supplier (South America, Tier 1)) - 68.94 days
+Fewest disruption records: SUP-I1-R1-T4 (81)
+Most disruption records: SUP-I4-R2-T1 (4276)
