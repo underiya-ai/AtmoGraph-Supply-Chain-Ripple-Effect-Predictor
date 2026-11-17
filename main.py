@@ -11,6 +11,8 @@ from collections import deque
 from datetime import datetime
 from pathlib import Path
 
+from data_preprocessing import preprocess_csv
+
 
 class AtmoGraph:
 
@@ -1219,6 +1221,37 @@ class AtmoGraph:
         except OSError as error:
             print("Export failed:", error)
 
+    def preprocess_dataset(self):
+        source = input(
+            "Source CSV "
+            "[datasets/raw/supply_chain_disruption_recovery.csv]: "
+        ).strip()
+        destination = input(
+            "Cleaned CSV "
+            "[datasets/processed/supply_chain_disruption_recovery_clean.csv]: "
+        ).strip()
+        source = source or "datasets/raw/supply_chain_disruption_recovery.csv"
+        destination = destination or (
+            "datasets/processed/supply_chain_disruption_recovery_clean.csv"
+        )
+
+        try:
+            report = preprocess_csv(source, destination)
+        except (OSError, csv.Error, UnicodeError, ValueError) as error:
+            print("Dataset preprocessing failed:", error)
+            return
+
+        print("\n========== DATA PREPROCESSING ==========")
+        print("Input rows:", report["input_rows"])
+        print("Accepted rows:", report["accepted_rows"])
+        print("Rejected rows:", report["rejected_rows"])
+        print("Blank rows skipped:", report["blank_rows"])
+        print("Duplicate identifiers:", report["duplicate_ids"])
+        print("Cleaned data:", report["output_file"])
+        print("Rejected rows:", report["reject_file"])
+        print("Quality report:", report["report_file"])
+        print("========================================")
+
     def export_dashboard_json(self):
         filename = Path("atmograph_dashboard.json")
         payload = self.dashboard_data()
@@ -1341,6 +1374,7 @@ def main():
         44: system.summary_report,
         45: system.predict_ripple_effect,
         46: system.export_dashboard_json,
+        47: system.preprocess_dataset,
     }
 
     while True:
@@ -1395,6 +1429,7 @@ def main():
 44. Final Summary Report
 45. Predict Disruption Ripple Effect
 46. Export Dashboard Data (JSON)
+47. Preprocess Disruption Dataset
  0. Exit
 
 ====================================================
@@ -1412,7 +1447,7 @@ def main():
 
         action = actions.get(choice)
         if action is None:
-            print("Invalid choice! Select between 0 and 46.")
+            print("Invalid choice! Select between 0 and 47.")
             continue
         action()
 

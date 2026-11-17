@@ -50,6 +50,27 @@ network connections, and simulation history to `atmograph_dashboard.json`.
 The export includes company counts, network health, and the same ripple-risk
 estimates used by the dashboard interface.
 
+Disruption dataset preprocessing
+
+Choose option 47 in the Python menu to validate and clean the raw disruption
+dataset. Press Enter at either prompt to use the default source and output
+paths. The workflow streams the CSV, normalizes headers, whitespace,
+categories, booleans, and numeric values, and checks required fields, numeric
+ranges, recovery-day ordering, and duplicate disruption IDs. It writes accepted
+rows to `datasets/processed/supply_chain_disruption_recovery_clean.csv`,
+invalid rows and reasons to a sibling `_rejected.csv`, and aggregate quality
+statistics to a sibling `_report.json`. The raw file is never overwritten.
+
+The same workflow can be run without opening the interactive menu:
+
+```text
+python data_preprocessing.py
+python data_preprocessing.py --input path/to/source.csv --output path/to/clean.csv
+```
+
+The `--rejects` and `--report` options can override the default companion file
+paths. Invalid rows are reported rather than silently discarded.
+
 Browser dashboard
 
 Open `index.html` in a browser to explore the interactive dashboard. Search or
