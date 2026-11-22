@@ -1,0 +1,16 @@
+node_id,node_name,node_type,industry,country,city,latitude,longitude,capacity_units,inventory_units,risk_level
+SUP_001,Supplier_A,Supplier,Electronics,Germany,Hamburg,53.55,9.99,50000,12000,3
+SUP_002,Supplier_B,Supplier,Electronics,China,Shanghai,31.23,121.47,60000,15000,4
+SUP_003,Supplier_C,Supplier,Automotive,Japan,Tokyo,35.68,139.69,40000,10000,2
+FAC_001,Factory_A,Factory,Electronics,Germany,Berlin,52.52,13.4,80000,20000,4
+FAC_002,Factory_B,Factory,Electronics,India,Hyderabad,17.38,78.48,70000,18000,3
+FAC_003,Factory_C,Factory,Automotive,Japan,Osaka,34.69,135.5,90000,25000,2
+WH_001,Warehouse_A,Warehouse,Electronics,Germany,Frankfurt,50.11,8.68,100000,30000,3
+WH_002,Warehouse_B,Warehouse,Electronics,India,Mumbai,19.07,72.87,90000,25000,4
+WH_003,Warehouse_C,Warehouse,Automotive,Japan,Nagoya,35.18,136.9,80000,22000,2
+PORT_001,Port_Hamburg,Port,Electronics,Germany,Hamburg,53.55,9.99,100000,0,5
+PORT_002,Port_Shanghai,Port,Electronics,China,Shanghai,31.23,121.47,150000,0,4
+PORT_003,Port_Mumbai,Port,Electronics,India,Mumbai,18.94,72.84,90000,0,3
+RET_001,Retailer_A,Retailer,Electronics,Germany,Munich,48.13,11.58,50000,10000,2
+RET_002,Retailer_B,Retailer,Electronics,India,Hyderabad,17.38,78.48,40000,8000,3
+RET_003,Retailer_C,Retailer,Automotive,Japan,Tokyo,35.68,139.69,60000,12000,2
