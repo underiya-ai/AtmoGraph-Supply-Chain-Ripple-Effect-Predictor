@@ -1,0 +1,117 @@
+{
+  "disrupted_node": "SUP-I1-R1-T2",
+  "disrupted_name": "Aerospace Supplier (Africa/Middle East, Tier 2)",
+  "start_impact": 31.01,
+  "total_affected": 13,
+  "by_risk_level": {
+    "HIGH": 1,
+    "MEDIUM": 1,
+    "LOW": 11
+  },
+  "affected": [
+    {
+      "node_id": "SUP-I1-R5-T1",
+      "name": "Aerospace Supplier (South America, Tier 1)",
+      "node_type": "supplier",
+      "distance": 1,
+      "impact": 27.91,
+      "risk_level": "HIGH"
+    },
+    {
+      "node_id": "SUP-I1-R4-T1",
+      "name": "Aerospace Supplier (North America, Tier 1)",
+      "node_type": "supplier",
+      "distance": 1,
+      "impact": 13.95,
+      "risk_level": "MEDIUM"
+    },
+    {
+      "node_id": "SUP-I1-R3-T1",
+      "name": "Aerospace Supplier (Europe, Tier 1)",
+      "node_type": "supplier",
+      "distance": 1,
+      "impact": 6.98,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "FAC-I1-1",
+      "name": "Aerospace Factory 1",
+      "node_type": "factory",
+      "distance": 2,
+      "impact": 8.79,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "FAC-I1-2",
+      "name": "Aerospace Factory 2",
+      "node_type": "factory",
+      "distance": 2,
+      "impact": 8.79,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "WH-I1-1",
+      "name": "Aerospace Warehouse 1",
+      "node_type": "warehouse",
+      "distance": 3,
+      "impact": 7.91,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "WH-I1-2",
+      "name": "Aerospace Warehouse 2",
+      "node_type": "warehouse",
+      "distance": 3,
+      "impact": 7.91,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "WH-I1-3",
+      "name": "Aerospace Warehouse 3",
+      "node_type": "warehouse",
+      "distance": 3,
+      "impact": 7.91,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "RET-I1-1",
+      "name": "Aerospace Retailer 1",
+      "node_type": "retailer",
+      "distance": 4,
+      "impact": 7.12,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "RET-I1-2",
+      "name": "Aerospace Retailer 2",
+      "node_type": "retailer",
+      "distance": 4,
+      "impact": 7.12,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "RET-I1-3",
+      "name": "Aerospace Retailer 3",
+      "node_type": "retailer",
+      "distance": 4,
+      "impact": 7.12,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "RET-I1-4",
+      "name": "Aerospace Retailer 4",
+      "node_type": "retailer",
+      "distance": 4,
+      "impact": 7.12,
+      "risk_level": "LOW"
+    },
+    {
+      "node_id": "RET-I1-5",
+      "name": "Aerospace Retailer 5",
+      "node_type": "retailer",
+      "distance": 4,
+      "impact": 7.12,
+      "risk_level": "LOW"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 575" width="1080" height="575" font-family="Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker><marker id="arrowhot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+<rect width="1080" height="575" fill="white"/>
+<text x="540.0" y="32" text-anchor="middle" font-size="18" font-weight="bold">Aerospace: ripple effect from Aerospace Supplier (Africa/Middle East, Tier 4)</text>
+<text x="540.0" y="54" text-anchor="middle" font-size="13" fill="#495057">Starting impact 21.1 | 19 nodes affected downstream | hover over a circle for details</text>
+<text x="90" y="85" text-anchor="middle" font-size="13" fill="#495057">Tier 4</text>
+<text x="240" y="85" text-anchor="middle" font-size="13" fill="#495057">Tier 3</text>
+<text x="390" y="85" text-anchor="middle" font-size="13" fill="#495057">Tier 2</text>
+<text x="540" y="85" text-anchor="middle" font-size="13" fill="#495057">Tier 1</text>
+<text x="690" y="85" text-anchor="middle" font-size="13" fill="#495057">Factory</text>
+<text x="840" y="85" text-anchor="middle" font-size="13" fill="#495057">Warehouse</text>
+<text x="990" y="85" text-anchor="middle" font-size="13" fill="#495057">Retailer</text>
+<line x1="262" y1="405.0" x2="365" y2="335.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="262" y1="405.0" x2="365" y2="405.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="112" y1="335.0" x2="215" y2="125.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="112" y1="335.0" x2="215" y2="405.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="562" y1="335.0" x2="665" y2="230.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="335.0" x2="665" y2="300.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="712" y1="300.0" x2="815" y2="265.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="712" y1="300.0" x2="815" y2="335.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="262" y1="265.0" x2="365" y2="125.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="262" y1="265.0" x2="365" y2="195.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="862" y1="335.0" x2="965" y2="195.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="862" y1="335.0" x2="965" y2="265.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="112" y1="125.0" x2="215" y2="125.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="112" y1="125.0" x2="215" y2="405.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="405.0" x2="665" y2="230.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="405.0" x2="665" y2="300.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="412" y1="195.0" x2="515" y2="125.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="412" y1="195.0" x2="515" y2="195.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="412" y1="125.0" x2="515" y2="265.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="412" y1="125.0" x2="515" y2="335.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="412" y1="125.0" x2="515" y2="405.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="262" y1="125.0" x2="365" y2="125.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="262" y1="125.0" x2="365" y2="405.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="112" y1="405.0" x2="215" y2="335.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="112" y1="405.0" x2="215" y2="405.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="712" y1="230.0" x2="815" y2="195.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="712" y1="230.0" x2="815" y2="265.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="412" y1="265.0" x2="515" y2="265.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="412" y1="265.0" x2="515" y2="335.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="562" y1="195.0" x2="665" y2="230.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="195.0" x2="665" y2="300.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="862" y1="265.0" x2="965" y2="125.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="862" y1="265.0" x2="965" y2="405.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="265.0" x2="665" y2="230.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="265.0" x2="665" y2="300.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="562" y1="125.0" x2="665" y2="230.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="562" y1="125.0" x2="665" y2="300.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="262" y1="195.0" x2="365" y2="125.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="262" y1="195.0" x2="365" y2="195.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="262" y1="195.0" x2="365" y2="265.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="412" y1="405.0" x2="515" y2="195.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="412" y1="405.0" x2="515" y2="265.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="862" y1="195.0" x2="965" y2="195.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="862" y1="195.0" x2="965" y2="335.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="862" y1="195.0" x2="965" y2="405.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="112" y1="195.0" x2="215" y2="195.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="112" y1="195.0" x2="215" y2="265.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="412" y1="335.0" x2="515" y2="195.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="412" y1="335.0" x2="515" y2="265.0" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowhot)"/>
+<line x1="112" y1="265.0" x2="215" y2="195.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="112" y1="265.0" x2="215" y2="405.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="262" y1="335.0" x2="365" y2="195.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="262" y1="335.0" x2="365" y2="405.0" stroke="#adb5bd" stroke-width="1" marker-end="url(#arrow)"/>
+<g><title>Aerospace Supplier (Africa/Middle East, Tier 1) | supplier | Africa/Middle East | not affected</title><circle cx="540" cy="125.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="540" y="129.0" text-anchor="middle" font-size="11" fill="#212529">R1-T1</text></g>
+<g><title>Aerospace Supplier (Africa/Middle East, Tier 2) | supplier | Africa/Middle East | impact 2.84 (LOW), 2 step(s) away</title><circle cx="390" cy="125.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="390" y="129.0" text-anchor="middle" font-size="11" fill="#212529">R1-T2</text></g>
+<g><title>Aerospace Supplier (Africa/Middle East, Tier 3) | supplier | Africa/Middle East | impact 9.47 (LOW), 1 step(s) away</title><circle cx="240" cy="125.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="240" y="129.0" text-anchor="middle" font-size="11" fill="#212529">R1-T3</text></g>
+<g><title>Aerospace Supplier (Africa/Middle East, Tier 4) | supplier | Africa/Middle East | DISRUPTED</title><circle cx="90" cy="125.0" r="22" fill="#c0392b" stroke="#495057" stroke-width="1"/><text x="90" y="129.0" text-anchor="middle" font-size="11" fill="white">R1-T4</text></g>
+<g><title>Aerospace Supplier (Asia-Pacific, Tier 1) | supplier | Asia-Pacific | impact 2.56 (LOW), 3 step(s) away</title><circle cx="540" cy="195.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="540" y="199.0" text-anchor="middle" font-size="11" fill="#212529">R2-T1</text></g>
+<g><title>Aerospace Supplier (Asia-Pacific, Tier 2) | supplier | Asia-Pacific | not affected</title><circle cx="390" cy="195.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="390" y="199.0" text-anchor="middle" font-size="11" fill="#212529">R2-T2</text></g>
+<g><title>Aerospace Supplier (Asia-Pacific, Tier 3) | supplier | Asia-Pacific | not affected</title><circle cx="240" cy="195.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="240" y="199.0" text-anchor="middle" font-size="11" fill="#212529">R2-T3</text></g>
+<g><title>Aerospace Supplier (Asia-Pacific, Tier 4) | supplier | Asia-Pacific | not affected</title><circle cx="90" cy="195.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="90" y="199.0" text-anchor="middle" font-size="11" fill="#212529">R2-T4</text></g>
+<g><title>Aerospace Supplier (Europe, Tier 1) | supplier | Europe | impact 2.56 (LOW), 3 step(s) away</title><circle cx="540" cy="265.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="540" y="269.0" text-anchor="middle" font-size="11" fill="#212529">R3-T1</text></g>
+<g><title>Aerospace Supplier (Europe, Tier 2) | supplier | Europe | not affected</title><circle cx="390" cy="265.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="390" y="269.0" text-anchor="middle" font-size="11" fill="#212529">R3-T2</text></g>
+<g><title>Aerospace Supplier (Europe, Tier 3) | supplier | Europe | not affected</title><circle cx="240" cy="265.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="240" y="269.0" text-anchor="middle" font-size="11" fill="#212529">R3-T3</text></g>
+<g><title>Aerospace Supplier (Europe, Tier 4) | supplier | Europe | not affected</title><circle cx="90" cy="265.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="90" y="269.0" text-anchor="middle" font-size="11" fill="#212529">R3-T4</text></g>
+<g><title>Aerospace Supplier (North America, Tier 1) | supplier | North America | impact 1.28 (LOW), 3 step(s) away</title><circle cx="540" cy="335.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="540" y="339.0" text-anchor="middle" font-size="11" fill="#212529">R4-T1</text></g>
+<g><title>Aerospace Supplier (North America, Tier 2) | supplier | North America | impact 4.26 (LOW), 2 step(s) away</title><circle cx="390" cy="335.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="390" y="339.0" text-anchor="middle" font-size="11" fill="#212529">R4-T2</text></g>
+<g><title>Aerospace Supplier (North America, Tier 3) | supplier | North America | not affected</title><circle cx="240" cy="335.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="240" y="339.0" text-anchor="middle" font-size="11" fill="#212529">R4-T3</text></g>
+<g><title>Aerospace Supplier (North America, Tier 4) | supplier | North America | not affected</title><circle cx="90" cy="335.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="90" y="339.0" text-anchor="middle" font-size="11" fill="#212529">R4-T4</text></g>
+<g><title>Aerospace Supplier (South America, Tier 1) | supplier | South America | impact 2.56 (LOW), 3 step(s) away</title><circle cx="540" cy="405.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="540" y="409.0" text-anchor="middle" font-size="11" fill="#212529">R5-T1</text></g>
+<g><title>Aerospace Supplier (South America, Tier 2) | supplier | South America | impact 4.26 (LOW), 2 step(s) away</title><circle cx="390" cy="405.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="390" y="409.0" text-anchor="middle" font-size="11" fill="#212529">R5-T2</text></g>
+<g><title>Aerospace Supplier (South America, Tier 3) | supplier | South America | impact 4.74 (LOW), 1 step(s) away</title><circle cx="240" cy="405.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="240" y="409.0" text-anchor="middle" font-size="11" fill="#212529">R5-T3</text></g>
+<g><title>Aerospace Supplier (South America, Tier 4) | supplier | South America | not affected</title><circle cx="90" cy="405.0" r="22" fill="#ced4da" stroke="#495057" stroke-width="1"/><text x="90" y="409.0" text-anchor="middle" font-size="11" fill="#212529">R5-T4</text></g>
+<g><title>Aerospace Factory 1 | factory | Africa/Middle East | impact 1.61 (LOW), 4 step(s) away</title><circle cx="690" cy="230.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="690" y="234.0" text-anchor="middle" font-size="11" fill="#212529">FAC-1</text></g>
+<g><title>Aerospace Factory 2 | factory | Asia-Pacific | impact 1.61 (LOW), 4 step(s) away</title><circle cx="690" cy="300.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="690" y="304.0" text-anchor="middle" font-size="11" fill="#212529">FAC-2</text></g>
+<g><title>Aerospace Warehouse 1 | warehouse | Africa/Middle East | impact 1.45 (LOW), 5 step(s) away</title><circle cx="840" cy="195.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="840" y="199.0" text-anchor="middle" font-size="11" fill="#212529">WH-1</text></g>
+<g><title>Aerospace Warehouse 2 | warehouse | Asia-Pacific | impact 1.45 (LOW), 5 step(s) away</title><circle cx="840" cy="265.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="840" y="269.0" text-anchor="middle" font-size="11" fill="#212529">WH-2</text></g>
+<g><title>Aerospace Warehouse 3 | warehouse | Europe | impact 1.45 (LOW), 5 step(s) away</title><circle cx="840" cy="335.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="840" y="339.0" text-anchor="middle" font-size="11" fill="#212529">WH-3</text></g>
+<g><title>Aerospace Retailer 1 | retailer | Africa/Middle East | impact 1.31 (LOW), 6 step(s) away</title><circle cx="990" cy="125.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="990" y="129.0" text-anchor="middle" font-size="11" fill="#212529">RET-1</text></g>
+<g><title>Aerospace Retailer 2 | retailer | Asia-Pacific | impact 1.31 (LOW), 6 step(s) away</title><circle cx="990" cy="195.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="990" y="199.0" text-anchor="middle" font-size="11" fill="#212529">RET-2</text></g>
+<g><title>Aerospace Retailer 3 | retailer | Europe | impact 1.31 (LOW), 6 step(s) away</title><circle cx="990" cy="265.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="990" y="269.0" text-anchor="middle" font-size="11" fill="#212529">RET-3</text></g>
+<g><title>Aerospace Retailer 4 | retailer | North America | impact 1.31 (LOW), 6 step(s) away</title><circle cx="990" cy="335.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="990" y="339.0" text-anchor="middle" font-size="11" fill="#212529">RET-4</text></g>
+<g><title>Aerospace Retailer 5 | retailer | South America | impact 1.31 (LOW), 6 step(s) away</title><circle cx="990" cy="405.0" r="22" fill="#ffe066" stroke="#495057" stroke-width="1"/><text x="990" y="409.0" text-anchor="middle" font-size="11" fill="#212529">RET-5</text></g>
+<circle cx="90" cy="480" r="9" fill="#c0392b" stroke="#495057"/>
+<text x="106" y="484" font-size="12">Disrupted</text>
+<circle cx="240" cy="480" r="9" fill="#e8590c" stroke="#495057"/>
+<text x="256" y="484" font-size="12">HIGH</text>
+<circle cx="390" cy="480" r="9" fill="#f59f00" stroke="#495057"/>
+<text x="406" y="484" font-size="12">MEDIUM</text>
+<circle cx="540" cy="480" r="9" fill="#ffe066" stroke="#495057"/>
+<text x="556" y="484" font-size="12">LOW</text>
+<circle cx="690" cy="480" r="9" fill="#ced4da" stroke="#495057"/>
+<text x="706" y="484" font-size="12">Not affected</text>
+<text x="50" y="518" font-size="12" fill="#495057">Region codes: R1 = Africa/Middle East   R2 = Asia-Pacific   R3 = Europe   R4 = North America   R5 = South America</text>
+<text x="50" y="538" font-size="12" fill="#495057">Synthetic network; disruption values come from the real dataset.</text>
+</svg>

@@ -43,7 +43,7 @@ A disrupted supplier starts with its real average production impact (%) from the
     result = build_ripple_json(G, "SUP-I1-R1-T2")
 
 ## Dataset
-Currently the raw file datasets/raw/supply_chain_disruption_recovery.csv. The cleaned file from Sri Varshini's pipeline will be used once it is verified with check_dataset.py.
+The cleaned file AtmoGraph_DataPreprocessing/data/processed/supply_chain_cleaned.csv from Sri Varshini's pipeline (branch dev_s), checked with check_dataset.py (100,000 rows, same columns and values our scripts need). Re-running the scripts on it gave the same network and supplier averages as the raw file.
 
 ## Assumptions (to be confirmed by the team lead)
 - A higher tier number is further upstream (tier 4 supplies tier 3, and so on).
@@ -53,3 +53,4 @@ Currently the raw file datasets/raw/supply_chain_disruption_recovery.csv. The cl
 ## Notes
 - The dataset is not stored in this folder.
 - Scripts use Python's csv module instead of pandas, because Windows Application Control blocked pandas on the author's laptop.
+

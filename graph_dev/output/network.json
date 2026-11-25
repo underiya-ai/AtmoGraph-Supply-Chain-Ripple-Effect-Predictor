@@ -1,0 +1,3072 @@
+{
+  "total_nodes": 150,
+  "total_edges": 266,
+  "nodes": [
+    {
+      "node_id": "SUP-I1-R1-T1",
+      "name": "Aerospace Supplier (Africa/Middle East, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": 1,
+      "disruption_count": 293,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 38.99,
+      "avg_revenue_loss_usd": 6183478.72,
+      "avg_response_time_days": 4.07,
+      "avg_full_recovery_days": 69.91,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.31
+    },
+    {
+      "node_id": "SUP-I1-R1-T2",
+      "name": "Aerospace Supplier (Africa/Middle East, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": 2,
+      "disruption_count": 249,
+      "avg_disruption_severity": 2.41,
+      "avg_production_impact_pct": 31.01,
+      "avg_revenue_loss_usd": 6209256.45,
+      "avg_response_time_days": 3.88,
+      "avg_full_recovery_days": 70.62,
+      "share_has_backup_supplier": 0.52,
+      "share_permanent_supplier_change": 0.18
+    },
+    {
+      "node_id": "SUP-I1-R1-T3",
+      "name": "Aerospace Supplier (Africa/Middle East, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": 3,
+      "disruption_count": 212,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 26.61,
+      "avg_revenue_loss_usd": 5130628.38,
+      "avg_response_time_days": 3.39,
+      "avg_full_recovery_days": 79.71,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I1-R1-T4",
+      "name": "Aerospace Supplier (Africa/Middle East, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": 4,
+      "disruption_count": 81,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 21.05,
+      "avg_revenue_loss_usd": 5107488.38,
+      "avg_response_time_days": 4.33,
+      "avg_full_recovery_days": 76.37,
+      "share_has_backup_supplier": 0.43,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I1-R2-T1",
+      "name": "Aerospace Supplier (Asia-Pacific, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": 1,
+      "disruption_count": 1405,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 37.47,
+      "avg_revenue_loss_usd": 7246610.06,
+      "avg_response_time_days": 4.09,
+      "avg_full_recovery_days": 74.53,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.26
+    },
+    {
+      "node_id": "SUP-I1-R2-T2",
+      "name": "Aerospace Supplier (Asia-Pacific, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": 2,
+      "disruption_count": 1256,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 31.49,
+      "avg_revenue_loss_usd": 6210543.43,
+      "avg_response_time_days": 4.07,
+      "avg_full_recovery_days": 73.42,
+      "share_has_backup_supplier": 0.53,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I1-R2-T3",
+      "name": "Aerospace Supplier (Asia-Pacific, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": 3,
+      "disruption_count": 986,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 26.41,
+      "avg_revenue_loss_usd": 5053254.85,
+      "avg_response_time_days": 3.95,
+      "avg_full_recovery_days": 78.35,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I1-R2-T4",
+      "name": "Aerospace Supplier (Asia-Pacific, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": 4,
+      "disruption_count": 373,
+      "avg_disruption_severity": 2.56,
+      "avg_production_impact_pct": 21.07,
+      "avg_revenue_loss_usd": 3256671.4,
+      "avg_response_time_days": 4.56,
+      "avg_full_recovery_days": 86.25,
+      "share_has_backup_supplier": 0.53,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I1-R3-T1",
+      "name": "Aerospace Supplier (Europe, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Europe",
+      "tier": 1,
+      "disruption_count": 751,
+      "avg_disruption_severity": 2.43,
+      "avg_production_impact_pct": 36.75,
+      "avg_revenue_loss_usd": 7220695.34,
+      "avg_response_time_days": 4.19,
+      "avg_full_recovery_days": 69.15,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I1-R3-T2",
+      "name": "Aerospace Supplier (Europe, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Europe",
+      "tier": 2,
+      "disruption_count": 660,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 31.87,
+      "avg_revenue_loss_usd": 5872022.9,
+      "avg_response_time_days": 3.94,
+      "avg_full_recovery_days": 78.08,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I1-R3-T3",
+      "name": "Aerospace Supplier (Europe, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Europe",
+      "tier": 3,
+      "disruption_count": 569,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 27.5,
+      "avg_revenue_loss_usd": 5707246.13,
+      "avg_response_time_days": 4.14,
+      "avg_full_recovery_days": 77.51,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I1-R3-T4",
+      "name": "Aerospace Supplier (Europe, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "Europe",
+      "tier": 4,
+      "disruption_count": 208,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 22.07,
+      "avg_revenue_loss_usd": 5165236.95,
+      "avg_response_time_days": 4.42,
+      "avg_full_recovery_days": 83.68,
+      "share_has_backup_supplier": 0.52,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I1-R4-T1",
+      "name": "Aerospace Supplier (North America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "North America",
+      "tier": 1,
+      "disruption_count": 680,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 37.08,
+      "avg_revenue_loss_usd": 6505420.82,
+      "avg_response_time_days": 4.26,
+      "avg_full_recovery_days": 72.05,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I1-R4-T2",
+      "name": "Aerospace Supplier (North America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "North America",
+      "tier": 2,
+      "disruption_count": 605,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 30.91,
+      "avg_revenue_loss_usd": 7029041.87,
+      "avg_response_time_days": 3.87,
+      "avg_full_recovery_days": 75.36,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.2
+    },
+    {
+      "node_id": "SUP-I1-R4-T3",
+      "name": "Aerospace Supplier (North America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "North America",
+      "tier": 3,
+      "disruption_count": 500,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 26.43,
+      "avg_revenue_loss_usd": 4885288.44,
+      "avg_response_time_days": 4.54,
+      "avg_full_recovery_days": 79.6,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.19
+    },
+    {
+      "node_id": "SUP-I1-R4-T4",
+      "name": "Aerospace Supplier (North America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "North America",
+      "tier": 4,
+      "disruption_count": 205,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 20.45,
+      "avg_revenue_loss_usd": 4423449.38,
+      "avg_response_time_days": 4.33,
+      "avg_full_recovery_days": 74.89,
+      "share_has_backup_supplier": 0.59,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I1-R5-T1",
+      "name": "Aerospace Supplier (South America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "South America",
+      "tier": 1,
+      "disruption_count": 361,
+      "avg_disruption_severity": 2.57,
+      "avg_production_impact_pct": 39.36,
+      "avg_revenue_loss_usd": 7512451.32,
+      "avg_response_time_days": 3.96,
+      "avg_full_recovery_days": 75.17,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.25
+    },
+    {
+      "node_id": "SUP-I1-R5-T2",
+      "name": "Aerospace Supplier (South America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "South America",
+      "tier": 2,
+      "disruption_count": 291,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 32.86,
+      "avg_revenue_loss_usd": 6168278.62,
+      "avg_response_time_days": 3.78,
+      "avg_full_recovery_days": 76.56,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.2
+    },
+    {
+      "node_id": "SUP-I1-R5-T3",
+      "name": "Aerospace Supplier (South America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "South America",
+      "tier": 3,
+      "disruption_count": 269,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 26.56,
+      "avg_revenue_loss_usd": 5399575.75,
+      "avg_response_time_days": 4.54,
+      "avg_full_recovery_days": 74.51,
+      "share_has_backup_supplier": 0.49,
+      "share_permanent_supplier_change": 0.19
+    },
+    {
+      "node_id": "SUP-I1-R5-T4",
+      "name": "Aerospace Supplier (South America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Aerospace",
+      "region": "South America",
+      "tier": 4,
+      "disruption_count": 95,
+      "avg_disruption_severity": 2.44,
+      "avg_production_impact_pct": 20.49,
+      "avg_revenue_loss_usd": 3497686.91,
+      "avg_response_time_days": 3.25,
+      "avg_full_recovery_days": 79.64,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "FAC-I1-1",
+      "name": "Aerospace Factory 1",
+      "node_type": "factory",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "FAC-I1-2",
+      "name": "Aerospace Factory 2",
+      "node_type": "factory",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I1-1",
+      "name": "Aerospace Warehouse 1",
+      "node_type": "warehouse",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I1-2",
+      "name": "Aerospace Warehouse 2",
+      "node_type": "warehouse",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I1-3",
+      "name": "Aerospace Warehouse 3",
+      "node_type": "warehouse",
+      "industry": "Aerospace",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I1-1",
+      "name": "Aerospace Retailer 1",
+      "node_type": "retailer",
+      "industry": "Aerospace",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I1-2",
+      "name": "Aerospace Retailer 2",
+      "node_type": "retailer",
+      "industry": "Aerospace",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I1-3",
+      "name": "Aerospace Retailer 3",
+      "node_type": "retailer",
+      "industry": "Aerospace",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I1-4",
+      "name": "Aerospace Retailer 4",
+      "node_type": "retailer",
+      "industry": "Aerospace",
+      "region": "North America",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I1-5",
+      "name": "Aerospace Retailer 5",
+      "node_type": "retailer",
+      "industry": "Aerospace",
+      "region": "South America",
+      "tier": null
+    },
+    {
+      "node_id": "SUP-I2-R1-T1",
+      "name": "Automotive Supplier (Africa/Middle East, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": 1,
+      "disruption_count": 719,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 38.28,
+      "avg_revenue_loss_usd": 2892860.75,
+      "avg_response_time_days": 4.11,
+      "avg_full_recovery_days": 74.89,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.25
+    },
+    {
+      "node_id": "SUP-I2-R1-T2",
+      "name": "Automotive Supplier (Africa/Middle East, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": 2,
+      "disruption_count": 553,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 32.19,
+      "avg_revenue_loss_usd": 2446451.5,
+      "avg_response_time_days": 4.18,
+      "avg_full_recovery_days": 76.05,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.2
+    },
+    {
+      "node_id": "SUP-I2-R1-T3",
+      "name": "Automotive Supplier (Africa/Middle East, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": 3,
+      "disruption_count": 515,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 26.81,
+      "avg_revenue_loss_usd": 2178789.77,
+      "avg_response_time_days": 4.03,
+      "avg_full_recovery_days": 81.17,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.2
+    },
+    {
+      "node_id": "SUP-I2-R1-T4",
+      "name": "Automotive Supplier (Africa/Middle East, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": 4,
+      "disruption_count": 201,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 20.36,
+      "avg_revenue_loss_usd": 1808453.29,
+      "avg_response_time_days": 3.53,
+      "avg_full_recovery_days": 80.59,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.19
+    },
+    {
+      "node_id": "SUP-I2-R2-T1",
+      "name": "Automotive Supplier (Asia-Pacific, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": 1,
+      "disruption_count": 3599,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 37.33,
+      "avg_revenue_loss_usd": 2858272.65,
+      "avg_response_time_days": 4.19,
+      "avg_full_recovery_days": 72.81,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I2-R2-T2",
+      "name": "Automotive Supplier (Asia-Pacific, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": 2,
+      "disruption_count": 2946,
+      "avg_disruption_severity": 2.45,
+      "avg_production_impact_pct": 31.29,
+      "avg_revenue_loss_usd": 2393851.39,
+      "avg_response_time_days": 3.95,
+      "avg_full_recovery_days": 73.22,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I2-R2-T3",
+      "name": "Automotive Supplier (Asia-Pacific, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": 3,
+      "disruption_count": 2505,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 26.48,
+      "avg_revenue_loss_usd": 1989521.7,
+      "avg_response_time_days": 3.9,
+      "avg_full_recovery_days": 78.17,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I2-R2-T4",
+      "name": "Automotive Supplier (Asia-Pacific, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": 4,
+      "disruption_count": 993,
+      "avg_disruption_severity": 2.45,
+      "avg_production_impact_pct": 20.46,
+      "avg_revenue_loss_usd": 1744280.93,
+      "avg_response_time_days": 4.22,
+      "avg_full_recovery_days": 80.35,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I2-R3-T1",
+      "name": "Automotive Supplier (Europe, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Europe",
+      "tier": 1,
+      "disruption_count": 1874,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 37.67,
+      "avg_revenue_loss_usd": 2826598.75,
+      "avg_response_time_days": 4.01,
+      "avg_full_recovery_days": 71.6,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.29
+    },
+    {
+      "node_id": "SUP-I2-R3-T2",
+      "name": "Automotive Supplier (Europe, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Europe",
+      "tier": 2,
+      "disruption_count": 1698,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 31.61,
+      "avg_revenue_loss_usd": 2337135.49,
+      "avg_response_time_days": 3.96,
+      "avg_full_recovery_days": 74.52,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I2-R3-T3",
+      "name": "Automotive Supplier (Europe, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Europe",
+      "tier": 3,
+      "disruption_count": 1414,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 26.53,
+      "avg_revenue_loss_usd": 2144988.65,
+      "avg_response_time_days": 3.91,
+      "avg_full_recovery_days": 77.96,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I2-R3-T4",
+      "name": "Automotive Supplier (Europe, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "Europe",
+      "tier": 4,
+      "disruption_count": 570,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 21.45,
+      "avg_revenue_loss_usd": 1770990.86,
+      "avg_response_time_days": 4.63,
+      "avg_full_recovery_days": 81.54,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I2-R4-T1",
+      "name": "Automotive Supplier (North America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "North America",
+      "tier": 1,
+      "disruption_count": 1731,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 37.52,
+      "avg_revenue_loss_usd": 3046383.27,
+      "avg_response_time_days": 4.0,
+      "avg_full_recovery_days": 72.67,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.26
+    },
+    {
+      "node_id": "SUP-I2-R4-T2",
+      "name": "Automotive Supplier (North America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "North America",
+      "tier": 2,
+      "disruption_count": 1488,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 32.15,
+      "avg_revenue_loss_usd": 2348219.04,
+      "avg_response_time_days": 4.18,
+      "avg_full_recovery_days": 73.86,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I2-R4-T3",
+      "name": "Automotive Supplier (North America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "North America",
+      "tier": 3,
+      "disruption_count": 1235,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 26.46,
+      "avg_revenue_loss_usd": 2153140.99,
+      "avg_response_time_days": 3.87,
+      "avg_full_recovery_days": 81.7,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I2-R4-T4",
+      "name": "Automotive Supplier (North America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "North America",
+      "tier": 4,
+      "disruption_count": 498,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 20.25,
+      "avg_revenue_loss_usd": 1648089.2,
+      "avg_response_time_days": 4.02,
+      "avg_full_recovery_days": 79.2,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I2-R5-T1",
+      "name": "Automotive Supplier (South America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "South America",
+      "tier": 1,
+      "disruption_count": 840,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 37.89,
+      "avg_revenue_loss_usd": 3162938.75,
+      "avg_response_time_days": 4.15,
+      "avg_full_recovery_days": 72.45,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I2-R5-T2",
+      "name": "Automotive Supplier (South America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "South America",
+      "tier": 2,
+      "disruption_count": 730,
+      "avg_disruption_severity": 2.54,
+      "avg_production_impact_pct": 32.89,
+      "avg_revenue_loss_usd": 2555574.41,
+      "avg_response_time_days": 4.36,
+      "avg_full_recovery_days": 76.19,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I2-R5-T3",
+      "name": "Automotive Supplier (South America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "South America",
+      "tier": 3,
+      "disruption_count": 591,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 26.63,
+      "avg_revenue_loss_usd": 2140447.27,
+      "avg_response_time_days": 4.14,
+      "avg_full_recovery_days": 79.95,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I2-R5-T4",
+      "name": "Automotive Supplier (South America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Automotive",
+      "region": "South America",
+      "tier": 4,
+      "disruption_count": 234,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 20.75,
+      "avg_revenue_loss_usd": 1395955.06,
+      "avg_response_time_days": 3.98,
+      "avg_full_recovery_days": 82.73,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "FAC-I2-1",
+      "name": "Automotive Factory 1",
+      "node_type": "factory",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "FAC-I2-2",
+      "name": "Automotive Factory 2",
+      "node_type": "factory",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I2-1",
+      "name": "Automotive Warehouse 1",
+      "node_type": "warehouse",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I2-2",
+      "name": "Automotive Warehouse 2",
+      "node_type": "warehouse",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I2-3",
+      "name": "Automotive Warehouse 3",
+      "node_type": "warehouse",
+      "industry": "Automotive",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I2-1",
+      "name": "Automotive Retailer 1",
+      "node_type": "retailer",
+      "industry": "Automotive",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I2-2",
+      "name": "Automotive Retailer 2",
+      "node_type": "retailer",
+      "industry": "Automotive",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I2-3",
+      "name": "Automotive Retailer 3",
+      "node_type": "retailer",
+      "industry": "Automotive",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I2-4",
+      "name": "Automotive Retailer 4",
+      "node_type": "retailer",
+      "industry": "Automotive",
+      "region": "North America",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I2-5",
+      "name": "Automotive Retailer 5",
+      "node_type": "retailer",
+      "industry": "Automotive",
+      "region": "South America",
+      "tier": null
+    },
+    {
+      "node_id": "SUP-I3-R1-T1",
+      "name": "Consumer Goods Supplier (Africa/Middle East, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": 1,
+      "disruption_count": 557,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 35.7,
+      "avg_revenue_loss_usd": 1011784.27,
+      "avg_response_time_days": 3.94,
+      "avg_full_recovery_days": 72.85,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.25
+    },
+    {
+      "node_id": "SUP-I3-R1-T2",
+      "name": "Consumer Goods Supplier (Africa/Middle East, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": 2,
+      "disruption_count": 490,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 32.04,
+      "avg_revenue_loss_usd": 1205292.49,
+      "avg_response_time_days": 4.07,
+      "avg_full_recovery_days": 73.19,
+      "share_has_backup_supplier": 0.61,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I3-R1-T3",
+      "name": "Consumer Goods Supplier (Africa/Middle East, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": 3,
+      "disruption_count": 395,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 25.99,
+      "avg_revenue_loss_usd": 847634.29,
+      "avg_response_time_days": 4.3,
+      "avg_full_recovery_days": 78.99,
+      "share_has_backup_supplier": 0.5,
+      "share_permanent_supplier_change": 0.25
+    },
+    {
+      "node_id": "SUP-I3-R1-T4",
+      "name": "Consumer Goods Supplier (Africa/Middle East, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": 4,
+      "disruption_count": 179,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 20.93,
+      "avg_revenue_loss_usd": 528945.41,
+      "avg_response_time_days": 3.93,
+      "avg_full_recovery_days": 86.53,
+      "share_has_backup_supplier": 0.5,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I3-R2-T1",
+      "name": "Consumer Goods Supplier (Asia-Pacific, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": 1,
+      "disruption_count": 2827,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 37.62,
+      "avg_revenue_loss_usd": 1123402.03,
+      "avg_response_time_days": 3.95,
+      "avg_full_recovery_days": 72.1,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I3-R2-T2",
+      "name": "Consumer Goods Supplier (Asia-Pacific, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": 2,
+      "disruption_count": 2382,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 31.67,
+      "avg_revenue_loss_usd": 973856.63,
+      "avg_response_time_days": 4.24,
+      "avg_full_recovery_days": 75.62,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I3-R2-T3",
+      "name": "Consumer Goods Supplier (Asia-Pacific, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": 3,
+      "disruption_count": 2025,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 26.28,
+      "avg_revenue_loss_usd": 856943.4,
+      "avg_response_time_days": 4.11,
+      "avg_full_recovery_days": 79.25,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I3-R2-T4",
+      "name": "Consumer Goods Supplier (Asia-Pacific, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": 4,
+      "disruption_count": 841,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 21.19,
+      "avg_revenue_loss_usd": 648825.27,
+      "avg_response_time_days": 3.95,
+      "avg_full_recovery_days": 83.02,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.25
+    },
+    {
+      "node_id": "SUP-I3-R3-T1",
+      "name": "Consumer Goods Supplier (Europe, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Europe",
+      "tier": 1,
+      "disruption_count": 1532,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 38.21,
+      "avg_revenue_loss_usd": 1218387.98,
+      "avg_response_time_days": 4.09,
+      "avg_full_recovery_days": 74.29,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.28
+    },
+    {
+      "node_id": "SUP-I3-R3-T2",
+      "name": "Consumer Goods Supplier (Europe, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Europe",
+      "tier": 2,
+      "disruption_count": 1320,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 32.41,
+      "avg_revenue_loss_usd": 1074316.25,
+      "avg_response_time_days": 4.05,
+      "avg_full_recovery_days": 75.98,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I3-R3-T3",
+      "name": "Consumer Goods Supplier (Europe, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Europe",
+      "tier": 3,
+      "disruption_count": 1144,
+      "avg_disruption_severity": 2.54,
+      "avg_production_impact_pct": 26.1,
+      "avg_revenue_loss_usd": 797338.39,
+      "avg_response_time_days": 4.24,
+      "avg_full_recovery_days": 79.83,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I3-R3-T4",
+      "name": "Consumer Goods Supplier (Europe, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "Europe",
+      "tier": 4,
+      "disruption_count": 448,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 21.35,
+      "avg_revenue_loss_usd": 823517.65,
+      "avg_response_time_days": 3.86,
+      "avg_full_recovery_days": 78.21,
+      "share_has_backup_supplier": 0.61,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I3-R4-T1",
+      "name": "Consumer Goods Supplier (North America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "North America",
+      "tier": 1,
+      "disruption_count": 1425,
+      "avg_disruption_severity": 2.47,
+      "avg_production_impact_pct": 37.23,
+      "avg_revenue_loss_usd": 1152977.7,
+      "avg_response_time_days": 3.95,
+      "avg_full_recovery_days": 71.02,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I3-R4-T2",
+      "name": "Consumer Goods Supplier (North America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "North America",
+      "tier": 2,
+      "disruption_count": 1208,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 32.08,
+      "avg_revenue_loss_usd": 963555.0,
+      "avg_response_time_days": 4.28,
+      "avg_full_recovery_days": 73.31,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I3-R4-T3",
+      "name": "Consumer Goods Supplier (North America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "North America",
+      "tier": 3,
+      "disruption_count": 1022,
+      "avg_disruption_severity": 2.47,
+      "avg_production_impact_pct": 26.42,
+      "avg_revenue_loss_usd": 858716.25,
+      "avg_response_time_days": 4.05,
+      "avg_full_recovery_days": 78.58,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.19
+    },
+    {
+      "node_id": "SUP-I3-R4-T4",
+      "name": "Consumer Goods Supplier (North America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "North America",
+      "tier": 4,
+      "disruption_count": 404,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 21.89,
+      "avg_revenue_loss_usd": 627681.84,
+      "avg_response_time_days": 3.97,
+      "avg_full_recovery_days": 77.13,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I3-R5-T1",
+      "name": "Consumer Goods Supplier (South America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "South America",
+      "tier": 1,
+      "disruption_count": 655,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 37.33,
+      "avg_revenue_loss_usd": 1188968.15,
+      "avg_response_time_days": 3.94,
+      "avg_full_recovery_days": 70.16,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.28
+    },
+    {
+      "node_id": "SUP-I3-R5-T2",
+      "name": "Consumer Goods Supplier (South America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "South America",
+      "tier": 2,
+      "disruption_count": 611,
+      "avg_disruption_severity": 2.58,
+      "avg_production_impact_pct": 33.15,
+      "avg_revenue_loss_usd": 998201.82,
+      "avg_response_time_days": 4.3,
+      "avg_full_recovery_days": 78.07,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I3-R5-T3",
+      "name": "Consumer Goods Supplier (South America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "South America",
+      "tier": 3,
+      "disruption_count": 505,
+      "avg_disruption_severity": 2.61,
+      "avg_production_impact_pct": 27.85,
+      "avg_revenue_loss_usd": 841030.29,
+      "avg_response_time_days": 4.19,
+      "avg_full_recovery_days": 80.83,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I3-R5-T4",
+      "name": "Consumer Goods Supplier (South America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Consumer Goods",
+      "region": "South America",
+      "tier": 4,
+      "disruption_count": 188,
+      "avg_disruption_severity": 2.47,
+      "avg_production_impact_pct": 22.04,
+      "avg_revenue_loss_usd": 603632.27,
+      "avg_response_time_days": 3.49,
+      "avg_full_recovery_days": 81.08,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.2
+    },
+    {
+      "node_id": "FAC-I3-1",
+      "name": "Consumer Goods Factory 1",
+      "node_type": "factory",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "FAC-I3-2",
+      "name": "Consumer Goods Factory 2",
+      "node_type": "factory",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I3-1",
+      "name": "Consumer Goods Warehouse 1",
+      "node_type": "warehouse",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I3-2",
+      "name": "Consumer Goods Warehouse 2",
+      "node_type": "warehouse",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I3-3",
+      "name": "Consumer Goods Warehouse 3",
+      "node_type": "warehouse",
+      "industry": "Consumer Goods",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I3-1",
+      "name": "Consumer Goods Retailer 1",
+      "node_type": "retailer",
+      "industry": "Consumer Goods",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I3-2",
+      "name": "Consumer Goods Retailer 2",
+      "node_type": "retailer",
+      "industry": "Consumer Goods",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I3-3",
+      "name": "Consumer Goods Retailer 3",
+      "node_type": "retailer",
+      "industry": "Consumer Goods",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I3-4",
+      "name": "Consumer Goods Retailer 4",
+      "node_type": "retailer",
+      "industry": "Consumer Goods",
+      "region": "North America",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I3-5",
+      "name": "Consumer Goods Retailer 5",
+      "node_type": "retailer",
+      "industry": "Consumer Goods",
+      "region": "South America",
+      "tier": null
+    },
+    {
+      "node_id": "SUP-I4-R1-T1",
+      "name": "Electronics Supplier (Africa/Middle East, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": 1,
+      "disruption_count": 814,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 38.57,
+      "avg_revenue_loss_usd": 2153504.05,
+      "avg_response_time_days": 3.98,
+      "avg_full_recovery_days": 72.37,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.29
+    },
+    {
+      "node_id": "SUP-I4-R1-T2",
+      "name": "Electronics Supplier (Africa/Middle East, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": 2,
+      "disruption_count": 714,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 32.84,
+      "avg_revenue_loss_usd": 1944468.89,
+      "avg_response_time_days": 4.07,
+      "avg_full_recovery_days": 78.89,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.25
+    },
+    {
+      "node_id": "SUP-I4-R1-T3",
+      "name": "Electronics Supplier (Africa/Middle East, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": 3,
+      "disruption_count": 638,
+      "avg_disruption_severity": 2.47,
+      "avg_production_impact_pct": 26.35,
+      "avg_revenue_loss_usd": 1451280.88,
+      "avg_response_time_days": 4.02,
+      "avg_full_recovery_days": 80.78,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I4-R1-T4",
+      "name": "Electronics Supplier (Africa/Middle East, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": 4,
+      "disruption_count": 248,
+      "avg_disruption_severity": 2.54,
+      "avg_production_impact_pct": 21.82,
+      "avg_revenue_loss_usd": 1049015.51,
+      "avg_response_time_days": 4.03,
+      "avg_full_recovery_days": 86.72,
+      "share_has_backup_supplier": 0.5,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I4-R2-T1",
+      "name": "Electronics Supplier (Asia-Pacific, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": 1,
+      "disruption_count": 4276,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 37.5,
+      "avg_revenue_loss_usd": 2201836.1,
+      "avg_response_time_days": 4.06,
+      "avg_full_recovery_days": 73.2,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I4-R2-T2",
+      "name": "Electronics Supplier (Asia-Pacific, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": 2,
+      "disruption_count": 3607,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 32.1,
+      "avg_revenue_loss_usd": 1893229.17,
+      "avg_response_time_days": 3.91,
+      "avg_full_recovery_days": 75.42,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I4-R2-T3",
+      "name": "Electronics Supplier (Asia-Pacific, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": 3,
+      "disruption_count": 2923,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 26.61,
+      "avg_revenue_loss_usd": 1643883.09,
+      "avg_response_time_days": 4.03,
+      "avg_full_recovery_days": 78.85,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I4-R2-T4",
+      "name": "Electronics Supplier (Asia-Pacific, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": 4,
+      "disruption_count": 1219,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 20.67,
+      "avg_revenue_loss_usd": 1314405.27,
+      "avg_response_time_days": 3.99,
+      "avg_full_recovery_days": 82.27,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I4-R3-T1",
+      "name": "Electronics Supplier (Europe, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Europe",
+      "tier": 1,
+      "disruption_count": 2275,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 36.9,
+      "avg_revenue_loss_usd": 2281906.0,
+      "avg_response_time_days": 4.23,
+      "avg_full_recovery_days": 70.05,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.26
+    },
+    {
+      "node_id": "SUP-I4-R3-T2",
+      "name": "Electronics Supplier (Europe, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Europe",
+      "tier": 2,
+      "disruption_count": 2010,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 32.03,
+      "avg_revenue_loss_usd": 1867526.53,
+      "avg_response_time_days": 3.86,
+      "avg_full_recovery_days": 76.34,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I4-R3-T3",
+      "name": "Electronics Supplier (Europe, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Europe",
+      "tier": 3,
+      "disruption_count": 1573,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 26.52,
+      "avg_revenue_loss_usd": 1552846.08,
+      "avg_response_time_days": 4.21,
+      "avg_full_recovery_days": 80.43,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I4-R3-T4",
+      "name": "Electronics Supplier (Europe, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "Europe",
+      "tier": 4,
+      "disruption_count": 622,
+      "avg_disruption_severity": 2.56,
+      "avg_production_impact_pct": 21.88,
+      "avg_revenue_loss_usd": 1536768.11,
+      "avg_response_time_days": 3.98,
+      "avg_full_recovery_days": 82.64,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I4-R4-T1",
+      "name": "Electronics Supplier (North America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "North America",
+      "tier": 1,
+      "disruption_count": 2057,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 37.28,
+      "avg_revenue_loss_usd": 2210028.23,
+      "avg_response_time_days": 4.07,
+      "avg_full_recovery_days": 72.05,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I4-R4-T2",
+      "name": "Electronics Supplier (North America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "North America",
+      "tier": 2,
+      "disruption_count": 1769,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 32.05,
+      "avg_revenue_loss_usd": 1897705.31,
+      "avg_response_time_days": 4.22,
+      "avg_full_recovery_days": 75.75,
+      "share_has_backup_supplier": 0.53,
+      "share_permanent_supplier_change": 0.23
+    },
+    {
+      "node_id": "SUP-I4-R4-T3",
+      "name": "Electronics Supplier (North America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "North America",
+      "tier": 3,
+      "disruption_count": 1516,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 26.46,
+      "avg_revenue_loss_usd": 1605074.77,
+      "avg_response_time_days": 4.04,
+      "avg_full_recovery_days": 78.6,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I4-R4-T4",
+      "name": "Electronics Supplier (North America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "North America",
+      "tier": 4,
+      "disruption_count": 591,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 20.89,
+      "avg_revenue_loss_usd": 1164237.83,
+      "avg_response_time_days": 4.01,
+      "avg_full_recovery_days": 79.17,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I4-R5-T1",
+      "name": "Electronics Supplier (South America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "South America",
+      "tier": 1,
+      "disruption_count": 1015,
+      "avg_disruption_severity": 2.48,
+      "avg_production_impact_pct": 37.16,
+      "avg_revenue_loss_usd": 2066395.93,
+      "avg_response_time_days": 3.86,
+      "avg_full_recovery_days": 72.2,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.26
+    },
+    {
+      "node_id": "SUP-I4-R5-T2",
+      "name": "Electronics Supplier (South America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "South America",
+      "tier": 2,
+      "disruption_count": 909,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 31.37,
+      "avg_revenue_loss_usd": 1942526.26,
+      "avg_response_time_days": 4.31,
+      "avg_full_recovery_days": 73.19,
+      "share_has_backup_supplier": 0.53,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I4-R5-T3",
+      "name": "Electronics Supplier (South America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "South America",
+      "tier": 3,
+      "disruption_count": 767,
+      "avg_disruption_severity": 2.46,
+      "avg_production_impact_pct": 25.83,
+      "avg_revenue_loss_usd": 1566480.99,
+      "avg_response_time_days": 4.36,
+      "avg_full_recovery_days": 77.26,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I4-R5-T4",
+      "name": "Electronics Supplier (South America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Electronics",
+      "region": "South America",
+      "tier": 4,
+      "disruption_count": 301,
+      "avg_disruption_severity": 2.53,
+      "avg_production_impact_pct": 21.43,
+      "avg_revenue_loss_usd": 1437047.44,
+      "avg_response_time_days": 3.94,
+      "avg_full_recovery_days": 82.57,
+      "share_has_backup_supplier": 0.59,
+      "share_permanent_supplier_change": 0.19
+    },
+    {
+      "node_id": "FAC-I4-1",
+      "name": "Electronics Factory 1",
+      "node_type": "factory",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "FAC-I4-2",
+      "name": "Electronics Factory 2",
+      "node_type": "factory",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I4-1",
+      "name": "Electronics Warehouse 1",
+      "node_type": "warehouse",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I4-2",
+      "name": "Electronics Warehouse 2",
+      "node_type": "warehouse",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I4-3",
+      "name": "Electronics Warehouse 3",
+      "node_type": "warehouse",
+      "industry": "Electronics",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I4-1",
+      "name": "Electronics Retailer 1",
+      "node_type": "retailer",
+      "industry": "Electronics",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I4-2",
+      "name": "Electronics Retailer 2",
+      "node_type": "retailer",
+      "industry": "Electronics",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I4-3",
+      "name": "Electronics Retailer 3",
+      "node_type": "retailer",
+      "industry": "Electronics",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I4-4",
+      "name": "Electronics Retailer 4",
+      "node_type": "retailer",
+      "industry": "Electronics",
+      "region": "North America",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I4-5",
+      "name": "Electronics Retailer 5",
+      "node_type": "retailer",
+      "industry": "Electronics",
+      "region": "South America",
+      "tier": null
+    },
+    {
+      "node_id": "SUP-I5-R1-T1",
+      "name": "Pharmaceuticals Supplier (Africa/Middle East, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": 1,
+      "disruption_count": 397,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 37.62,
+      "avg_revenue_loss_usd": 4074733.88,
+      "avg_response_time_days": 3.89,
+      "avg_full_recovery_days": 74.3,
+      "share_has_backup_supplier": 0.53,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I5-R1-T2",
+      "name": "Pharmaceuticals Supplier (Africa/Middle East, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": 2,
+      "disruption_count": 353,
+      "avg_disruption_severity": 2.63,
+      "avg_production_impact_pct": 33.93,
+      "avg_revenue_loss_usd": 3912273.05,
+      "avg_response_time_days": 4.06,
+      "avg_full_recovery_days": 79.42,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I5-R1-T3",
+      "name": "Pharmaceuticals Supplier (Africa/Middle East, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": 3,
+      "disruption_count": 281,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 25.96,
+      "avg_revenue_loss_usd": 2774769.06,
+      "avg_response_time_days": 4.0,
+      "avg_full_recovery_days": 84.04,
+      "share_has_backup_supplier": 0.52,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I5-R1-T4",
+      "name": "Pharmaceuticals Supplier (Africa/Middle East, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": 4,
+      "disruption_count": 124,
+      "avg_disruption_severity": 2.44,
+      "avg_production_impact_pct": 20.37,
+      "avg_revenue_loss_usd": 1763699.39,
+      "avg_response_time_days": 4.08,
+      "avg_full_recovery_days": 82.28,
+      "share_has_backup_supplier": 0.59,
+      "share_permanent_supplier_change": 0.26
+    },
+    {
+      "node_id": "SUP-I5-R2-T1",
+      "name": "Pharmaceuticals Supplier (Asia-Pacific, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": 1,
+      "disruption_count": 2137,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 37.46,
+      "avg_revenue_loss_usd": 4395414.39,
+      "avg_response_time_days": 4.06,
+      "avg_full_recovery_days": 72.79,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.3
+    },
+    {
+      "node_id": "SUP-I5-R2-T2",
+      "name": "Pharmaceuticals Supplier (Asia-Pacific, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": 2,
+      "disruption_count": 1824,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 32.38,
+      "avg_revenue_loss_usd": 3935097.5,
+      "avg_response_time_days": 4.02,
+      "avg_full_recovery_days": 77.28,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I5-R2-T3",
+      "name": "Pharmaceuticals Supplier (Asia-Pacific, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": 3,
+      "disruption_count": 1500,
+      "avg_disruption_severity": 2.5,
+      "avg_production_impact_pct": 26.28,
+      "avg_revenue_loss_usd": 3201979.82,
+      "avg_response_time_days": 3.97,
+      "avg_full_recovery_days": 78.82,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I5-R2-T4",
+      "name": "Pharmaceuticals Supplier (Asia-Pacific, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": 4,
+      "disruption_count": 638,
+      "avg_disruption_severity": 2.43,
+      "avg_production_impact_pct": 20.5,
+      "avg_revenue_loss_usd": 2360474.29,
+      "avg_response_time_days": 3.74,
+      "avg_full_recovery_days": 79.23,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I5-R3-T1",
+      "name": "Pharmaceuticals Supplier (Europe, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Europe",
+      "tier": 1,
+      "disruption_count": 1124,
+      "avg_disruption_severity": 2.54,
+      "avg_production_impact_pct": 37.71,
+      "avg_revenue_loss_usd": 4212185.19,
+      "avg_response_time_days": 4.01,
+      "avg_full_recovery_days": 72.3,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.26
+    },
+    {
+      "node_id": "SUP-I5-R3-T2",
+      "name": "Pharmaceuticals Supplier (Europe, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Europe",
+      "tier": 2,
+      "disruption_count": 955,
+      "avg_disruption_severity": 2.52,
+      "avg_production_impact_pct": 32.06,
+      "avg_revenue_loss_usd": 3663303.04,
+      "avg_response_time_days": 4.61,
+      "avg_full_recovery_days": 77.14,
+      "share_has_backup_supplier": 0.53,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I5-R3-T3",
+      "name": "Pharmaceuticals Supplier (Europe, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Europe",
+      "tier": 3,
+      "disruption_count": 825,
+      "avg_disruption_severity": 2.54,
+      "avg_production_impact_pct": 26.36,
+      "avg_revenue_loss_usd": 3219259.04,
+      "avg_response_time_days": 4.01,
+      "avg_full_recovery_days": 79.93,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I5-R3-T4",
+      "name": "Pharmaceuticals Supplier (Europe, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "Europe",
+      "tier": 4,
+      "disruption_count": 318,
+      "avg_disruption_severity": 2.61,
+      "avg_production_impact_pct": 22.31,
+      "avg_revenue_loss_usd": 3094543.93,
+      "avg_response_time_days": 4.04,
+      "avg_full_recovery_days": 82.14,
+      "share_has_backup_supplier": 0.56,
+      "share_permanent_supplier_change": 0.2
+    },
+    {
+      "node_id": "SUP-I5-R4-T1",
+      "name": "Pharmaceuticals Supplier (North America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "North America",
+      "tier": 1,
+      "disruption_count": 1063,
+      "avg_disruption_severity": 2.43,
+      "avg_production_impact_pct": 36.3,
+      "avg_revenue_loss_usd": 4156129.18,
+      "avg_response_time_days": 4.2,
+      "avg_full_recovery_days": 71.75,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.29
+    },
+    {
+      "node_id": "SUP-I5-R4-T2",
+      "name": "Pharmaceuticals Supplier (North America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "North America",
+      "tier": 2,
+      "disruption_count": 922,
+      "avg_disruption_severity": 2.51,
+      "avg_production_impact_pct": 32.17,
+      "avg_revenue_loss_usd": 3595103.89,
+      "avg_response_time_days": 4.2,
+      "avg_full_recovery_days": 75.11,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.22
+    },
+    {
+      "node_id": "SUP-I5-R4-T3",
+      "name": "Pharmaceuticals Supplier (North America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "North America",
+      "tier": 3,
+      "disruption_count": 725,
+      "avg_disruption_severity": 2.55,
+      "avg_production_impact_pct": 26.75,
+      "avg_revenue_loss_usd": 3278208.18,
+      "avg_response_time_days": 4.1,
+      "avg_full_recovery_days": 81.88,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.24
+    },
+    {
+      "node_id": "SUP-I5-R4-T4",
+      "name": "Pharmaceuticals Supplier (North America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "North America",
+      "tier": 4,
+      "disruption_count": 295,
+      "avg_disruption_severity": 2.42,
+      "avg_production_impact_pct": 20.7,
+      "avg_revenue_loss_usd": 2419049.15,
+      "avg_response_time_days": 4.03,
+      "avg_full_recovery_days": 76.26,
+      "share_has_backup_supplier": 0.58,
+      "share_permanent_supplier_change": 0.18
+    },
+    {
+      "node_id": "SUP-I5-R5-T1",
+      "name": "Pharmaceuticals Supplier (South America, Tier 1)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "South America",
+      "tier": 1,
+      "disruption_count": 531,
+      "avg_disruption_severity": 2.45,
+      "avg_production_impact_pct": 35.53,
+      "avg_revenue_loss_usd": 3946345.09,
+      "avg_response_time_days": 4.27,
+      "avg_full_recovery_days": 68.94,
+      "share_has_backup_supplier": 0.55,
+      "share_permanent_supplier_change": 0.27
+    },
+    {
+      "node_id": "SUP-I5-R5-T2",
+      "name": "Pharmaceuticals Supplier (South America, Tier 2)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "South America",
+      "tier": 2,
+      "disruption_count": 473,
+      "avg_disruption_severity": 2.49,
+      "avg_production_impact_pct": 31.57,
+      "avg_revenue_loss_usd": 3756715.79,
+      "avg_response_time_days": 3.96,
+      "avg_full_recovery_days": 75.55,
+      "share_has_backup_supplier": 0.57,
+      "share_permanent_supplier_change": 0.19
+    },
+    {
+      "node_id": "SUP-I5-R5-T3",
+      "name": "Pharmaceuticals Supplier (South America, Tier 3)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "South America",
+      "tier": 3,
+      "disruption_count": 384,
+      "avg_disruption_severity": 2.57,
+      "avg_production_impact_pct": 27.45,
+      "avg_revenue_loss_usd": 3252107.24,
+      "avg_response_time_days": 4.16,
+      "avg_full_recovery_days": 82.34,
+      "share_has_backup_supplier": 0.54,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "SUP-I5-R5-T4",
+      "name": "Pharmaceuticals Supplier (South America, Tier 4)",
+      "node_type": "supplier",
+      "industry": "Pharmaceuticals",
+      "region": "South America",
+      "tier": 4,
+      "disruption_count": 146,
+      "avg_disruption_severity": 2.42,
+      "avg_production_impact_pct": 19.48,
+      "avg_revenue_loss_usd": 2286013.6,
+      "avg_response_time_days": 3.66,
+      "avg_full_recovery_days": 70.76,
+      "share_has_backup_supplier": 0.62,
+      "share_permanent_supplier_change": 0.21
+    },
+    {
+      "node_id": "FAC-I5-1",
+      "name": "Pharmaceuticals Factory 1",
+      "node_type": "factory",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "FAC-I5-2",
+      "name": "Pharmaceuticals Factory 2",
+      "node_type": "factory",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I5-1",
+      "name": "Pharmaceuticals Warehouse 1",
+      "node_type": "warehouse",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I5-2",
+      "name": "Pharmaceuticals Warehouse 2",
+      "node_type": "warehouse",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "WH-I5-3",
+      "name": "Pharmaceuticals Warehouse 3",
+      "node_type": "warehouse",
+      "industry": "Pharmaceuticals",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I5-1",
+      "name": "Pharmaceuticals Retailer 1",
+      "node_type": "retailer",
+      "industry": "Pharmaceuticals",
+      "region": "Africa/Middle East",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I5-2",
+      "name": "Pharmaceuticals Retailer 2",
+      "node_type": "retailer",
+      "industry": "Pharmaceuticals",
+      "region": "Asia-Pacific",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I5-3",
+      "name": "Pharmaceuticals Retailer 3",
+      "node_type": "retailer",
+      "industry": "Pharmaceuticals",
+      "region": "Europe",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I5-4",
+      "name": "Pharmaceuticals Retailer 4",
+      "node_type": "retailer",
+      "industry": "Pharmaceuticals",
+      "region": "North America",
+      "tier": null
+    },
+    {
+      "node_id": "RET-I5-5",
+      "name": "Pharmaceuticals Retailer 5",
+      "node_type": "retailer",
+      "industry": "Pharmaceuticals",
+      "region": "South America",
+      "tier": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "SUP-I1-R1-T1",
+      "target": "FAC-I1-1"
+    },
+    {
+      "source": "SUP-I1-R1-T1",
+      "target": "FAC-I1-2"
+    },
+    {
+      "source": "SUP-I1-R1-T2",
+      "target": "SUP-I1-R3-T1"
+    },
+    {
+      "source": "SUP-I1-R1-T2",
+      "target": "SUP-I1-R4-T1"
+    },
+    {
+      "source": "SUP-I1-R1-T2",
+      "target": "SUP-I1-R5-T1"
+    },
+    {
+      "source": "SUP-I1-R1-T3",
+      "target": "SUP-I1-R1-T2"
+    },
+    {
+      "source": "SUP-I1-R1-T3",
+      "target": "SUP-I1-R5-T2"
+    },
+    {
+      "source": "SUP-I1-R1-T4",
+      "target": "SUP-I1-R1-T3"
+    },
+    {
+      "source": "SUP-I1-R1-T4",
+      "target": "SUP-I1-R5-T3"
+    },
+    {
+      "source": "SUP-I1-R2-T1",
+      "target": "FAC-I1-1"
+    },
+    {
+      "source": "SUP-I1-R2-T1",
+      "target": "FAC-I1-2"
+    },
+    {
+      "source": "SUP-I1-R2-T2",
+      "target": "SUP-I1-R1-T1"
+    },
+    {
+      "source": "SUP-I1-R2-T2",
+      "target": "SUP-I1-R2-T1"
+    },
+    {
+      "source": "SUP-I1-R2-T3",
+      "target": "SUP-I1-R1-T2"
+    },
+    {
+      "source": "SUP-I1-R2-T3",
+      "target": "SUP-I1-R2-T2"
+    },
+    {
+      "source": "SUP-I1-R2-T3",
+      "target": "SUP-I1-R3-T2"
+    },
+    {
+      "source": "SUP-I1-R2-T4",
+      "target": "SUP-I1-R2-T3"
+    },
+    {
+      "source": "SUP-I1-R2-T4",
+      "target": "SUP-I1-R3-T3"
+    },
+    {
+      "source": "SUP-I1-R3-T1",
+      "target": "FAC-I1-1"
+    },
+    {
+      "source": "SUP-I1-R3-T1",
+      "target": "FAC-I1-2"
+    },
+    {
+      "source": "SUP-I1-R3-T2",
+      "target": "SUP-I1-R3-T1"
+    },
+    {
+      "source": "SUP-I1-R3-T2",
+      "target": "SUP-I1-R4-T1"
+    },
+    {
+      "source": "SUP-I1-R3-T3",
+      "target": "SUP-I1-R1-T2"
+    },
+    {
+      "source": "SUP-I1-R3-T3",
+      "target": "SUP-I1-R2-T2"
+    },
+    {
+      "source": "SUP-I1-R3-T4",
+      "target": "SUP-I1-R2-T3"
+    },
+    {
+      "source": "SUP-I1-R3-T4",
+      "target": "SUP-I1-R5-T3"
+    },
+    {
+      "source": "SUP-I1-R4-T1",
+      "target": "FAC-I1-1"
+    },
+    {
+      "source": "SUP-I1-R4-T1",
+      "target": "FAC-I1-2"
+    },
+    {
+      "source": "SUP-I1-R4-T2",
+      "target": "SUP-I1-R2-T1"
+    },
+    {
+      "source": "SUP-I1-R4-T2",
+      "target": "SUP-I1-R3-T1"
+    },
+    {
+      "source": "SUP-I1-R4-T3",
+      "target": "SUP-I1-R2-T2"
+    },
+    {
+      "source": "SUP-I1-R4-T3",
+      "target": "SUP-I1-R5-T2"
+    },
+    {
+      "source": "SUP-I1-R4-T4",
+      "target": "SUP-I1-R1-T3"
+    },
+    {
+      "source": "SUP-I1-R4-T4",
+      "target": "SUP-I1-R5-T3"
+    },
+    {
+      "source": "SUP-I1-R5-T1",
+      "target": "FAC-I1-1"
+    },
+    {
+      "source": "SUP-I1-R5-T1",
+      "target": "FAC-I1-2"
+    },
+    {
+      "source": "SUP-I1-R5-T2",
+      "target": "SUP-I1-R2-T1"
+    },
+    {
+      "source": "SUP-I1-R5-T2",
+      "target": "SUP-I1-R3-T1"
+    },
+    {
+      "source": "SUP-I1-R5-T3",
+      "target": "SUP-I1-R4-T2"
+    },
+    {
+      "source": "SUP-I1-R5-T3",
+      "target": "SUP-I1-R5-T2"
+    },
+    {
+      "source": "SUP-I1-R5-T4",
+      "target": "SUP-I1-R4-T3"
+    },
+    {
+      "source": "SUP-I1-R5-T4",
+      "target": "SUP-I1-R5-T3"
+    },
+    {
+      "source": "FAC-I1-1",
+      "target": "WH-I1-1"
+    },
+    {
+      "source": "FAC-I1-1",
+      "target": "WH-I1-2"
+    },
+    {
+      "source": "FAC-I1-2",
+      "target": "WH-I1-2"
+    },
+    {
+      "source": "FAC-I1-2",
+      "target": "WH-I1-3"
+    },
+    {
+      "source": "WH-I1-1",
+      "target": "RET-I1-2"
+    },
+    {
+      "source": "WH-I1-1",
+      "target": "RET-I1-4"
+    },
+    {
+      "source": "WH-I1-1",
+      "target": "RET-I1-5"
+    },
+    {
+      "source": "WH-I1-2",
+      "target": "RET-I1-1"
+    },
+    {
+      "source": "WH-I1-2",
+      "target": "RET-I1-5"
+    },
+    {
+      "source": "WH-I1-3",
+      "target": "RET-I1-2"
+    },
+    {
+      "source": "WH-I1-3",
+      "target": "RET-I1-3"
+    },
+    {
+      "source": "SUP-I2-R1-T1",
+      "target": "FAC-I2-1"
+    },
+    {
+      "source": "SUP-I2-R1-T1",
+      "target": "FAC-I2-2"
+    },
+    {
+      "source": "SUP-I2-R1-T2",
+      "target": "SUP-I2-R1-T1"
+    },
+    {
+      "source": "SUP-I2-R1-T2",
+      "target": "SUP-I2-R3-T1"
+    },
+    {
+      "source": "SUP-I2-R1-T3",
+      "target": "SUP-I2-R1-T2"
+    },
+    {
+      "source": "SUP-I2-R1-T3",
+      "target": "SUP-I2-R2-T2"
+    },
+    {
+      "source": "SUP-I2-R1-T4",
+      "target": "SUP-I2-R1-T3"
+    },
+    {
+      "source": "SUP-I2-R1-T4",
+      "target": "SUP-I2-R2-T3"
+    },
+    {
+      "source": "SUP-I2-R2-T1",
+      "target": "FAC-I2-1"
+    },
+    {
+      "source": "SUP-I2-R2-T1",
+      "target": "FAC-I2-2"
+    },
+    {
+      "source": "SUP-I2-R2-T2",
+      "target": "SUP-I2-R1-T1"
+    },
+    {
+      "source": "SUP-I2-R2-T2",
+      "target": "SUP-I2-R2-T1"
+    },
+    {
+      "source": "SUP-I2-R2-T2",
+      "target": "SUP-I2-R5-T1"
+    },
+    {
+      "source": "SUP-I2-R2-T3",
+      "target": "SUP-I2-R2-T2"
+    },
+    {
+      "source": "SUP-I2-R2-T3",
+      "target": "SUP-I2-R5-T2"
+    },
+    {
+      "source": "SUP-I2-R2-T4",
+      "target": "SUP-I2-R3-T3"
+    },
+    {
+      "source": "SUP-I2-R2-T4",
+      "target": "SUP-I2-R4-T3"
+    },
+    {
+      "source": "SUP-I2-R3-T1",
+      "target": "FAC-I2-1"
+    },
+    {
+      "source": "SUP-I2-R3-T1",
+      "target": "FAC-I2-2"
+    },
+    {
+      "source": "SUP-I2-R3-T2",
+      "target": "SUP-I2-R3-T1"
+    },
+    {
+      "source": "SUP-I2-R3-T2",
+      "target": "SUP-I2-R4-T1"
+    },
+    {
+      "source": "SUP-I2-R3-T3",
+      "target": "SUP-I2-R2-T2"
+    },
+    {
+      "source": "SUP-I2-R3-T3",
+      "target": "SUP-I2-R4-T2"
+    },
+    {
+      "source": "SUP-I2-R3-T4",
+      "target": "SUP-I2-R3-T3"
+    },
+    {
+      "source": "SUP-I2-R3-T4",
+      "target": "SUP-I2-R4-T3"
+    },
+    {
+      "source": "SUP-I2-R3-T4",
+      "target": "SUP-I2-R5-T3"
+    },
+    {
+      "source": "SUP-I2-R4-T1",
+      "target": "FAC-I2-1"
+    },
+    {
+      "source": "SUP-I2-R4-T1",
+      "target": "FAC-I2-2"
+    },
+    {
+      "source": "SUP-I2-R4-T2",
+      "target": "SUP-I2-R1-T1"
+    },
+    {
+      "source": "SUP-I2-R4-T2",
+      "target": "SUP-I2-R3-T1"
+    },
+    {
+      "source": "SUP-I2-R4-T3",
+      "target": "SUP-I2-R3-T2"
+    },
+    {
+      "source": "SUP-I2-R4-T3",
+      "target": "SUP-I2-R4-T2"
+    },
+    {
+      "source": "SUP-I2-R4-T4",
+      "target": "SUP-I2-R2-T3"
+    },
+    {
+      "source": "SUP-I2-R4-T4",
+      "target": "SUP-I2-R3-T3"
+    },
+    {
+      "source": "SUP-I2-R5-T1",
+      "target": "FAC-I2-1"
+    },
+    {
+      "source": "SUP-I2-R5-T1",
+      "target": "FAC-I2-2"
+    },
+    {
+      "source": "SUP-I2-R5-T2",
+      "target": "SUP-I2-R2-T1"
+    },
+    {
+      "source": "SUP-I2-R5-T2",
+      "target": "SUP-I2-R3-T1"
+    },
+    {
+      "source": "SUP-I2-R5-T3",
+      "target": "SUP-I2-R2-T2"
+    },
+    {
+      "source": "SUP-I2-R5-T3",
+      "target": "SUP-I2-R5-T2"
+    },
+    {
+      "source": "SUP-I2-R5-T4",
+      "target": "SUP-I2-R2-T3"
+    },
+    {
+      "source": "SUP-I2-R5-T4",
+      "target": "SUP-I2-R3-T3"
+    },
+    {
+      "source": "FAC-I2-1",
+      "target": "WH-I2-1"
+    },
+    {
+      "source": "FAC-I2-1",
+      "target": "WH-I2-2"
+    },
+    {
+      "source": "FAC-I2-1",
+      "target": "WH-I2-3"
+    },
+    {
+      "source": "FAC-I2-2",
+      "target": "WH-I2-1"
+    },
+    {
+      "source": "FAC-I2-2",
+      "target": "WH-I2-2"
+    },
+    {
+      "source": "WH-I2-1",
+      "target": "RET-I2-1"
+    },
+    {
+      "source": "WH-I2-1",
+      "target": "RET-I2-5"
+    },
+    {
+      "source": "WH-I2-2",
+      "target": "RET-I2-2"
+    },
+    {
+      "source": "WH-I2-2",
+      "target": "RET-I2-3"
+    },
+    {
+      "source": "WH-I2-2",
+      "target": "RET-I2-5"
+    },
+    {
+      "source": "WH-I2-3",
+      "target": "RET-I2-1"
+    },
+    {
+      "source": "WH-I2-3",
+      "target": "RET-I2-4"
+    },
+    {
+      "source": "SUP-I3-R1-T1",
+      "target": "FAC-I3-1"
+    },
+    {
+      "source": "SUP-I3-R1-T1",
+      "target": "FAC-I3-2"
+    },
+    {
+      "source": "SUP-I3-R1-T2",
+      "target": "SUP-I3-R2-T1"
+    },
+    {
+      "source": "SUP-I3-R1-T2",
+      "target": "SUP-I3-R3-T1"
+    },
+    {
+      "source": "SUP-I3-R1-T3",
+      "target": "SUP-I3-R2-T2"
+    },
+    {
+      "source": "SUP-I3-R1-T3",
+      "target": "SUP-I3-R4-T2"
+    },
+    {
+      "source": "SUP-I3-R1-T4",
+      "target": "SUP-I3-R4-T3"
+    },
+    {
+      "source": "SUP-I3-R1-T4",
+      "target": "SUP-I3-R5-T3"
+    },
+    {
+      "source": "SUP-I3-R2-T1",
+      "target": "FAC-I3-1"
+    },
+    {
+      "source": "SUP-I3-R2-T1",
+      "target": "FAC-I3-2"
+    },
+    {
+      "source": "SUP-I3-R2-T2",
+      "target": "SUP-I3-R1-T1"
+    },
+    {
+      "source": "SUP-I3-R2-T2",
+      "target": "SUP-I3-R2-T1"
+    },
+    {
+      "source": "SUP-I3-R2-T3",
+      "target": "SUP-I3-R1-T2"
+    },
+    {
+      "source": "SUP-I3-R2-T3",
+      "target": "SUP-I3-R4-T2"
+    },
+    {
+      "source": "SUP-I3-R2-T4",
+      "target": "SUP-I3-R3-T3"
+    },
+    {
+      "source": "SUP-I3-R2-T4",
+      "target": "SUP-I3-R5-T3"
+    },
+    {
+      "source": "SUP-I3-R3-T1",
+      "target": "FAC-I3-1"
+    },
+    {
+      "source": "SUP-I3-R3-T1",
+      "target": "FAC-I3-2"
+    },
+    {
+      "source": "SUP-I3-R3-T2",
+      "target": "SUP-I3-R3-T1"
+    },
+    {
+      "source": "SUP-I3-R3-T2",
+      "target": "SUP-I3-R5-T1"
+    },
+    {
+      "source": "SUP-I3-R3-T3",
+      "target": "SUP-I3-R2-T2"
+    },
+    {
+      "source": "SUP-I3-R3-T3",
+      "target": "SUP-I3-R3-T2"
+    },
+    {
+      "source": "SUP-I3-R3-T4",
+      "target": "SUP-I3-R1-T3"
+    },
+    {
+      "source": "SUP-I3-R3-T4",
+      "target": "SUP-I3-R2-T3"
+    },
+    {
+      "source": "SUP-I3-R3-T4",
+      "target": "SUP-I3-R5-T3"
+    },
+    {
+      "source": "SUP-I3-R4-T1",
+      "target": "FAC-I3-1"
+    },
+    {
+      "source": "SUP-I3-R4-T1",
+      "target": "FAC-I3-2"
+    },
+    {
+      "source": "SUP-I3-R4-T2",
+      "target": "SUP-I3-R1-T1"
+    },
+    {
+      "source": "SUP-I3-R4-T2",
+      "target": "SUP-I3-R4-T1"
+    },
+    {
+      "source": "SUP-I3-R4-T3",
+      "target": "SUP-I3-R1-T2"
+    },
+    {
+      "source": "SUP-I3-R4-T3",
+      "target": "SUP-I3-R5-T2"
+    },
+    {
+      "source": "SUP-I3-R4-T4",
+      "target": "SUP-I3-R1-T3"
+    },
+    {
+      "source": "SUP-I3-R4-T4",
+      "target": "SUP-I3-R3-T3"
+    },
+    {
+      "source": "SUP-I3-R5-T1",
+      "target": "FAC-I3-1"
+    },
+    {
+      "source": "SUP-I3-R5-T1",
+      "target": "FAC-I3-2"
+    },
+    {
+      "source": "SUP-I3-R5-T2",
+      "target": "SUP-I3-R1-T1"
+    },
+    {
+      "source": "SUP-I3-R5-T2",
+      "target": "SUP-I3-R3-T1"
+    },
+    {
+      "source": "SUP-I3-R5-T3",
+      "target": "SUP-I3-R2-T2"
+    },
+    {
+      "source": "SUP-I3-R5-T3",
+      "target": "SUP-I3-R3-T2"
+    },
+    {
+      "source": "SUP-I3-R5-T4",
+      "target": "SUP-I3-R1-T3"
+    },
+    {
+      "source": "SUP-I3-R5-T4",
+      "target": "SUP-I3-R3-T3"
+    },
+    {
+      "source": "FAC-I3-1",
+      "target": "WH-I3-2"
+    },
+    {
+      "source": "FAC-I3-1",
+      "target": "WH-I3-3"
+    },
+    {
+      "source": "FAC-I3-2",
+      "target": "WH-I3-1"
+    },
+    {
+      "source": "FAC-I3-2",
+      "target": "WH-I3-3"
+    },
+    {
+      "source": "WH-I3-1",
+      "target": "RET-I3-3"
+    },
+    {
+      "source": "WH-I3-1",
+      "target": "RET-I3-4"
+    },
+    {
+      "source": "WH-I3-2",
+      "target": "RET-I3-2"
+    },
+    {
+      "source": "WH-I3-2",
+      "target": "RET-I3-5"
+    },
+    {
+      "source": "WH-I3-3",
+      "target": "RET-I3-1"
+    },
+    {
+      "source": "WH-I3-3",
+      "target": "RET-I3-3"
+    },
+    {
+      "source": "WH-I3-3",
+      "target": "RET-I3-4"
+    },
+    {
+      "source": "SUP-I4-R1-T1",
+      "target": "FAC-I4-1"
+    },
+    {
+      "source": "SUP-I4-R1-T1",
+      "target": "FAC-I4-2"
+    },
+    {
+      "source": "SUP-I4-R1-T2",
+      "target": "SUP-I4-R2-T1"
+    },
+    {
+      "source": "SUP-I4-R1-T2",
+      "target": "SUP-I4-R5-T1"
+    },
+    {
+      "source": "SUP-I4-R1-T3",
+      "target": "SUP-I4-R2-T2"
+    },
+    {
+      "source": "SUP-I4-R1-T3",
+      "target": "SUP-I4-R4-T2"
+    },
+    {
+      "source": "SUP-I4-R1-T3",
+      "target": "SUP-I4-R5-T2"
+    },
+    {
+      "source": "SUP-I4-R1-T4",
+      "target": "SUP-I4-R3-T3"
+    },
+    {
+      "source": "SUP-I4-R1-T4",
+      "target": "SUP-I4-R4-T3"
+    },
+    {
+      "source": "SUP-I4-R2-T1",
+      "target": "FAC-I4-1"
+    },
+    {
+      "source": "SUP-I4-R2-T1",
+      "target": "FAC-I4-2"
+    },
+    {
+      "source": "SUP-I4-R2-T2",
+      "target": "SUP-I4-R3-T1"
+    },
+    {
+      "source": "SUP-I4-R2-T2",
+      "target": "SUP-I4-R4-T1"
+    },
+    {
+      "source": "SUP-I4-R2-T3",
+      "target": "SUP-I4-R2-T2"
+    },
+    {
+      "source": "SUP-I4-R2-T3",
+      "target": "SUP-I4-R5-T2"
+    },
+    {
+      "source": "SUP-I4-R2-T4",
+      "target": "SUP-I4-R4-T3"
+    },
+    {
+      "source": "SUP-I4-R2-T4",
+      "target": "SUP-I4-R5-T3"
+    },
+    {
+      "source": "SUP-I4-R3-T1",
+      "target": "FAC-I4-1"
+    },
+    {
+      "source": "SUP-I4-R3-T1",
+      "target": "FAC-I4-2"
+    },
+    {
+      "source": "SUP-I4-R3-T2",
+      "target": "SUP-I4-R2-T1"
+    },
+    {
+      "source": "SUP-I4-R3-T2",
+      "target": "SUP-I4-R5-T1"
+    },
+    {
+      "source": "SUP-I4-R3-T3",
+      "target": "SUP-I4-R1-T2"
+    },
+    {
+      "source": "SUP-I4-R3-T3",
+      "target": "SUP-I4-R3-T2"
+    },
+    {
+      "source": "SUP-I4-R3-T3",
+      "target": "SUP-I4-R5-T2"
+    },
+    {
+      "source": "SUP-I4-R3-T4",
+      "target": "SUP-I4-R1-T3"
+    },
+    {
+      "source": "SUP-I4-R3-T4",
+      "target": "SUP-I4-R2-T3"
+    },
+    {
+      "source": "SUP-I4-R4-T1",
+      "target": "FAC-I4-1"
+    },
+    {
+      "source": "SUP-I4-R4-T1",
+      "target": "FAC-I4-2"
+    },
+    {
+      "source": "SUP-I4-R4-T2",
+      "target": "SUP-I4-R1-T1"
+    },
+    {
+      "source": "SUP-I4-R4-T2",
+      "target": "SUP-I4-R4-T1"
+    },
+    {
+      "source": "SUP-I4-R4-T2",
+      "target": "SUP-I4-R5-T1"
+    },
+    {
+      "source": "SUP-I4-R4-T3",
+      "target": "SUP-I4-R1-T2"
+    },
+    {
+      "source": "SUP-I4-R4-T3",
+      "target": "SUP-I4-R2-T2"
+    },
+    {
+      "source": "SUP-I4-R4-T4",
+      "target": "SUP-I4-R1-T3"
+    },
+    {
+      "source": "SUP-I4-R4-T4",
+      "target": "SUP-I4-R2-T3"
+    },
+    {
+      "source": "SUP-I4-R5-T1",
+      "target": "FAC-I4-1"
+    },
+    {
+      "source": "SUP-I4-R5-T1",
+      "target": "FAC-I4-2"
+    },
+    {
+      "source": "SUP-I4-R5-T2",
+      "target": "SUP-I4-R2-T1"
+    },
+    {
+      "source": "SUP-I4-R5-T2",
+      "target": "SUP-I4-R4-T1"
+    },
+    {
+      "source": "SUP-I4-R5-T3",
+      "target": "SUP-I4-R1-T2"
+    },
+    {
+      "source": "SUP-I4-R5-T3",
+      "target": "SUP-I4-R5-T2"
+    },
+    {
+      "source": "SUP-I4-R5-T4",
+      "target": "SUP-I4-R1-T3"
+    },
+    {
+      "source": "SUP-I4-R5-T4",
+      "target": "SUP-I4-R3-T3"
+    },
+    {
+      "source": "FAC-I4-1",
+      "target": "WH-I4-1"
+    },
+    {
+      "source": "FAC-I4-1",
+      "target": "WH-I4-2"
+    },
+    {
+      "source": "FAC-I4-2",
+      "target": "WH-I4-2"
+    },
+    {
+      "source": "FAC-I4-2",
+      "target": "WH-I4-3"
+    },
+    {
+      "source": "WH-I4-1",
+      "target": "RET-I4-1"
+    },
+    {
+      "source": "WH-I4-1",
+      "target": "RET-I4-2"
+    },
+    {
+      "source": "WH-I4-1",
+      "target": "RET-I4-3"
+    },
+    {
+      "source": "WH-I4-2",
+      "target": "RET-I4-2"
+    },
+    {
+      "source": "WH-I4-2",
+      "target": "RET-I4-5"
+    },
+    {
+      "source": "WH-I4-3",
+      "target": "RET-I4-4"
+    },
+    {
+      "source": "WH-I4-3",
+      "target": "RET-I4-5"
+    },
+    {
+      "source": "SUP-I5-R1-T1",
+      "target": "FAC-I5-1"
+    },
+    {
+      "source": "SUP-I5-R1-T1",
+      "target": "FAC-I5-2"
+    },
+    {
+      "source": "SUP-I5-R1-T2",
+      "target": "SUP-I5-R1-T1"
+    },
+    {
+      "source": "SUP-I5-R1-T2",
+      "target": "SUP-I5-R4-T1"
+    },
+    {
+      "source": "SUP-I5-R1-T3",
+      "target": "SUP-I5-R1-T2"
+    },
+    {
+      "source": "SUP-I5-R1-T3",
+      "target": "SUP-I5-R2-T2"
+    },
+    {
+      "source": "SUP-I5-R1-T4",
+      "target": "SUP-I5-R2-T3"
+    },
+    {
+      "source": "SUP-I5-R1-T4",
+      "target": "SUP-I5-R4-T3"
+    },
+    {
+      "source": "SUP-I5-R2-T1",
+      "target": "FAC-I5-1"
+    },
+    {
+      "source": "SUP-I5-R2-T1",
+      "target": "FAC-I5-2"
+    },
+    {
+      "source": "SUP-I5-R2-T2",
+      "target": "SUP-I5-R3-T1"
+    },
+    {
+      "source": "SUP-I5-R2-T2",
+      "target": "SUP-I5-R4-T1"
+    },
+    {
+      "source": "SUP-I5-R2-T3",
+      "target": "SUP-I5-R2-T2"
+    },
+    {
+      "source": "SUP-I5-R2-T3",
+      "target": "SUP-I5-R4-T2"
+    },
+    {
+      "source": "SUP-I5-R2-T4",
+      "target": "SUP-I5-R3-T3"
+    },
+    {
+      "source": "SUP-I5-R2-T4",
+      "target": "SUP-I5-R4-T3"
+    },
+    {
+      "source": "SUP-I5-R3-T1",
+      "target": "FAC-I5-1"
+    },
+    {
+      "source": "SUP-I5-R3-T1",
+      "target": "FAC-I5-2"
+    },
+    {
+      "source": "SUP-I5-R3-T2",
+      "target": "SUP-I5-R3-T1"
+    },
+    {
+      "source": "SUP-I5-R3-T2",
+      "target": "SUP-I5-R4-T1"
+    },
+    {
+      "source": "SUP-I5-R3-T3",
+      "target": "SUP-I5-R4-T2"
+    },
+    {
+      "source": "SUP-I5-R3-T3",
+      "target": "SUP-I5-R5-T2"
+    },
+    {
+      "source": "SUP-I5-R3-T4",
+      "target": "SUP-I5-R1-T3"
+    },
+    {
+      "source": "SUP-I5-R3-T4",
+      "target": "SUP-I5-R2-T3"
+    },
+    {
+      "source": "SUP-I5-R4-T1",
+      "target": "FAC-I5-1"
+    },
+    {
+      "source": "SUP-I5-R4-T1",
+      "target": "FAC-I5-2"
+    },
+    {
+      "source": "SUP-I5-R4-T2",
+      "target": "SUP-I5-R4-T1"
+    },
+    {
+      "source": "SUP-I5-R4-T2",
+      "target": "SUP-I5-R5-T1"
+    },
+    {
+      "source": "SUP-I5-R4-T3",
+      "target": "SUP-I5-R2-T2"
+    },
+    {
+      "source": "SUP-I5-R4-T3",
+      "target": "SUP-I5-R3-T2"
+    },
+    {
+      "source": "SUP-I5-R4-T3",
+      "target": "SUP-I5-R4-T2"
+    },
+    {
+      "source": "SUP-I5-R4-T4",
+      "target": "SUP-I5-R1-T3"
+    },
+    {
+      "source": "SUP-I5-R4-T4",
+      "target": "SUP-I5-R4-T3"
+    },
+    {
+      "source": "SUP-I5-R5-T1",
+      "target": "FAC-I5-1"
+    },
+    {
+      "source": "SUP-I5-R5-T1",
+      "target": "FAC-I5-2"
+    },
+    {
+      "source": "SUP-I5-R5-T2",
+      "target": "SUP-I5-R2-T1"
+    },
+    {
+      "source": "SUP-I5-R5-T2",
+      "target": "SUP-I5-R5-T1"
+    },
+    {
+      "source": "SUP-I5-R5-T3",
+      "target": "SUP-I5-R1-T2"
+    },
+    {
+      "source": "SUP-I5-R5-T3",
+      "target": "SUP-I5-R2-T2"
+    },
+    {
+      "source": "SUP-I5-R5-T4",
+      "target": "SUP-I5-R1-T3"
+    },
+    {
+      "source": "SUP-I5-R5-T4",
+      "target": "SUP-I5-R5-T3"
+    },
+    {
+      "source": "FAC-I5-1",
+      "target": "WH-I5-1"
+    },
+    {
+      "source": "FAC-I5-1",
+      "target": "WH-I5-2"
+    },
+    {
+      "source": "FAC-I5-1",
+      "target": "WH-I5-3"
+    },
+    {
+      "source": "FAC-I5-2",
+      "target": "WH-I5-1"
+    },
+    {
+      "source": "FAC-I5-2",
+      "target": "WH-I5-3"
+    },
+    {
+      "source": "WH-I5-1",
+      "target": "RET-I5-2"
+    },
+    {
+      "source": "WH-I5-1",
+      "target": "RET-I5-4"
+    },
+    {
+      "source": "WH-I5-2",
+      "target": "RET-I5-1"
+    },
+    {
+      "source": "WH-I5-2",
+      "target": "RET-I5-2"
+    },
+    {
+      "source": "WH-I5-3",
+      "target": "RET-I5-1"
+    },
+    {
+      "source": "WH-I5-3",
+      "target": "RET-I5-3"
+    },
+    {
+      "source": "WH-I5-3",
+      "target": "RET-I5-5"
+    }
+  ]
+}

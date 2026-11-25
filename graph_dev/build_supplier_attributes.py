@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
 DATA_FILE = (
-    BASE_DIR.parent / "datasets" / "raw" / "supply_chain_disruption_recovery.csv"
+    BASE_DIR.parent / "AtmoGraph_DataPreprocessing" / "data" / "processed" / "supply_chain_cleaned.csv"
 )
 NET_DIR = BASE_DIR / "network_data"
 
@@ -91,3 +91,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
